@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Seegen 분석 자동화 SW" />
+    <title>원픽 제휴점 App 관리자 화면</title>
+    <style type="text/css">
+      table.tableizer-table {
+        font-size: 12px;
+        border: 1px solid #ccc;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      .tableizer-table td {
+        padding: 4px;
+        border: 1px solid #ccc;
+      }
+
+      .tableizer-table th {
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #fe4b4b;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .tableizer-table tr.last td {
+        border-bottom: 1px solid #888;
+      }
+
+      .prcd-100 {
+        background: rgb(75, 167, 254) 50%;
+      }
+
+      .prcd-75 {
+        background: -webkit-linear-gradient(
+          left,
+          rgb(75, 167, 254) 75%,
+          rgba(255, 255, 255, 0) 25%
+        );
+        background: -moz-linear-gradient(left, rgb(75, 167, 254) 70%, rgba(255, 255, 255, 0) 25%);
+        background: -ms-linear-gradient(left, rgb(75, 167, 254) 70%, rgba(255, 255, 255, 0) 25%);
+        background: linear-gradient(left, rgb(75, 167, 254) 70%, rgba(255, 255, 255, 0) 25%);
+      }
+
+      .prcd-50 {
+        background: -webkit-linear-gradient(
+          left,
+          rgb(75, 167, 254) 50%,
+          rgba(255, 255, 255, 0) 50%
+        );
+        background: -moz-linear-gradient(left, rgb(75, 167, 254) 50%, rgba(255, 255, 255, 0) 50%);
+        background: -ms-linear-gradient(left, rgb(75, 167, 254) 50%, rgba(255, 255, 255, 0) 50%);
+        background: linear-gradient(left, rgb(75, 167, 254) 50%, rgba(255, 255, 255, 0) 50%);
+      }
+
+      .prcd-25 {
+        background: -webkit-linear-gradient(
+          left,
+          rgb(75, 167, 254) 25%,
+          rgba(255, 255, 255, 0) 75%
+        );
+        background: -moz-linear-gradient(left, rgb(75, 167, 254) 25%, rgba(255, 255, 255, 0) 75%);
+        background: -ms-linear-gradient(left, rgb(75, 167, 254) 25%, rgba(255, 255, 255, 0) 75%);
+        background: linear-gradient(left, rgb(75, 167, 254) 25%, rgba(255, 255, 255, 0) 75%);
+      }
+
+      .prcd-0 {
+        background: none;
+      }
+    </style>
+    <script>
+      window.addEventListener('load', (e) => {
+        const row = document
+          .getElementsByClassName('tableizer-table')[0]
+          .getElementsByTagName('tr');
+
+        Array.from(row).forEach((el) => {
+          el.addEventListener('mouseover', (e) => {
+            e.currentTarget.style.backgroundColor = '#ededed';
+          });
+          el.addEventListener('mouseout', (e) => {
+            e.currentTarget.style.backgroundColor = null;
+          });
+        });
+
+        console.log(row.length);
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="root">
+      <h1>원픽 제휴점 App 관리자 화면</h1>
+      <table class="tableizer-table">
+        <thead>
+          <tr class="tableizer-firstrow">
+            <th colspan="4">ID</th>
+            <th rowspan="2">Task</th>
+            <th rowspan="2">Description</th>
+            <th colspan="2">Plan</th>
+            <th rowspan="2" width="200px">Url</th>
+          </tr>
+          <tr>
+            <th>depth1</th>
+            <th>depth2</th>
+            <th>depth3</th>
+            <th>depth4</th>
+            <th>Start</th>
+            <th>Finish</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="last">
+            <td>WSG</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>디자인</td>
+            <td>&nbsp;</td>
+            <td>2020-09-07</td>
+            <td>2020-09-29</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>공통 UI</td>
+            <td>elements</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-14</td>
+            <td class="prcd-100">2020-09-17</td>
+            <td><a href="/about" target="_blank">/about</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>header, footer</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-18</td>
+            <td class="prcd-100">2020-09-21</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>로그인</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-22</td>
+            <td class="prcd-100">2020-09-25</td>
+            <td><a href="/user/login" target="_blank">/user/login</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>비밀번호 재 설정</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-24</td>
+            <td class="prcd-100">2020-09-25</td>
+            <td><a href="/user/password_forget" target="_blank">/user/password_forget</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>메일 링크를 통한 재설정 화면</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-28</td>
+            <td class="prcd-100">2020-09-29</td>
+            <td><a href="/user/password_reset" target="_blank">user/password_reset</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>회원가입</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-05</td>
+            <td class="prcd-100">2020-10-07</td>
+            <td><a href="/user/signup" target="_blank">/user/signup</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>이메일 주소 인증</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-06</td>
+            <td class="prcd-100">2020-10-07</td>
+            <td>
+              <a href="/user/signup" target="_blank"
+                >/user/signup</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>계정관리</td>
+            <td>회원정보 수정</td>
+            <td>비밀번호 인증</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-08</td>
+            <td class="prcd-100">2020-10-12</td>
+            <td><a href="/mypage/password_check" target="_blank">/mypage/password_check</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>회원정보 수정</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-13</td>
+            <td class="prcd-100">2020-10-15</td>
+            <td><a href="/mypage/modify" target="_blank">/mypage/modify</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>메일폼</td>
+            <td>이메일 인증안내</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mail form</td>
+            <td>2020-10-15</td>
+            <td class="prcd-100">2020-10-16</td>
+            <td>
+              <a href="/mail_form/email_validation.html" target="_blank"
+                >/mail_form/email_validation.html</a
+              >
+            </td>
+          </tr>
+          <tr class="last">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>비밀번호 재설정 안내</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>mail form</td>
+            <td>2020-10-15</td>
+            <td class="prcd-100">2020-10-16</td>
+            <td>
+              <a href="/mail_form/password_reset.html" target="_blank"
+                >/mail_form/password_reset.html</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>메인</td>
+            <td>프로젝트(left)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-14</td>
+            <td class="prcd-100">2020-09-15</td>
+            <td><a href="/main" target="_blank">/main</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>서버에서 불러오기</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-16</td>
+            <td class="prcd-100">2020-09-18</td>
+            <td><a href="#" target="_blank">파일찾아보기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>실험파일 목록<br />AAS_100_P01</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-16</td>
+            <td class="prcd-100">2020-09-18</td>
+            <td><a href="#" target="_blank">파일찾아보기- 서버에서 가져오기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>분석통계<br />AAS_100_P04</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-18</td>
+            <td>2020-09-21</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>설정값 비교<br />AAS_100_P05</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-21</td>
+            <td>2020-09-22</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>설정값 히스토리</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-23</td>
+            <td class="prcd-100">2020-09-24</td>
+            <td><a href="#" target="_blank">설정값[+] - 히스토리에서 가져오기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>뷰어(center)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-17</td>
+            <td class="prcd-75">2020-09-18</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>그래프 설정팝업</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-19</td>
+            <td class="prcd-100">2020-09-21</td>
+            <td><a href="#" target="_blank">그래프 우클릭 - 그래프 설정</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>설정값(right)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-19</td>
+            <td>2020-09-21</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>새 설정값 저장 > 히스토리에 저장하기</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-22</td>
+            <td class="prcd-100">2020-09-23</td>
+            <td><a href="#" target="_blank">새 설정값 저장 - 히스토리에 저장하기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>새 설정값 저장<br />AAS_100_S00</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-24</td>
+            <td>2020-09-25</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>설정값 불러오기 > 히스토리에서 가져오기</td>
+            <td>설정값 히스토리 목록<br />AAS_200_P00</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-24</td>
+            <td class="prcd-100">2020-09-28</td>
+            <td><a href="#" target="_blank">설정값[+] - 히스토리에서 가져오기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>미리보기<br />AAS_200_P01</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-09-28</td>
+            <td class="prcd-100">2020-10-01</td>
+            <td><a href="#" target="_blank">히스토리에서 가져오기 - 보기</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>필터/알고리즘</td>
+            <td>Filter</td>
+            <td>&nbsp;</td>
+            <td>popup/tab</td>
+            <td>2020-10-02</td>
+            <td class="prcd-100">2020-10-05</td>
+            <td><a href="#" target="_blank">filter/Algorithm</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Algorithm</td>
+            <td>&nbsp;</td>
+            <td>tab</td>
+            <td>2020-10-05</td>
+            <td class="prcd-100">2020-10-07</td>
+            <td><a href="#" target="_blank">filter/Algorithm</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Crosstalk</td>
+            <td>&nbsp;</td>
+            <td>tab</td>
+            <td>2020-10-07</td>
+            <td class="prcd-100">2020-10-09</td>
+            <td><a href="#" target="_blank">filter/Algorithm</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>설정값 최적화<br />AAS_202_P00</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-12</td>
+            <td class="prcd-100">2020-10-15</td>
+            <td><a href="#" target="_blank">설정값 - 설정값 최적화</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>설정값 저장</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-16</td>
+            <td class="prcd-100">2020-10-19</td>
+            <td><a href="#" target="_blank">설정값 최적화 - 저장</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>프로젝트 관리</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-20</td>
+            <td>2020-10-23</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr class="last">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>접근권한 관리</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-21</td>
+            <td>2020-10-23</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>출력</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr class="last">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>랩노트</td>
+            <td>실험정보</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-09-28</td>
+            <td class="prcd-100">2020-10-01</td>
+            <td><a href="/lab_note/experiment" target="_blank">/lab_note/experiment</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Oligo Mix 추가/변경</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>popup</td>
+            <td>2020-10-07</td>
+            <td class="prcd-100">2020-10-09</td>
+            <td><a href="#" target="_blank"></a>Oligo Mix 설정 - 추가</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>인터프리테이션</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>미정</td>
+            <td>2020-10-12</td>
+            <td class="prcd-100">2020-10-14</td>
+            <td><a href="#" target="_blank">랩노트 - 인터프리테이션 정보</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>제품정보 입력</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-15</td>
+            <td class="prcd-100">2020-10-19</td>
+            <td><a href="/lab_note/product" target="_blank">/lab_note/product</a></td>
+          </tr>
+          <tr class="last">
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>Help</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-19</td>
+            <td>2020-10-23</td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>사이트맵</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-19</td>
+            <td class="prcd-100">2020-10-21</td>
+            <td><a href="/help/sitemap" target="_blank">/help/sitemap</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>도움말</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>2020-10-21</td>
+            <td class="prcd-100">2020-09-23</td>
+            <td><a href="/help/list" target="_blank">/help/list</a></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td></td>
+            <td><a href="#" target="_blank">..</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="height: 100px">&nbsp;</div>
+    </div>
+  </body>
+</html>
