@@ -50,6 +50,33 @@ $(function(){
         e.preventDefault();
     });
 
+    // Data Js Excute
+    $('[data-js]').each(function(i, el){
+        switch ($(this).attr('data-js')){
+            case "checkEmpty" :
+                checkEmpty(this);
+                break;
+        }
+    });
+
+    function checkEmpty(el){
+        var $container = $(el);
+        var $items = $container.find('[data-check-empty="item"]');
+        var $action = $container.find('[data-check-empty="action"]');
+        $items.on('keyup', function(e){
+            isItemEmpty() ? $action.attr("disabled", true) : $action.attr("disabled", false);
+        });
+        function isItemEmpty(){
+            var result = false;
+            $items.each(function(i, el){
+                if($(this).val() == ""){
+                    result = true;
+                }
+            })
+            console.log(result);
+            return result;
+        }
+    }
 });
 
 function addNumCommas(x) {
