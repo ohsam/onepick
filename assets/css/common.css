@@ -79,7 +79,7 @@ html[xmlns] .clearfix {display: block;}
 </app-wrap>
 */
 .app-wrap {height:100%;}
-.app-header-wrap {position:fixed;width:100%;left:0;top:0;height:56px;border-bottom:1px solid #e0e0e0;background:#fff;}
+.app-header-wrap {position:fixed;width:100%;left:0;top:0;height:56px;border-bottom:1px solid #e0e0e0;background:#fff;z-index:100;}
 .app-header-wrap + .app-content-wrap {padding-top:56px;}
 .app-header-wrap + .app-content-wrap .app-section.full {min-height:calc(100vh - 56px);}
 .app-content-wrap {}
