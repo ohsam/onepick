@@ -130,6 +130,38 @@ html[xmlns] .clearfix {display: block;}
 .push-list .date {margin-top:4px;display:block;font-size:14px;font-weight:400;color:#828282;}
 .push-list .btn-delete {position:absolute;top:50%;right:-4px;margin-top:-16px;width:32px;height:32px;}
 
+/* gnb */
+[data-layer-name="gnb"] .layer-cont {display:flex;flex-direction:column;}
+[data-layer-name="gnb"] .gnb-header {margin-top:20px;}
+[data-layer-name="gnb"] .gnb-content {margin-top:20px;margin-bottom:20px;}
+[data-layer-name="gnb"] .gnb-footer {margin-top:auto;padding-bottom:20px;}
+
+.onepick-company {padding:0 10px;height:100px;line-height:100px;text-align:center;background:url('../img/bg_company.png') no-repeat center center;background-size:cover;border-radius:10px;}
+.onepick-company .name {margin-top:-6px;display:inline-block;font-size:26px;line-height:1.2;color:#fff;vertical-align:middle;}
+
+.onepick-management {}
+.onepick-management li > a {position:relative;display:block;padding:14px 38px 15px 52px;}
+.onepick-management span {font-size:18px;color:#020202;}
+.onepick-management i {position:absolute;top:8px;left:0;width:40px;height:40px;background-repeat:no-repeat;background-position:center center;background-size:40px 40px;}
+.onepick-management i.ico-my {background-image:url('../img/icon/ic_my.png');}
+.onepick-management i.ico-guide {background-image:url('../img/icon/ic_guide.png');}
+.onepick-management i.ico-notice {background-image:url('../img/icon/ic_notice.png');}
+.onepick-management i.ico-setting {background-image:url('../img/icon/ic_setting.png');}
+
+.onepick-call {display:flex;margin-left:-8px;margin-right:-8px;}
+.onepick-call a {margin-left:8px;margin-right:8px;width:50%;padding:11px 10px 9px;border:1px solid #e0e0e0;border-radius:6px;}
+.onepick-call span {margin-top:6px;display:block;font-size:12px;color:#828282;text-align:center;}
+.onepick-call i {margin:0 auto;display:block;width:20px;height:20px;background-repeat:no-repeat;background-position:center center;background-size:20px 20px;}
+.onepick-call i.ico-phone {background-image:url('../img/icon/ic_phone.png');}
+
+.onepick-info {margin-top:12px;}
+.onepick-info p {font-size:12px;line-height:18px;font-weight:400;color:#828282;}
+
+.onepick-link {margin-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;}
+.onepick-link a,
+.onepick-link span {font-size:12px;font-weight:400;color:#828282;}
+.onepick-link span {padding:0 5px;font-size:10px;}
+
 /* input */
 ::placeholder {/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #bdbdbd;
