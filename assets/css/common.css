@@ -118,6 +118,18 @@ html[xmlns] .clearfix {display: block;}
 .layer-wrap .layer:not(.full) .layer-head {}
 .layer-wrap .layer:not(.full) .layer-cont {}
 
+/* notification */
+[data-layer-name="notification"] .push-guide {margin-top:14px;font-size:16px;line-height:26px;color:#037cff;}
+[data-layer-name="notification"] .push-guide + .push-list {margin-top:10px;}
+[data-layer-name="notification"] .push-list + .button-wrap {padding-top:20px;padding-bottom:26px;}
+
+.push-list {}
+.push-list li {position:relative;border-bottom:1px solid #e0e0e0;}
+.push-list li > a {display:block;padding:16px 40px 16px 0;}
+.push-list .title {font-size:18px;line-height:27px;font-weight:500;color:#000;}
+.push-list .date {margin-top:4px;display:block;font-size:14px;font-weight:400;color:#828282;}
+.push-list .btn-delete {position:absolute;top:50%;right:-4px;margin-top:-16px;width:32px;height:32px;}
+
 /* input */
 ::placeholder {/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: #bdbdbd;
