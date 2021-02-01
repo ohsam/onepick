@@ -187,6 +187,8 @@ button[class^="lg-"][disabled] {color:#bdbdbd;border-color:#eee;background:#eee;
 .button-wrap.dialog button:nth-child(1) {width:33.3%;}
 .button-wrap.dialog button:nth-child(2) {width:66.6%;}
 .button-wrap.dialog button + button {margin-left:12px;}
+.btn-more {font-size:16px;line-height:32px;color:#828282;border:none;background-color:transparent;}
+.btn-more:after {content:"";display:inline-block;width:32px;height:32px;vertical-align:top;background:url('../img/icon/ic_more.png') no-repeat center center;background-size:32px 32px;}
 .btn-delete {width:24px;height:24px;font-size:0;color:transparent;border:none;background:url('../img/icon/icon_delete_circ.png') no-repeat center center;background-size:24px 24px;}
 .btn-hd-close {width:50px;height:50px;font-size:0;color:transparent;border:none;background:url('../img/icon/ic_close.png') no-repeat center center;background-size:50px 50px;}
 .btn-hd-back {width:50px;height:50px;font-size:0;color:transparent;border:none;background:url('../img/icon/ic_back.png') no-repeat center center;background-size:50px 50px;}
