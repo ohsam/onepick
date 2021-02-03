@@ -57,6 +57,9 @@ $(function(){
         if(!$tgLayer.hasClass('full')){
             $('[data-layer-name]').filter(':not(.full)').hide();
         }
+        var $layers = $('[data-layer-name]');
+        $layers.css('z-index', '1').filter('[data-layer-name="'+layerName+'"]').css('z-index', '100');
+        
         $tgLayer.show();
     });
     $('[data-close-layer]').on('click', function(e){
@@ -69,7 +72,7 @@ $(function(){
         }
         $tgLayer.hide();
     });
-
+    
     // Gnb
     $('[data-open-util]').on('click', function(e){
         var layerName = $(this).attr('data-open-util');
@@ -115,6 +118,20 @@ $(function(){
             return result;
         }
     }
+
+    // window Fn
+    window.openLayer = function(layerName){
+        var $tgLayer = $('[data-layer-name="'+layerName+'"]');
+        if(!$tgLayer.hasClass('full')){
+            $('[data-layer-name]').filter(':not(.full)').hide();
+        }
+        $tgLayer.show();
+    }
+    window.closeLayer = function(layerName){
+        $tgLayer = $('[data-layer-name="'+layerName+'"]');
+        $tgLayer.hide();
+    }
+
 });
 
 function addNumCommas(x) {

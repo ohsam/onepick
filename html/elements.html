@@ -398,12 +398,14 @@
 
                 <section class="app-section">
                     <fieldset>
-                        <legend>Layer</legend>
+                        <legend>Layer/Popup</legend>
                         <div class="button-wrap mt10">
                             <button class="sm-wt" type="button" data-open-layer="terms">전체 팝업</button>
-                            <button class="sm-bk" type="button" data-open-layer="alert-version-update">alert</button>
-                            <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">confirm</button>
-                            <button class="sm-bk" type="button" data-open-layer="dialog-exit-app">dialog</button>
+                            <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">앱 종료</button>
+                            <button class="sm-bk" type="button" data-open-layer="confirm-cancel-saleset">숙박판매설정취소</button>
+                            <button class="sm-bk" type="button" data-open-layer="alert-version-update">업데이트</button>
+                            <button class="sm-bk" type="button" data-open-layer="alert-prepare">준비중</button>
+                            <button class="sm-bk" type="button" data-open-layer="dialog-sample">dialog sample</button>
                         </div>
                     </fieldset>
                 </section>
@@ -433,31 +435,16 @@
     <!-- layer-wrap [s] -->
     <div class="layer-wrap">
         
-        <!-- layer-name="terms" -->
-        <div class="layer full" data-layer-name="terms">
+        <!-- layer-name="confirm-exit-app" -->
+        <div class="layer confirm" data-layer-name="confirm-exit-app">
             <div class="layer-inner">
-                <div class="layer-head"><strong class="title">layer-head</strong></div>
                 <div class="layer-cont">
-                    <p>layer-name="terms"</p>
-                    <div class="button-wrap mt10">
-                        <button class="sm-wt" type="button" data-open-layer="personal-information-policy">전체 팝업의 팝업</button>
-                        <button class="sm-bk" type="button" data-open-layer="alert-version-update">전체 팝업의 alert</button>
-                        <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">전체 팝업의 confirm</button>
-                        <button class="sm-bk" type="button" data-open-layer="dialog-exit-app">전체 팝업의 dialog</button>
-                    </div>
+                    뒤로 한 번 더 누르시거나 확인을 누르시면 앱이 종료됩니다.
                 </div>
-                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
-            </div>
-        </div>
-        
-        <!-- layer-name="personal-information-policy" -->
-        <div class="layer full" data-layer-name="personal-information-policy">
-            <div class="layer-inner">
-                <div class="layer-head"><strong class="title">layer-head</strong></div>
-                <div class="layer-cont">
-                    layer-name="personal-information-policy"
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
-                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
             </div>
         </div>
 
@@ -474,21 +461,21 @@
             </div>
         </div>
 
-        <!-- layer-name="confirm-exit-app" -->
-        <div class="layer confirm" data-layer-name="confirm-exit-app">
+        <!-- layer-name="alert-prepare" -->
+        <div class="layer alert" data-layer-name="alert-prepare">
             <div class="layer-inner">
                 <div class="layer-cont">
-                    뒤로 한 번 더 누르시거나 확인을 누르시면 앱이 종료됩니다.
+                    서비스가 준비 중입니다.<br />
+                    빠른 시일 내에 업데이트 하겠습니다. 
                 </div>
-                <div class="button-wrap dialog">
-                    <button class="md-gr" type="button" data-close-layer>취소(self)</button>
-                    <button class="md-bl" type="button" data-close-layer="confirm-exit-app">확인(닫기: 이름 지정)</button>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
             </div>
         </div>
 
-        <!-- layer-name="dialog-exit-app" -->
-        <div class="layer dialog" data-layer-name="dialog-exit-app">
+        <!-- layer-name="dialog-sample" -->
+        <div class="layer dialog" data-layer-name="dialog-sample">
             <div class="layer-inner">
                 <div class="layer-head">
                     <strong class="title">변경할 비밀번호를 입력하세요</strong>
@@ -504,6 +491,47 @@
             </div>
         </div>
 
+        <!-- layer-name="confirm-cancel-saleset" -->
+        <div class="layer confirm" data-layer-name="confirm-cancel-saleset">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    설정하신 숙박 판매 설정을 <br/>취소하시겠습니까?
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer="confirm-cancel-saleset">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="terms" -->
+        <div class="layer full" data-layer-name="terms">
+            <div class="layer-inner">
+                <div class="layer-head"><strong class="title">layer-head</strong></div>
+                <div class="layer-cont">
+                    <p>layer-name="terms"</p>
+                    <div class="button-wrap mt10">
+                        <button class="sm-wt" type="button" data-open-layer="personal-information-policy">전체 팝업의 팝업</button>
+                        <button class="sm-bk" type="button" data-open-layer="alert-version-update">전체 팝업의 alert</button>
+                        <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">전체 팝업의 confirm</button>
+                        <button class="sm-bk" type="button" data-open-layer="dialog-sample">전체 팝업의 dialog</button>
+                    </div>
+                </div>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
+            </div>
+        </div>
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer full" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong class="title">layer-head</strong></div>
+                <div class="layer-cont">
+                    layer-name="personal-information-policy"
+                </div>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
+            </div>
+        </div>
+        
     </div>
     <!-- layer-wrap [e] -->
     
