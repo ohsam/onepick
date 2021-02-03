@@ -401,6 +401,7 @@
                         <legend>Layer/Popup</legend>
                         <div class="button-wrap mt10">
                             <button class="sm-wt" type="button" data-open-layer="terms">전체 팝업</button>
+                            <button class="sm-bk" type="button" data-open-layer="popup-event">이벤트</button>
                             <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">앱 종료</button>
                             <button class="sm-bk" type="button" data-open-layer="confirm-cancel-saleset">숙박판매설정취소</button>
                             <button class="sm-bk" type="button" data-open-layer="alert-version-update">업데이트</button>
@@ -434,7 +435,22 @@
 
     <!-- layer-wrap [s] -->
     <div class="layer-wrap">
-        
+        <!-- layer-name="popup-event" -->
+        <div class="layer event" data-layer-name="popup-event">
+            <div class="layer-inner">
+                <div class="image-cont">
+                    <img src="http://ipsumimage.appspot.com/680x920,ffd700?l=Sample+Image|(1x)+340X460|(2x)+680x920">
+                </div>
+                <div class="button-wrap">
+                    <div class="input-wrap">
+                        <input class="chk_t02" type="checkbox" id="chk_01">
+                        <label for="chk_01">다시 보지 않기</label>
+                    </div>
+                    <button class="btn-close" type="button" data-close-layer>닫기</button>
+                </div>
+            </div>
+      </div>
+
         <!-- layer-name="confirm-exit-app" -->
         <div class="layer confirm" data-layer-name="confirm-exit-app">
             <div class="layer-inner">

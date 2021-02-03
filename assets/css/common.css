@@ -124,6 +124,16 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 .layer-wrap .layer:not(.full) .layer-head .title {display:block;font-size:18px;line-height:28px;font-weight:500;}
 .layer-wrap .layer:not(.full) .layer-head .desc {display:block;font-size:16px;line-height:22px;font-weight:400;color:#828282;}
 
+.layer-wrap .layer.event {}
+.layer-wrap .layer.event .layer-inner {border-radius:0;background-color:transparent;}
+.layer-wrap .layer.event .image-cont {max-height:80vh;border-radius:24px;overflow-y:scroll;background-color:#fff;}
+.layer-wrap .layer.event .image-cont img {margin:0 auto;display:block;max-width:100%;}
+.layer-wrap .layer.event .button-wrap {position:absolute;bottom:100%;left:0;width:100%;}
+.layer-wrap .layer.event .button-wrap:after {content:"";display:block;clear:both;}
+.layer-wrap .layer.event .button-wrap .input-wrap {margin:10px 0;float:left;color:#fff;}
+.layer-wrap .layer.event .button-wrap .input-wrap label {padding-left:3px;font-size:14px;}
+.layer-wrap .layer.event .button-wrap .btn-close {float:right;width:44px;height:44px;background:url('../img/icon/ic_close_popup.png') no-repeat center center;background-size:44px 44px;color:transparent;border:none;}
+
 .layer-wrap .layer.alert .layer-inner {padding:20px;}
 .layer-wrap .layer.alert .layer-inner .layer-cont {padding:40px 20px 60px;text-align:center;}
 
