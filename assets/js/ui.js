@@ -50,6 +50,36 @@ $(function(){
         e.preventDefault();
     });
 
+    // layer
+    $('[data-open-layer]').on('click', function(e){
+        var layerName = $(this).attr('data-open-layer');
+        var $tgLayer = $('[data-layer-name="'+layerName+'"]');
+        if(!$tgLayer.hasClass('full')){
+            $('[data-layer-name]').filter(':not(.full)').hide();
+        }
+        $tgLayer.show();
+    });
+    $('[data-close-layer]').on('click', function(e){
+        var layerName = $(this).attr('data-close-layer');
+        var $tgLayer;
+        if(layerName){
+            $tgLayer = $('[data-layer-name="'+layerName+'"]');
+        }else{
+            $tgLayer = $(this).closest('.layer');
+        }
+        $tgLayer.hide();
+    });
+
+    // Gnb
+    $('[data-open-util]').on('click', function(e){
+        var layerName = $(this).attr('data-open-util');
+        var $tgLayer = $('[data-layer-name="'+layerName+'"]');
+        $tgLayer.addClass('show').show(0, function(){
+            $(this).css('left', 0);
+        });
+        $('body').addClass('lock');
+    });
+
     // Data Js Excute
     $('[data-js]').each(function(i, el){
         switch ($(this).attr('data-js')){

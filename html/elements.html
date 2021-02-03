@@ -19,8 +19,8 @@
         <header class="app-header-wrap">
             <div class="app-header main"><!-- class:: main/sub/popup -->
                 <h1>페이지 타이틀</h1>
-                <button class="btn-hd-notifications" type="button">알림</button>
-                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-notifications" type="button" data-open-util="notification">알림</button>
+                <button class="btn-hd-menu" type="button" data-open-util="gnb">메뉴</button>
                 <button class="btn-hd-back" type="button">뒤로가기</button>
                 <button class="btn-hd-close" type="button">닫기</button>
             </div>
@@ -395,6 +395,19 @@
                         </div>
                     </fieldset>
                 </section>
+
+                <section class="app-section">
+                    <fieldset>
+                        <legend>Layer</legend>
+                        <div class="button-wrap mt10">
+                            <button class="sm-wt" type="button" data-open-layer="terms">전체 팝업</button>
+                            <button class="sm-bk" type="button" data-open-layer="alert-version-update">alert</button>
+                            <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">confirm</button>
+                            <button class="sm-bk" type="button" data-open-layer="dialog-exit-app">dialog</button>
+                        </div>
+                    </fieldset>
+                </section>
+
                 <!-- bottom-floating-menu [s] -->
                 <div class="bottom-floating-menu-wrap">
                     <div class="floating-menu-wrap">
@@ -425,9 +438,15 @@
             <div class="layer-inner">
                 <div class="layer-head"><strong class="title">layer-head</strong></div>
                 <div class="layer-cont">
-                    layer-name="terms"
+                    <p>layer-name="terms"</p>
+                    <div class="button-wrap mt10">
+                        <button class="sm-wt" type="button" data-open-layer="personal-information-policy">전체 팝업의 팝업</button>
+                        <button class="sm-bk" type="button" data-open-layer="alert-version-update">전체 팝업의 alert</button>
+                        <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">전체 팝업의 confirm</button>
+                        <button class="sm-bk" type="button" data-open-layer="dialog-exit-app">전체 팝업의 dialog</button>
+                    </div>
                 </div>
-                <button class="btn-layer-close"><i class="btn-hd-close"></i></button>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
             </div>
         </div>
         
@@ -438,7 +457,7 @@
                 <div class="layer-cont">
                     layer-name="personal-information-policy"
                 </div>
-                <button class="btn-layer-close"><i class="btn-hd-close"></i></button>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
             </div>
         </div>
 
@@ -450,7 +469,7 @@
                     업데이트 진행 후 원픽 서비스를 사용할 수 있습니다. 
                 </div>
                 <div class="button-wrap full">
-                    <button class="md-bl" type="button">확인</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
             </div>
         </div>
@@ -462,8 +481,8 @@
                     뒤로 한 번 더 누르시거나 확인을 누르시면 앱이 종료됩니다.
                 </div>
                 <div class="button-wrap dialog">
-                    <button class="md-gr" type="button">취소</button>
-                    <button class="md-bl" type="button">확인</button>
+                    <button class="md-gr" type="button" data-close-layer>취소(self)</button>
+                    <button class="md-bl" type="button" data-close-layer="confirm-exit-app">확인(닫기: 이름 지정)</button>
                 </div>
             </div>
         </div>
@@ -479,8 +498,8 @@
                     CONTENT
                 </div>
                 <div class="button-wrap dialog">
-                    <button class="md-gr" type="button">취소</button>
-                    <button class="md-bl" type="button">확인</button>
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
             </div>
         </div>
