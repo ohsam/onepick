@@ -66,7 +66,9 @@ html[xmlns] .clearfix {display: block;}
 .mt5 {margin-top:5px;}
 .mt10 {margin-top:10px;}
 .mt20 {margin-top:20px;}
-.mt30 {margin-top:20px;}
+.mt30 {margin-top:30px;}
+.mt40 {margin-top:40px;}
+.mt60 {margin-top:60px;}
 .al-l {text-align:left;}
 .al-c {text-align:center;}
 .al-r {text-align:right;}
@@ -128,7 +130,7 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 .layer-wrap .layer.confirm .layer-inner .layer-cont {padding:40px 20px 60px;text-align:center;}
 
 .layer-wrap .layer.dialog .layer-inner {padding:20px;}
-.layer-wrap .layer.dialog .layer-inner .layer-cont {padding:40px 0 60px;}
+.layer-wrap .layer.dialog .layer-inner .layer-cont {padding:0;}
 
 
 /* notification */
@@ -241,6 +243,7 @@ button.lg-bl {color:#fff;background:#037cff;}
 button[class^="sm-"][disabled],
 button[class^="md-"][disabled],
 button[class^="lg-"][disabled] {color:#bdbdbd;border-color:#eee;background:#eee;}
+button[class$="-wt"][disabled] {background:#fff;}
 .button-wrap.full button {width:100%;}
 .button-wrap.dialog {display:flex;}
 .button-wrap.dialog button:nth-child(1) {width:33.3%;}
