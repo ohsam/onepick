@@ -68,6 +68,8 @@ video {
 
 /* [s]: UI-2 ***********************************************************/
 .bg-gray-t1 {background-color:#f7f7f7;}
+.mb60 {margin-bottom:60px;}
+.layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 
 /* CEO_manage 내 정보 관리 */
 .my-info-top {padding:10px 20px;}
