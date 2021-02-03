@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>비밀번호 찾기 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header sub"><!-- class:: main/sub/popup -->
+                <h1>비밀번호 찾기</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class -->
+            <div class="app-content">
+                <section class="app-section full find-pw">
+                    <div class="content-box" data-js="checkEmpty">
+                        <div class="form-wrap with-button">
+                            <div class="input-wrap-text">
+                                <input type="text" data-check-empty="item" placeholder="이름">
+                            </div>
+                            <div class="input-wrap-text">
+                                <input type="text" data-check-empty="item" placeholder="아이디(사업자 번호)">
+                            </div>
+                            <div class="input-wrap-text unit mt16">
+                                <input type="number" data-check-empty="item" placeholder="연락처">
+                                <button class="sm-wt" type="button" disabled="">인증번호 요청</button>
+                            </div>
+                            <div class="input-wrap-certi unit mt30">
+                                <label for="authNumber" class="lb-title">인증번호 입력</label>
+                                <input id="authNumber" type="text" data-check-empty="item" placeholder="구글 인증번호 입력">
+                                <button class="sm-wt" type="button">재전송</button>
+                            </div>
+                            <div class="button-wrap al-r mt30">
+                                <button class="md-bk" type="button" disabled="">인증하기</button>
+                            </div>
+                        </div>
+                        <div class="button-wrap full">
+                            <button class="lg-bl" type="button" data-check-empty="action" disabled>완료</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- bottom-floating-menu [s] -->
+                <!-- <div class="bottom-floating-menu-wrap">
+                    <div class="floating-menu-wrap">
+                        floating-menu
+                    </div>
+                </div> -->
+                <!-- bottom-floating-menu [e] -->
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>

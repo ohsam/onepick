@@ -23,6 +23,30 @@
 .login .validation-message {position:absolute;width:100%;top:130px;}
 .login .validation-message span {text-align:center;}
 
+/* CEO 아이디 찾기 */
+.find-id {}
+.find-id .form-wrap {padding-top:84px;}
+
+/* CEO 아이디 확인 */
+.verification-id {}
+.verification-id .verification-info {position:relative;min-height:calc(100vh - 56px - 110px - 20px);padding-top:196px;text-align:center;}  /* 100vh - button height - button paddingTop - button paddingBottom */
+.verification-id .verification-info .text {font-size:16px;line-height:24px;}
+.verification-id .verification-info .data {margin-top:58px;display:block;font-size:40px;color:#037cff;}
+.verification-id .verification-info + .button-wrap {padding-top:110px;padding-bottom:20px;}
+.verification-id .button-wrap {position:relative;}
+.verification-id .button-wrap .text-link {position:absolute;top:30px;left:0;width:100%;text-align:center;}
+
+/* CEO 비밀번호 찾기 */
+.find-pw {}
+.find-pw .form-wrap {padding-top:30px;}
+
+/* CEO 비밀번호 변경 */
+.change-pw {}
+.change-pw .form-wrap {padding-top:50px;}
+.change-pw .form-wrap .form-head {padding-bottom:46px;}
+.change-pw .validation-message {position:relative;padding-top:20px;padding-bottom:22px;}
+.change-pw .validation-message span {position:absolute;top:20px;left:0;width:100%;text-align:center;}
+
 /* CEO_main */
 .main-reserve {background:#f6f7f7;}
 .main-reserve--top {position:relative;height:60px;padding:5px 10px;border-bottom:1px solid #eee;background:#fff;}
