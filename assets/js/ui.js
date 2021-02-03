@@ -79,6 +79,14 @@ $(function(){
         });
         $('body').addClass('lock');
     });
+    $('[data-close-util]').on('click', function(e){
+        $tgLayer = $(this).closest('.layer');
+        $tgLayer.attr('style', '').delay(400).hide(0, function(){
+            $(this).removeClass('show');
+            $('body').removeClass('lock');
+        });
+    });
+
 
     // Data Js Excute
     $('[data-js]').each(function(i, el){

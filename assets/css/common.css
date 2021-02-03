@@ -132,7 +132,7 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 
 
 /* notification */
-.layer[data-layer-name="notification"] {left:-110%;transition: left 0.33s;}
+.layer[data-layer-name="notification"] {left:-110%;transition: left 0.5s;}
 [data-layer-name="notification"] .push-guide {margin-top:14px;font-size:16px;line-height:26px;color:#037cff;}
 [data-layer-name="notification"] .push-guide + .push-list {margin-top:10px;}
 [data-layer-name="notification"] .push-list + .button-wrap {padding-top:20px;padding-bottom:26px;}
@@ -145,7 +145,7 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 .push-list .btn-delete {position:absolute;top:50%;right:-4px;margin-top:-16px;width:32px;height:32px;}
 
 /* gnb */
-.layer[data-layer-name="gnb"] {left:110%;transition: left 0.33s;}
+.layer[data-layer-name="gnb"] {left:110%;transition: left 0.5s;}
 [data-layer-name="gnb"] .layer-cont {display:flex;flex-direction:column;}
 [data-layer-name="gnb"] .gnb-header {margin-top:20px;}
 [data-layer-name="gnb"] .gnb-content {margin-top:20px;margin-bottom:20px;}
