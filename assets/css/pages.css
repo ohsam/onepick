@@ -105,12 +105,11 @@ video {
 
 
 /* modal layer - dialog | 공통 */
-.guide-text {font-size:18px;line-height:27px;letter-spacing:-1.5px;}
 .lb-title {display:block;font-size:18px;line-height:27px;}
 
-/* modal layer - dialog | 핸드폰 변경 */
-
-
+/* modal layer - dialog | 비밀번호 변경 */
+.layer[data-layer-name="dialog-pw-edit"] .input-wrap-pass:not(.dbcheck) {margin-top:62px;}
+.layer[data-layer-name="dialog-pw-edit"] .input-wrap-pass.dbcheck {margin:16px 0 119px;}
 
 
 /* [e]: UI-2 ***********************************************************/

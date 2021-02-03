@@ -36,11 +36,11 @@
                     <div class="my-info-top bg-gray-t1">
                         <div class="row">
                             <p class="text">010-****-1234</p>
-                            <button class="sm-wt" type="button" onclick="">핸드폰 변경</button>
+                            <button class="sm-wt" type="button" data-open-layer="dialog-phone-edit">핸드폰 변경</button>
                         </div>
                         <div class="row">
                             <p class="text">******</p>
-                            <button class="sm-wt" type="button" onclick="">비밀번호 변경</button>
+                            <button class="sm-wt" type="button" data-open-layer="dialog-pw-edit">비밀번호 변경</button>
                         </div>
                     </div>
 
@@ -89,25 +89,64 @@
     <!-- layer-wrap [s] -->
     <div class="layer-wrap">
         
-        <!-- layer-name="terms" -->
-        <div class="layer" data-layer-name="terms">
+        <!-- layer-name="dialog-phone-edit" -->
+        <div class="layer dialog" data-layer-name="dialog-phone-edit">
             <div class="layer-inner">
-                <div class="layer-head"><strong>layer-head</strong></div>
-                <div class="layer-cont full">
-                    layer-cont full
+                <div class="layer-head">
+                    <strong class="title">
+                        휴대폰 번호를 인증하시면 알림 정보를<br/>
+                        수신 받으실 수 있어 편리하게<br/>
+                        숙소 운영이 가능합니다.
+                    </strong>
                 </div>
-                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+                <div class="layer-cont">
+                    <div class="input-wrap-text mt40">
+                        <input id="mNumber" type="number" title="핸드폰 번호" placeholder="핸드폰 번호" value="01012341234">
+                    </div>
+                    <div class="button-wrap al-r mt10">
+                        <button class="sm-wt" type="button">인증번호 요청</button>
+                    </div>
+
+                    <label for="authNumber" class="lb-title mt30">인증번호 입력</label>
+                    <div class="input-wrap-certi mt10">
+                        <input id="authNumber" type="text" placeholder="인증번호 입력">
+                        <button class="sm-wt" type="button" disabled>재전송</button>
+                    </div>
+                    <div class="button-wrap al-r mt30 mb60">
+                        <button class="md-bk" type="button" disabled>인증하기</button>
+                    </div>
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                </div>
             </div>
         </div>
         
-        <!-- layer-name="personal-information-policy" -->
-        <div class="layer" data-layer-name="personal-information-policy">
+        <!-- layer-name="dialog-pw-edit" -->
+        <div class="layer dialog" data-layer-name="dialog-pw-edit">
             <div class="layer-inner">
-                <div class="layer-head"><strong>layer-head</strong></div>
-                <div class="layer-cont full">
-                    layer-cont full
+                <div class="layer-head">
+                    <strong class="title">변경할 비밀번호를 입력하세요</strong>
+                    <span class="desc">(영문+숫자 6자리로 입력)</span>
                 </div>
-                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+                <div class="layer-cont">
+
+                    <div class="input-wrap-pass">
+                        <input type="password" placeholder="비밀번호">
+                        <button type="button">비밀번호 표시</button>
+                    </div>
+
+                    <div class="input-wrap-pass dbcheck">
+                        <input type="password" placeholder="비밀번호">
+                        <button type="button">비밀번호 표시</button>
+                    </div>
+
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" disabled data-close-layer>확인</button>
+                </div>
             </div>
         </div>
     </div>
