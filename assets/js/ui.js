@@ -155,6 +155,67 @@ $(function(){
         }
     });
 
+    // [아코디언] QnA 목록
+    var $QItem = $('.accordion-list .item-q');
+    var $AItem = $('.accordion-list .item-a');
+
+    $QItem.each( function() {
+        $(this).on('click', function(){
+            if($(this).attr("aria-expanded") === 'true') {
+                $(this).attr("aria-expanded","false").find('span').text('열기');
+                $AItem.attr("aria-hidden","true");
+                $(this).next().attr("aria-hidden","true");
+            } else {
+                $QItem.attr("aria-expanded","false");
+                $(this).attr("aria-expanded","true").find('span').text('닫기');
+                $AItem.attr("aria-hidden","true");
+                $(this).next().attr("aria-hidden","false").show();
+            }
+        });
+    });
+
+    // 수평 목록(터치 시 중앙으로 이동)
+    var $scrollitem = $('.h-scroll-item');
+    var scrollWidth = 0;
+
+    for (var i=0; i<$scrollitem.length; i++) {
+        scrollWidth += $scrollitem.eq(i).outerWidth();
+    }
+
+    $('.h-scroll-wrapper').css('width',scrollWidth);
+    $scrollitem.click(function(){
+        var target = $(this); 
+        $scrollitem.removeClass('on')
+        target.addClass('on');
+        muCenter(target);
+    })
+
+    function muCenter(target){
+        var scrollBox = $('.h-scroll');
+        var scrollBoxItem = scrollBox.find('.h-scroll-item');
+        var scrollBoxHarf = scrollBox.width()/2;
+        var pos;
+        var listWidth = 0;
+        var targetLeft = 0;
+
+        scrollBoxItem.each(function(){ listWidth += $(this).outerWidth(); });
+        
+        for (var i=0; i<target.index(); i++) targetLeft += scrollBoxItem.eq(i).outerWidth(); // 선택요소까지 길이
+        
+        var selectTargetPos = (targetLeft + target.outerWidth()/2);
+        if (selectTargetPos <= scrollBoxHarf) { // Left
+            pos = 0;
+        }else if (listWidth - selectTargetPos <= scrollBoxHarf) { // Right
+            pos = listWidth-scrollBox.width();
+        }else {
+            pos = selectTargetPos - scrollBoxHarf; // Center
+        }
+        
+        setTimeout(function(){
+            scrollBox.animate({scrollLeft:pos}, 300);
+        }, 200);
+    }
+
     /* UI-2 [e] */
 });
 

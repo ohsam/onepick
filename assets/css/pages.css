@@ -93,6 +93,7 @@ video {
 /* [s]: UI-2 ***********************************************************/
 .bg-gray-t1 {background-color:#f7f7f7;}
 .mb60 {margin-bottom:60px;}
+.hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 
 /* CEO_manage 내 정보 관리 */
@@ -106,6 +107,23 @@ video {
 .list-ty-myinfo li {padding:16px 0;border-bottom:1px solid #e0e0e0;}
 .list-ty-myinfo .name {line-height:24px;}
 .list-ty-myinfo .biznum {margin-top:2px;font-family:'Roboto', sans-serif;font-size:22px;font-weight:700;line-height:27px;}
+
+/* CEO_manage 제휴점 관리 앱 가이드 */
+.h-scroll {overflow-x:auto;margin:0 auto;padding:0 5px;background:#f6f7f7;}
+.h-scroll-wrap {/* overflow:hidden; */font-size:0;white-space:nowrap;}
+.h-scroll-item {display:inline-block;width:auto;border:none;background:transparent;}
+.h-scroll-item .item-text {position:relative;display:block;height:56px;padding:14px 15px 15px;font-size:18px;color:#a2a2a2;white-space:nowrap;}
+.h-scroll-item.on .item-text {color:#037cff;font-weight:700;letter-spacing:0;}
+
+.qna-guide-list {padding-bottom:20px;}
+.qna-guide-list .accordion-list {padding:0 20px;}
+.qna-guide-list .item-q {position:relative;width:100%;height:56px;padding:12px 0 16px;border:none;border-bottom:1px solid #e0e0e0;background:#fff;font-size:18px;text-align:left;}
+.item-q::after {content:"";position:absolute;top:10px;right:-10px;display:block;width:40px;height:40px;}
+.item-q[aria-expanded="true"]::after {background:url(../img/icon/ic_acc_close.png) no-repeat 0 0;background-size:contain;}
+.item-q[aria-expanded="false"]::after {background:url(../img/icon/ic_acc_open.png) no-repeat 0 0;background-size:contain;}
+.qna-guide-list .item-a[aria-hidden="true"] {display:none;}
+.qna-guide-list .item-a[aria-hidden="false"] {display:block;}
+.qna-guide-list .item-a .a-content {padding:10px 14px;border:1px solid #e0e0e0;border-top:none;}
 
 
 /* CEO_manage 이용약관,개인정보 처리방침,사업자 정보 확인 */
