@@ -164,16 +164,18 @@ $(function(){
     var $AItem = $('.accordion-list .item-a');
 
     $QItem.each( function() {
+        $AItem.hide();
+        $('.accordion-list li').eq(0).find('.item-a').show();
+
         $(this).on('click', function(){
             if($(this).attr("aria-expanded") === 'true') {
+                $AItem.slideUp(400).attr("aria-hidden","true");
                 $(this).attr("aria-expanded","false").find('span').text('열기');
-                $AItem.attr("aria-hidden","true");
-                $(this).next().attr("aria-hidden","true");
             } else {
                 $QItem.attr("aria-expanded","false");
                 $(this).attr("aria-expanded","true").find('span').text('닫기');
-                $AItem.attr("aria-hidden","true");
-                $(this).next().attr("aria-hidden","false").show();
+                $AItem.hide().attr("aria-hidden","true");
+                $(this).next().slideDown(400).attr("aria-hidden","false");
             }
         });
     });

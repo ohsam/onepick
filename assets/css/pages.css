@@ -122,8 +122,6 @@ video {
 .item-q::after {content:"";position:absolute;top:10px;right:-10px;display:block;width:40px;height:40px;}
 .item-q[aria-expanded="true"]::after {background:url(../img/icon/ic_acc_close.png) no-repeat 0 0;background-size:contain;}
 .item-q[aria-expanded="false"]::after {background:url(../img/icon/ic_acc_open.png) no-repeat 0 0;background-size:contain;}
-.qna-guide-list .item-a[aria-hidden="true"] {display:none;}
-.qna-guide-list .item-a[aria-hidden="false"] {display:block;}
 .qna-guide-list .item-a .a-content {padding:10px 14px;border:1px solid #e0e0e0;border-top:none;}
 
 
