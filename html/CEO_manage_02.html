@@ -100,8 +100,9 @@
                     </strong>
                 </div>
                 <div class="layer-cont">
+
                     <div class="input-wrap-text mt40">
-                        <input id="mNumber" type="number" title="핸드폰 번호" placeholder="핸드폰 번호" value="01012341234">
+                        <input id="mNumber" type="number" title="핸드폰 번호" placeholder="핸드폰 번호" value="01012341234" data-mobile-number>
                     </div>
                     <div class="button-wrap al-r mt10">
                         <button class="sm-wt" type="button">인증번호 요청</button>
@@ -109,16 +110,17 @@
 
                     <label for="authNumber" class="lb-title mt30">인증번호 입력</label>
                     <div class="input-wrap-certi mt10">
-                        <input id="authNumber" type="text" placeholder="인증번호 입력">
+                        <input id="authNumber" type="text" placeholder="인증번호 입력" data-auth-number>
                         <button class="sm-wt" type="button" disabled>재전송</button>
                     </div>
                     <div class="button-wrap al-r mt30 mb60">
                         <button class="md-bk" type="button" disabled>인증하기</button>
                     </div>
+
                 </div>
                 <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer>취소</button>
-                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                    <button class="md-bl" type="button" data-close-layer disabled>확인</button>
                 </div>
             </div>
         </div>
