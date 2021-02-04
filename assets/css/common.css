@@ -334,8 +334,7 @@ a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 
 /* form wrap */
 .form-wrap {}
-.form-wrap.with-button {min-height:calc(100vh - 56px - 56px - 60px - 20px);}  /* 100vh - gnb height - button height - button paddingTop - button paddingBottom */
-.form-wrap.with-button + .button-wrap {padding-top:60px;padding-bottom:20px;}
+.form-wrap + .button-wrap {margin-top:auto;padding-top:60px;padding-bottom:20px;}
 
 .form-wrap .form-head {}
 .form-wrap .form-head .title {display:block;font-size:16px;line-height:26px;font-weight:500;}
