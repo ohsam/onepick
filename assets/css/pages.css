@@ -91,6 +91,7 @@ video {
 
 
 /* [s]: UI-2 ***********************************************************/
+.grp-title {font-size:20px;font-weight:700;}
 .bg-gray-t1 {background-color:#f7f7f7;}
 .mb60 {margin-bottom:60px;}
 .hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
@@ -145,6 +146,12 @@ video {
 .content-ty-notice .content-box p {margin-bottom:22px;}
 .content-ty-notice .content-box img {width:100% !important;max-width:100%;height:100% !important;}
 
+/* CEO_manage 설정 */
+.settings .input-wrap {position:relative;display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:8px 0;}
+.settings .input-wrap.top {padding-bottom:17px;border-bottom:1px solid #eee;}
+.version-info {position:fixed;bottom:0;left:0;right:0;padding: 0 20px 20px;}
+.version-info .text {display:block;height:64px;border:1px solid #e0e0e0;border-radius:6px;font-size:20px;line-height:64px;text-align:center;}
+.version-info .num {font-family:'Roboto', sans-serif;}
 
 /* modal layer - dialog | 공통 */
 .lb-title {display:block;font-size:18px;line-height:27px;}
