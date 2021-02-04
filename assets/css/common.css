@@ -245,15 +245,15 @@ input[type="number"] {width:100%;height:56px;font-size:18px;border:none;border-b
 .input-wrap label {display:inline-block;vertical-align:middle;}
 
 /* Button */
-a {display:inline-block;text-align:center;}
-a[class^="sm-"],button[class^="sm-"] {height:28px;padding:3px 8px 4px;font-size:14px;border-radius:4px;border:1px solid #000;background:#fff;}
+a {display:inline-block;}
+a[class^="sm-"],button[class^="sm-"] {height:28px;padding:3px 8px 4px;font-size:14px;border-radius:4px;border:1px solid #000;background:#fff;text-align:center;}
 a.sm-bk,button.sm-bk {border-color:#000;color:#fff;background:#000;}
 a.sm-wt,button.sm-wt {border-color:#000;color:#000;background:#fff;}
-a[class^="md-"],button[class^="md-"] {height:46px;padding:12px 30px;font-size:16px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
+a[class^="md-"],button[class^="md-"] {height:46px;padding:12px 30px;font-size:16px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;text-align:center;}
 a.md-gr,button.md-gr {color:#fff;background:#bdbdbd;}
 a.md-bl,button.md-bl {color:#fff;background:#037cff;}
 a.md-bk,button.md-bk {color:#fff;background:#000;}
-a[class^="lg-"],button[class^="lg-"] {padding:14px 40px;font-size:20px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
+a[class^="lg-"],button[class^="lg-"] {padding:14px 40px;font-size:20px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;text-align:center;}
 a.lg-bl,button.lg-bl {color:#fff;background:#037cff;}
 a[class^="sm-"][disabled],button[class^="sm-"][disabled],
 a[class^="md-"][disabled],button[class^="md-"][disabled],
