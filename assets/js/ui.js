@@ -59,7 +59,7 @@ $(function(){
         }
         var $layers = $('[data-layer-name]');
         $layers.css('z-index', '1').filter('[data-layer-name="'+layerName+'"]').css('z-index', '100');
-        
+
         $tgLayer.show();
     });
     $('[data-close-layer]').on('click', function(e){
@@ -114,7 +114,6 @@ $(function(){
                     result = true;
                 }
             })
-            console.log(result);
             return result;
         }
     }
@@ -135,25 +134,25 @@ $(function(){
     /* UI-2 [s] */
     
     // 핸드폰번호 입력 여부 -> 인증번호 버튼 활성/비활성
-    $('[data-mobile-number]').on('keyup',function(){
-        if( $(this).val().length === 0 ){
-            $(this).parent().next().children('button').prop("disabled", true);
-        } else {
-            $(this).parent().next().children('button').prop("disabled", false);
-        }
-    });
+    // $('[data-mobile-number]').on('keyup',function(){
+    //     if( $(this).val().length === 0 ){
+    //         $(this).parent().next().children('button').prop("disabled", true);
+    //     } else {
+    //         $(this).parent().next().children('button').prop("disabled", false);
+    //     }
+    // });
 
-    // 인증번호 입력 여부 -> 재전송,인증하기 버튼 활성/비활성
-    $('[data-auth-number]').on('keyup',function(){
-        if( $(this).val().length === 0 ){
-            $(this).next().prop("disabled", true);
-            $(this).parent().next().children('button').prop("disabled", true);
+    // // 인증번호 입력 여부 -> 재전송,인증하기 버튼 활성/비활성
+    // $('[data-auth-number]').on('keyup',function(){
+    //     if( $(this).val().length === 0 ){
+    //         $(this).next().prop("disabled", true);
+    //         $(this).parent().next().children('button').prop("disabled", true);
 
-        } else {
-            $(this).next().prop("disabled", false);
-            $(this).parent().next().children('button').prop("disabled", false);
-        }
-    });
+    //     } else {
+    //         $(this).next().prop("disabled", false);
+    //         $(this).parent().next().children('button').prop("disabled", false);
+    //     }
+    // });
 
     // [아코디언] QnA 목록
     var $QItem = $('.accordion-list .item-q');
