@@ -97,6 +97,10 @@ video {
 .hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 
+/* 임시 */
+.bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;padding:20px;}
+.floating-menu-wrap.full button {width:100%;}
+
 /* CEO_manage 내 정보 관리 */
 .my-info-top {padding:10px 20px;}
 .my-info-top .row {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:14px 0;}
@@ -150,6 +154,8 @@ video {
 .version-info {position:fixed;bottom:0;left:0;right:0;padding: 0 20px 20px;}
 .version-info .text {display:block;height:64px;border:1px solid #e0e0e0;border-radius:6px;font-size:20px;line-height:64px;text-align:center;}
 .version-info .num {font-family:'Roboto', sans-serif;}
+
+/* CEO_reserve 예약 취소 */
 
 /* modal layer - dialog | 공통 */
 .lb-title {display:block;font-size:18px;line-height:27px;}
