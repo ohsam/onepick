@@ -187,8 +187,8 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 [data-layer-name="gnb"] .gnb-content {margin-top:20px;margin-bottom:20px;}
 [data-layer-name="gnb"] .gnb-footer {margin-top:auto;padding-bottom:20px;}
 
-.onepick-company {padding:0 10px;height:100px;line-height:100px;text-align:center;background:url('../img/bg_company.png') no-repeat center center;background-size:cover;border-radius:10px;}
-.onepick-company .name {margin-top:-6px;display:inline-block;font-size:26px;line-height:1.2;color:#fff;vertical-align:middle;}
+.onepick-company {display:flex;padding:15px ​20p;min-height:100px;text-align:center;background:#2876ec url('../img/bg_company.png') no-repeat center center;background-size:cover;border-radius:10px;}
+.onepick-company .name {width:100%;font-size:26px;line-height:1.2;color:#fff;align-self:center;}
 
 .onepick-management {}
 .onepick-management li > a {position:relative;display:block;padding:14px 38px 15px 52px;}
