@@ -90,6 +90,11 @@ $(function(){
         });
     });
 
+    // app-header-layer
+    $('.btn-header-layer').on('click', function(e){
+        var $header = $(this).closest('.app-header-wrap');
+        $header.toggleClass("header-layer-open");
+    })
 
     // Data Js Excute
     $('[data-js]').each(function(i, el){

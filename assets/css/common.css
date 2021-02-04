@@ -82,7 +82,7 @@ html[xmlns] .clearfix {display: block;}
 </app-wrap>
 */
 .app-wrap {height:100%;}
-.app-header-wrap {position:fixed;width:100%;left:0;top:0;height:56px;border-bottom:1px solid #e0e0e0;background:#fff;z-index:100;}
+.app-header-wrap {position:fixed;width:100%;left:0;top:0;z-index:100;}
 .app-header-wrap + .app-content-wrap {padding-top:56px;}
 .app-header-wrap + .app-content-wrap .app-section.full {min-height:calc(100vh - 56px);}
 .app-content-wrap {}
@@ -90,10 +90,10 @@ html[xmlns] .clearfix {display: block;}
 .app-section {padding:0 20px;}
 .app-section.no-gutter {padding-left:0;padding-right:0;}
 body.lock {overflow:hidden;}
-body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;display:block;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;display:block;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1;}
 
 /* Header */
-.app-header {position:relative;}
+.app-header {position:relative;height:56px;border-bottom:1px solid #e0e0e0;background:#fff;}
 .app-header > h1 {width:calc(100% - 112px);padding-top:14px;margin:0 auto;text-align:center}
 .app-header > button {display:none;}
 .app-header .btn-hd-notifications,
@@ -104,6 +104,17 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 .app-header.main .btn-hd-menu {display:block;}
 .app-header.sub .btn-hd-back {display:block;}
 .app-header.popup .btn-hd-close {display:block;}
+
+/* app-header-layer */
+.app-header .btn-header-layer {position:relative;border:none;background:none;padding-right:43px;}
+.app-header .btn-header-layer:after {content:'';position:absolute;right:0px;top:-6px;display:block;width:40px;height:40px;background:url('../img/icon/ic_open_change_down.png') no-repeat center center;background-size:41px 40px;}
+.app-header-layer {display:none;position:relative;}
+.app-header-layer:before {display:none;content:'';position:absolute;left:0;top:0;width:100%;height:calc(100vh - 56px);background:rgba(0,0,0,0.5);}
+.app-header-layer .layer-box {position:relative;padding:20px;background:#fff;border-bottom-left-radius:24px;border-bottom-right-radius:24px;}
+.app-header-wrap.header-layer-open .app-header .btn-header-layer:after {background:url('../img/icon/ic_open_change_up.png') no-repeat center center;background-size:41px 40px;}
+.app-header-wrap.header-layer-open .app-header-layer,
+.app-header-wrap.header-layer-open .app-header-layer:before {display:block;}
+
 
 /* Layer */
 .layer-wrap {position:relative;z-index:101;}
