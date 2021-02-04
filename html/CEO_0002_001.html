@@ -33,29 +33,33 @@
             <!-- page class -->
             <div class="app-content">
                 <section class="app-section full find-pw">
-                    <div class="content-box" data-js="checkEmpty">
+                    <div class="content-box">
                         <div class="form-wrap with-button">
-                            <div class="input-wrap-text">
-                                <input type="text" data-check-empty="item" placeholder="이름">
+                            <div data-js="checkEmpty">
+                                <div class="input-wrap-text">
+                                    <input type="text" data-check-empty="item" placeholder="이름">
+                                </div>
+                                <div class="input-wrap-text">
+                                    <input type="text" data-check-empty="item" placeholder="아이디(사업자 번호)">
+                                </div>
+                                <div class="input-wrap-text unit mt16">
+                                    <input type="number" data-check-empty="item" placeholder="연락처">
+                                    <button class="sm-wt" type="button" data-check-empty="action" disabled="">인증번호 요청</button>
+                                </div>
                             </div>
-                            <div class="input-wrap-text">
-                                <input type="text" data-check-empty="item" placeholder="아이디(사업자 번호)">
-                            </div>
-                            <div class="input-wrap-text unit mt16">
-                                <input type="number" data-check-empty="item" placeholder="연락처">
-                                <button class="sm-wt" type="button" disabled="">인증번호 요청</button>
-                            </div>
-                            <div class="input-wrap-certi unit mt30">
-                                <label for="authNumber" class="lb-title">인증번호 입력</label>
-                                <input id="authNumber" type="text" data-check-empty="item" placeholder="구글 인증번호 입력">
-                                <button class="sm-wt" type="button">재전송</button>
-                            </div>
-                            <div class="button-wrap al-r mt30">
-                                <button class="md-bk" type="button" disabled="">인증하기</button>
+                            <div data-js="checkEmpty">
+                                <div class="input-wrap-certi unit mt30">
+                                    <label for="authNumber" class="lb-title">인증번호 입력</label>
+                                    <input id="authNumber" type="text" data-check-empty="item" placeholder="구글 인증번호 입력">
+                                    <button class="sm-wt" type="button">재전송</button>
+                                </div>
+                                <div class="button-wrap al-r mt30">
+                                    <button class="md-bk" type="button" data-check-empty="action" disabled="">인증하기</button>
+                                </div>
                             </div>
                         </div>
                         <div class="button-wrap full">
-                            <button class="lg-bl" type="button" data-check-empty="action" disabled>완료</button>
+                            <button class="lg-bl" type="button">완료</button>
                         </div>
                     </div>
                 </section>

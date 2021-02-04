@@ -245,25 +245,26 @@ input[type="number"] {width:100%;height:56px;font-size:18px;border:none;border-b
 .input-wrap label {display:inline-block;vertical-align:middle;}
 
 /* Button */
-button[class^="sm-"] {height:28px;padding:3px 8px 4px;font-size:14px;border-radius:4px;border:1px solid #000;background:#fff;}
-button.sm-bk {border-color:#000;color:#fff;background:#000;}
-button.sm-wt {border-color:#000;color:#000;background:#fff;}
-button[class^="md-"] {height:46px;padding:12px 30px;font-size:16px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
-button.md-gr {color:#fff;background:#bdbdbd;}
-button.md-bl {color:#fff;background:#037cff;}
-button.md-bk {color:#fff;background:#000;}
-button[class^="lg-"] {padding:14px 40px;font-size:20px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
-button.lg-bl {color:#fff;background:#037cff;}
-button[class^="sm-"][disabled],
-button[class^="md-"][disabled],
-button[class^="lg-"][disabled] {color:#bdbdbd;border-color:#eee;background:#eee;}
-button[class*="md-bk"][disabled] {color:#fff;border-color:#bdbdbd;background:#bdbdbd;}
-button[class$="-wt"][disabled] {background:#fff;}
-.button-wrap.full button {width:100%;}
+a {display:inline-block;text-align:center;}
+a[class^="sm-"],button[class^="sm-"] {height:28px;padding:3px 8px 4px;font-size:14px;border-radius:4px;border:1px solid #000;background:#fff;}
+a.sm-bk,button.sm-bk {border-color:#000;color:#fff;background:#000;}
+a.sm-wt,button.sm-wt {border-color:#000;color:#000;background:#fff;}
+a[class^="md-"],button[class^="md-"] {height:46px;padding:12px 30px;font-size:16px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
+a.md-gr,button.md-gr {color:#fff;background:#bdbdbd;}
+a.md-bl,button.md-bl {color:#fff;background:#037cff;}
+a.md-bk,button.md-bk {color:#fff;background:#000;}
+a[class^="lg-"],button[class^="lg-"] {padding:14px 40px;font-size:20px;color:#fff;border:none;border-radius:6px;background:#bdbdbd;}
+a.lg-bl,button.lg-bl {color:#fff;background:#037cff;}
+a[class^="sm-"][disabled],button[class^="sm-"][disabled],
+a[class^="md-"][disabled],button[class^="md-"][disabled],
+a[class^="lg-"][disabled],button[class^="lg-"][disabled] {color:#bdbdbd;border-color:#eee;background:#eee;}
+a[class*="md-bk"][disabled],button[class*="md-bk"][disabled] {color:#fff;border-color:#bdbdbd;background:#bdbdbd;}
+a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
+.button-wrap.full a,.button-wrap.full button {width:100%;}
 .button-wrap.dialog {display:flex;}
-.button-wrap.dialog button:nth-child(1) {width:33.3%;}
-.button-wrap.dialog button:nth-child(2) {width:66.6%;}
-.button-wrap.dialog button + button {margin-left:12px;}
+.button-wrap.dialog a:nth-child(1),.button-wrap.dialog button:nth-child(1) {width:33.3%;}
+.button-wrap.dialog a:nth-child(2),.button-wrap.dialog button:nth-child(2) {width:66.6%;}
+.button-wrap.dialog a + a,.button-wrap.dialog button + button {margin-left:12px;}
 .btn-more {font-size:16px;line-height:32px;color:#828282;border:none;background-color:transparent;}
 .btn-more:after {content:"";display:inline-block;width:32px;height:32px;vertical-align:top;background:url('../img/icon/ic_more.png') no-repeat center center;background-size:32px 32px;}
 .btn-delete {width:24px;height:24px;font-size:0;color:transparent;border:none;background:url('../img/icon/icon_delete_circ.png') no-repeat center center;background-size:24px 24px;}

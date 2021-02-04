@@ -42,8 +42,8 @@
                         </div>
                     </div>
                     <div class="bottom-box">
-                        <a href="./CEO_0004_001.html">아이디 찾기</a>
-                        <a href="./CEO_0002_001.html">비밀번호 찾기</a>
+                        <a href="/html/CEO_0004_001.html">아이디 찾기</a>
+                        <a href="/html/CEO_0002_001.html">비밀번호 찾기</a>
                     </div>
                 </section>
             </div>
@@ -51,10 +51,35 @@
         <!-- app-content-wrap [e] -->
     </div>
     
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+    
+        <!-- layer-name="alert-times-exceeded" -->
+        <div class="layer alert" data-layer-name="alert-times-exceeded">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    비밀번호 5회 초과로 보안유지를 위해 다시 설정 후 이용 가능합니다.
+                </div>
+                <div class="button-wrap full">
+                    <button onclick="window.open('./CEO_0003_001.html', '_self');" class="md-bl" type="button" data-close-layer>비밀번호 변경하기</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- layer-wrap [e] -->
+
     <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/lib/current-device.min.js"></script>
     <script src="../assets/js/lib/swiper.min.js"></script>
     <script src="../assets/js/ui.js"></script>
+
+    <!-- temp code for notice -->
+    <script>
+        $(window).on('load', function(e){
+            openLayer('alert-times-exceeded');
+        })
+    </script>
 </body>
 
 </html>

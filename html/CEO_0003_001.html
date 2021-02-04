@@ -33,18 +33,18 @@
             <!-- page class -->
             <div class="app-content">
                 <section class="app-section full change-pw">
-                    <div class="content-box" data-js="checkEmpty">
+                    <div class="content-box">
                         <div class="form-wrap with-button">
                             <div class="form-head">
                                 <strong class="title">변경할 비밀번호를 입력하세요</strong>
                                 <span class="desc">(영문+숫자 6자리로 입력)</span>
                             </div>
                             <div class="input-wrap-pass">
-                                <input type="password" data-check-empty="item" placeholder="비밀번호">
+                                <input type="password" placeholder="비밀번호">
                                 <button type="button">비밀번호 표시</button>
                             </div>
                             <div class="input-wrap-pass mt16">
-                                <input type="password" data-check-empty="item" placeholder="비밀번호 확인">
+                                <input type="password" placeholder="비밀번호 확인">
                                 <button type="button">비밀번호 확인 표시</button>
                             </div>
                             <div class="validation-message">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         <div class="button-wrap full">
-                            <button class="lg-bl" type="button" data-check-empty="action" data-open-layer="confirm-change-pw" disabled>완료</button>
+                            <button class="lg-bl" type="button" data-open-layer="confirm-change-pw">완료</button>
                         </div>
                     </div>
                 </section>
@@ -81,18 +81,6 @@
                 <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer>취소</button>
                     <button class="md-bl" type="button" data-close-layer>확인</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- layer-name="alert-times-exceeded" -->
-        <div class="layer alert" data-layer-name="alert-times-exceeded">
-            <div class="layer-inner">
-                <div class="layer-cont">
-                    비밀번호 5회 초과로 보안유지를 위해 다시 설정 후 이용 가능합니다.
-                </div>
-                <div class="button-wrap full">
-                    <button class="md-bl" type="button" data-close-layer>비밀번호 변경하기</button>
                 </div>
             </div>
         </div>
