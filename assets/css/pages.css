@@ -117,7 +117,7 @@ video {
 
 /* [s]: UI-2 ***********************************************************/
 .grp-title {font-size:20px;font-weight:700;}
-.bg-gray-t1 {background-color:#f7f7f7;}
+.bg-gray-t1 {background-color:#f6f7f7;}
 .mb20 {margin-bottom:20px;}
 .mb60 {margin-bottom:60px;}
 .hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
@@ -196,6 +196,9 @@ video {
 .issue-check label .input-wrap {float:right;}
 .issue-check .etc {display:block;margin:20px 0 8px;}
 .issue-check textarea {width:100%;padding:8px 16px;border-color:#eee;}
+
+/* CEO_room 객실 유형 */
+.room-types div[role="tabpanel"] {min-height:calc(100vh - 148px);}
 
 /* modal layer - dialog | 공통 */
 .lb-title {display:block;font-size:18px;line-height:27px;}
