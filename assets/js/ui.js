@@ -59,8 +59,8 @@ $(function(){
         }
         var $layers = $('[data-layer-name]');
         $layers.css('z-index', '1').filter('[data-layer-name="'+layerName+'"]').css('z-index', '100');
-
         $tgLayer.show();
+        $('body').addClass('lock');
     });
     $('[data-close-layer]').on('click', function(e){
         var layerName = $(this).attr('data-close-layer');
@@ -71,6 +71,7 @@ $(function(){
             $tgLayer = $(this).closest('.layer');
         }
         $tgLayer.hide();
+        $('body').removeClass('lock');
     });
     
     // Gnb

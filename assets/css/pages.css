@@ -33,8 +33,7 @@
 .verification-id .verification-info .text {font-size:16px;line-height:24px;}
 .verification-id .verification-info .data {margin-top:58px;display:block;font-size:40px;color:#037cff;}
 .verification-id .verification-info + .button-wrap {padding-top:110px;padding-bottom:20px;}
-.verification-id .button-wrap {position:relative;margin-top:auto;}
-.verification-id .button-wrap .text-link {position:absolute;top:30px;left:0;width:100%;text-align:center;}
+.verification-id .find-pw-link {position:relative;padding-top:190px;text-align:center;}
 
 /* CEO 비밀번호 찾기 */
 .find-pw {display:flex;flex-direction:column;}
@@ -55,7 +54,6 @@
 .main-reserve--top > button {position:absolute;right:20px;top:16px;}
 
 /* CEO app-main */
-.app-main ~ .bottom-floating-menu-wrap {padding:8px 0;background-color:#fff;box-shadow:0 -10px 10px 0 rgba(20, 0, 0, 0.1);}
 .recent-notice {background-color:#eee;}
 .recent-notice a {display:flex;padding:14px 20px;}
 .recent-notice .title {flex-grow:1;font-size:18px;line-height:28px;font-weight:500;color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
@@ -126,7 +124,7 @@ video {
 .bg-white-rd10 {background-color:#fff;border-radius:10px;}
 
 /* 임시 */
-.bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;padding:20px;}
+.bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;}
 .floating-menu-wrap.full button {width:100%;}
 
 /* CEO_manage 내 정보 관리 */

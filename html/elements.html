@@ -18,9 +18,11 @@
     <div class="app-wrap">
         <header class="app-header-wrap">
             <div class="app-header main"><!-- class:: main/sub/popup -->
-                <h1>페이지 타이틀</h1>
-                <!-- header-layer Type
-                <h1><button class="btn-header-layer" type="button">천안 엠파이어</button></h1> -->
+                <!-- normal Type
+                    <h1>페이지 타이틀</h1> -->
+                <!-- header-layer Type -->
+                <h1><button class="btn-header-layer" type="button">천안 엠파이어</button></h1>
+
                 <button class="btn-hd-notifications" type="button" data-open-util="notification">알림</button>
                 <button class="btn-hd-menu" type="button" data-open-util="gnb">메뉴</button>
                 <button class="btn-hd-back" type="button">뒤로가기</button>
@@ -35,13 +37,15 @@
                         <div class="desc">보고자하는 숙박 사업장을 선택하면 <br/>해당 숙박 사업장으로 이동합니다.</div>
                     </div>
                     <ul class="change-location--list">
-                        <li class="current"><a href="#"><span>인천 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>인천 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>부천 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>성남 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>천안 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>천안 엠파이어</span><span>체크</span></a></li>
-                        <li><a href="#"><span>천안 엠파이어</span><span>체크</span></a></li>
+                        <li class="current"><a href="#"><span class="name">인천 엠파이어</span><span class="hidden">선택됨</span></a></li>
+                        <li><a href="#"><span class="name">인천 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">부천 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">성남 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -275,8 +279,8 @@
 
         <!-- app-content-wrap [s] -->
         <main class="app-content-wrap">
-            <!-- page class -->
-            <div class="app-content">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-button">
                 <section class="app-section">
                     <fieldset>
                         <legend>input</legend>
@@ -435,8 +439,19 @@
 
                 <!-- bottom-floating-menu [s] -->
                 <div class="bottom-floating-menu-wrap">
+                    <!-- common button -->
+                    <div class="button-wrap full">
+                        <button class="lg-bl" type="button" >완료</button>
+                    </div>
+                    <!-- main(depth1) menu -->
                     <div class="floating-menu-wrap">
-                        floating-menu
+                        <div class="button-wrap-menu">
+                            <a href="#" class="btn-menu-home" role="button">홈</a>
+                            <a href="#" class="btn-menu-reserve" role="button">예약내역</a>
+                            <a href="#" class="btn-menu-rooms" role="button">객실유형</a>
+                            <a href="#" class="btn-menu-calc" role="button">정산내역</a>
+                            <a href="#" class="btn-menu-review" role="button">리뷰</a>
+                        </div>
                     </div>
                 </div>
                 <!-- bottom-floating-menu [e] -->
@@ -445,14 +460,15 @@
         </main>
         <!-- app-content-wrap [e] -->
 
-        <!-- app-footer-wrap [s] -->
-        <footer class="app-footer-wrap">
+        <!-- app-footer-wrap [s] 제작중 -->
+        <!-- <footer class="app-footer-wrap">
             <div class="app-footer">
                 app-footer
             </div>
-        </footer>
+        </footer> -->
         <!-- app-footer-wrap [e] -->
 
+        <div class="spacer s1"></div>
     </div>
 
     <!-- layer-wrap [s] -->
