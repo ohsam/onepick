@@ -136,23 +136,42 @@
                 </div>
                 <div class="layer-cont">
 
-                    <div class="input-wrap-pass">
-                        <input type="password" placeholder="비밀번호" title="변경할 비밀번호">
-                        <button type="button">비밀번호 표시</button>
-                    </div>
+                    <div class="form-wrap pw-edit">
+                        <div class="input-wrap-pass">
+                            <input type="password" placeholder="비밀번호" title="변경할 비밀번호">
+                            <button type="button">비밀번호 표시</button>
+                        </div>
 
-                    <div class="input-wrap-pass dbcheck">
-                        <input type="password" placeholder="비밀번호" title="변경할 비밀번호 재입력">
-                        <button type="button">비밀번호 표시</button>
+                        <div class="input-wrap-pass dbcheck">
+                            <input type="password" placeholder="비밀번호" title="변경할 비밀번호 재입력">
+                            <button type="button">비밀번호 표시</button>
+                        </div>
+
+                        <div class="validation-message">
+                            <span>입력 정보가 일치하지 않습니다.</span>
+                        </div>
                     </div>
 
                 </div>
                 <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer>취소</button>
-                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                    <button class="md-bl" type="button" data-close-layer data-open-layer="confirm-change-pw">확인</button>
                 </div>
             </div>
         </div>
+
+        <div class="layer confirm" data-layer-name="confirm-change-pw">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    비밀번호 변경을 완료하겠습니까?
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- layer-wrap [e] -->
     
