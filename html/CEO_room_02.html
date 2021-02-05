@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>객실 유형 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap"><!-- class:: header-layer-open -->
+            <div class="app-header main"><!-- class:: main/sub/popup -->
+                <h1>객실 유형</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class -->
+            <div class="app-content">
+                <section class="app-section full no-gutter room-types">
+
+                    <div class="main-reserve--tab">
+                        <div class="tab-container">
+                            <div role="tablist" class="tablist-ty01">
+                                <button role="tab" aria-selected="true" aria-controls="tab_content1_1" id="tab1_1">숙박</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content1_2" id="tab1_2">대실</button>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_1" aria-labelledby="tab1_1" class="bg-gray-t1 show">
+                                <!-- 숙박 결과 없음 [s] -->
+                                <div class="no-data-info al-c">
+                                    <p class="al-c">현재 등록된 객실이 없습니다.</p>
+                                    <div class="box-cs-info bg-white-rd10 al-c">
+                                        <p class="text">객실 등록은 원픽 관리자에게 문의하세요.</p>
+                                        <p class="contact mt16">
+                                            원픽 제휴점 전용 고객 센터: 1899-1303<br>
+                                            이용 시간: 오전 9시 30분 ~ 오전 3시
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 숙박 결과 없음 [e] -->
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_2" aria-labelledby="tab1_2" class="bg-gray-t1">
+                                <!-- 대실 결과 없음 [s] -->
+                                <div class="no-data-info al-c">
+                                    <p class="al-c">현재 등록된 대실이 없습니다.</p>
+                                    <div class="box-cs-info bg-white-rd10 al-c">
+                                        <p class="text">대실 등록은 원픽 관리자에게 문의하세요.</p>
+                                        <p class="contact mt16">
+                                            원픽 제휴점 전용 고객 센터: 1899-1303<br>
+                                            이용 시간: 오전 9시 30분 ~ 오전 3시
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 대실 결과 없음 [e] -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+                    <div class="floating-menu-wrap">
+                        <div class="button-wrap-menu">
+                            <a href="#" class="btn-menu-home" role="button">홈</a>
+                            <a href="#" class="btn-menu-reserve" role="button">예약내역</a>
+                            <a href="#" class="btn-menu-rooms on" role="button">객실유형</a>
+                            <a href="#" class="btn-menu-calc" role="button">정산내역</a>
+                            <a href="#" class="btn-menu-review" role="button">리뷰</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+        
+        <!-- layer-name="terms" -->
+        <div class="layer" data-layer-name="terms">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- layer-wrap [e] -->
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>

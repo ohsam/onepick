@@ -123,6 +123,7 @@ video {
 .hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 .layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
+.bg-white-rd10 {background-color:#fff;border-radius:10px;}
 
 /* 임시 */
 .bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;padding:20px;}
@@ -198,7 +199,10 @@ video {
 .issue-check textarea {width:100%;padding:8px 16px;border-color:#eee;}
 
 /* CEO_room 객실 유형 */
-.room-types div[role="tabpanel"] {min-height:calc(100vh - 148px);}
+.room-types div[role="tabpanel"] {min-height:calc(100vh - 204px);}
+.no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:29vw;} /* padding-top:120px */
+.room-types .box-cs-info {display:inline-block;padding:20px;margin-top:27.054vw;} /* margin-top:114px */
+.no-data-info .box-cs-info .contact {color:#a1a1a1;font-weight:400;}
 
 /* modal layer - dialog | 공통 */
 .lb-title {display:block;font-size:18px;line-height:27px;}
