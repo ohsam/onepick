@@ -32,36 +32,40 @@
         <main class="app-content-wrap">
             <!-- page class -->
             <div class="app-content">
-                <section class="app-section full">
-                    <p class="">예약번호 <strong>20120910320302</strong></p>
+                <section class="app-section full issue-check">
 
-                    <ul>
-                        <li>
-                            <label for="">화장실 누수 발생</label>
-                            <div class="input-wrap">
-                                <input id="" class="chk_t01" type="checkbox" checked>
-                            </div>
-                        </li>
-                        <li>
-                            <label for="">보일러 고장</label>
-                            <div class="input-wrap">
-                                <input id="" class="chk_t01" type="checkbox" checked>
-                            </div>
-                        </li>
-                        <li>
-                            <label for="">전기 공사</label>
-                            <div class="input-wrap">
-                                <input id="" class="chk_t01" type="checkbox" checked>
-                            </div>
-                        </li>
-                        <li>
-                            <label for="">기타 사유</label>
-                            <div class="input-wrap">
-                                <textarea name="" id="" cols="30" rows="3" placeholder="예약 취소 사유를 작성해주세요."></textarea>
-                            </div>
-                        </li>
-                    </ul>
+                    <p class="reserv-num mt20">예약번호 <strong class="rnum">20120910320302</strong></p>
 
+                    <div class="form-wrap">
+                        <ul>
+                            <li>
+                                <label for="issueItem01">화장실 누수 발생
+                                    <div class="input-wrap">
+                                        <input id="issueItem01" class="chk_t01" type="checkbox" checked>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="issueItem02">보일러 고장
+                                    <div class="input-wrap">
+                                        <input id="issueItem02" class="chk_t01" type="checkbox">
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="issueItem03">전기 공사
+                                    <div class="input-wrap">
+                                        <input id="issueItem03" class="chk_t01" type="checkbox">
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                        <label for="issueItem04" class="etc">기타 사유</label>
+                        <div class="input-wrap">
+                            <textarea id="issueItem04" cols="30" rows="4" placeholder="예약 취소 사유를 작성해주세요."></textarea>
+                        </div>
+                        
+                    </div>
                 </section>
                 <!-- bottom-floating-menu [s] -->
                 <div class="bottom-floating-menu-wrap">
@@ -78,38 +82,38 @@
     <div class="layer-wrap">
 
         <!-- layer-name="confirm-cancel-msg" -->
-        <div class="layer confirm" data-layer-name="confirm-cancel-msg" style="z-index: 100; display: none;">
+        <div class="layer confirm" data-layer-name="confirm-cancel-msg">
             <div class="layer-inner">
                 <div class="layer-cont">
-                    <p class="">예약번호 <strong>20120910320302</strong></p>
-                    <p>
-                        예약을 취소하시겠습니까?<br>
-                        보내기를 누르면 고객님에게<br>
-                        메세지가 전달됩니다.
-                    </p>
+                    <p class="reserv-num mt20 mb20">예약번호 <strong class="rnum">20120910320302</strong></p>
+                    예약을 취소하시겠습니까?<br>
+                    보내기를 누르면 고객님에게<br>
+                    메세지가 전달됩니다.
                 </div>
                 <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer="">취소</button>
-                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="alert-cancel-yes">보내기</button>
+                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">보내기</button>
                 </div>
             </div>
         </div>
 
-        <!-- layer-name="alert-cancel-yes" -->
-        <div class="layer alert" data-layer-name="alert-cancel-yes" style="display: none; z-index: 1;">
+        <!-- layer-name="dialog-cancel-yes" -->
+        <div class="layer dialog" data-layer-name="dialog-cancel-yes">
             <div class="layer-inner">
                 <div class="layer-head">
-                    <strong>취소 상세</strong>
+                    <div class="layer-title" role="heading">취소 상세</div>
                 </div>
                 <div class="layer-cont">
-                    <p class="">예약번호 </p>
-                    <p><strong>20120910320302</strong></p>
 
-                    <p class="">취소 일시 </p>
-                    <p><strong>2020.12.11(금요일) 17:00</strong></p>
+                    <dl class="details-info mt30">
+                        <dt>예약번호</dt>
+                        <dd class="rnum">20120910320302</dd>
+                        <dt class="mt20">취소 일시</dt>
+                        <dd>2020.12.11(금요일) 17:00</dd>
+                        <dt class="mt20">취소 사유</dt>
+                        <dd>누수로 인해 부득이하게 예약 취소를 합니다.</dd>
+                    </dl>
 
-                    <p class="">취소 사유 </p>
-                    <p><strong>누수로 인해 부득이하게 예약 취소를 합니다.</strong></p>
                 </div>
                 <div class="button-wrap full">
                     <button class="md-bl" type="button" data-close-layer="">확인</button>

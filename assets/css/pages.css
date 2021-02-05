@@ -118,9 +118,11 @@ video {
 /* [s]: UI-2 ***********************************************************/
 .grp-title {font-size:20px;font-weight:700;}
 .bg-gray-t1 {background-color:#f7f7f7;}
+.mb20 {margin-bottom:20px;}
 .mb60 {margin-bottom:60px;}
 .hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
+.layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
 
 /* 임시 */
 .bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;padding:20px;}
@@ -181,7 +183,19 @@ video {
 .version-info .num {font-family:'Roboto', sans-serif;}
 
 /* CEO_reserve 예약 취소 */
+.reserv-num, .details-info dt {font-weight:400;color:#121212;}
+.details-info {margin-bottom:83px;}
+.details-info dd {margin:4px 0 0;font-size:18px;}
+.rnum {display:inline-block;margin-left:6px;font-family:'Roboto', sans-serif;font-size:18px;font-weight:700;color:#037cff;line-height:21px;}
 
+.issue-check {margin-top:27px;}
+.issue-check li {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:15px 0 14px;border-bottom:1px solid #e0e0e0;}
+.issue-check li:first-child {margin-top:27px;}
+.issue-check label {width:100%;font-size:18px;}
+.issue-check label::after {content:'';clear:both;display:table;}
+.issue-check label .input-wrap {float:right;}
+.issue-check .etc {display:block;margin:20px 0 8px;}
+.issue-check textarea {width:100%;padding:8px 16px;border-color:#eee;}
 
 /* modal layer - dialog | 공통 */
 .lb-title {display:block;font-size:18px;line-height:27px;}
