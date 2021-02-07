@@ -54,6 +54,19 @@
 .main-reserve--top .input-wrap-select select {font-size:20px;border:none;}
 .main-reserve--top > button {position:absolute;right:20px;top:16px;}
 
+.reservation-summary {padding:16px 20px 20px 20px;white-space:nowrap;overflow-x:auto;}
+.reservation-summary .reservation-item {display:inline-block;min-width:62px;padding-left:10px;border-left:1px solid #bdbdbd;}
+.reservation-summary .reservation-item + .reservation-item {margin-left:10px;}
+.reservation-summary .reservation-item .text {display:block;padding-bottom:4px;font-size:12px;line-height:18px;font-weight:400;color:#828282;}
+.reservation-summary .reservation-item .num {font-size:26px;line-height:30px;font-weight:600;}
+.reservation-summary .reservation-item .currency {font-size:20px;font-style:normal;}
+.reservation-summary .reservation-item.empty * {color:#a1a1a1;}
+
+.reservation-list {padding:0 20px;}
+.reservation-list .reservation-card + .reservation-card {margin-top:14px;}
+.reservation-list .no-data {padding:150px 0 210px;font-size:16px;line-height:24px;text-align:center;}
+
+.reservation-card {border:1px solid #eee;border-radius:6px;background-color:#fff;}
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
 .recent-notice a {display:flex;padding:14px 20px;}
