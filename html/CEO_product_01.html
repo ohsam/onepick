@@ -12,6 +12,69 @@
 
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/pages.css">
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/js/lib/daterangepicker.min.css"/>
+    <style type="text/css">
+        .date-picker-wrapper .month-wrapper table .day.lalala {
+            background-color: orange;
+        }
+        .date-picker-wrapper.date-range-picker19 .day.first-date-selected {
+            background-color: red !important;
+        }
+        .date-picker-wrapper.date-range-picker19 .day.last-date-selected {
+            background-color: orange !important;
+        }
+
+        .date-picker-wrapper {
+            left:0 !important;
+            box-sizing: border-box;
+            padding: 0;
+            background-color:transparent;
+            box-shadow: none;
+            border: none;
+        }
+        .date-picker-wrapper .drp_top-bar {padding:0;z-index:1;}
+        .date-picker-wrapper .drp_top-bar .normal-top,
+        .date-picker-wrapper .drp_top-bar .error-top,
+        .date-picker-wrapper .drp_top-bar .default-top {display:none !important;}
+        .date-picker-wrapper .drp_top-bar .apply-btn {position:absolute;right:20px;top:10px;height:28px;
+            padding:3px 8px 4px;
+            font-size:14px;
+            background:#000;
+            border-radius:4px;
+            border:1px solid #000;}
+        .date-picker-wrapper.no-shortcuts {padding-bottom:initial;}
+        .date-picker-wrapper:before {content:'';position:fixed;left:0;display:block;
+            top:117px;
+            width:100%;
+            height:calc(100% - 117px);
+            background:rgba(0,0,0,0.5);
+        }
+        .date-picker-wrapper .month-wrapper {
+            padding: 0 16px 18px;
+            border: none;
+            border-radius: initial;
+        }
+        .date-picker-wrapper .month-wrapper table {
+            width:100%;
+            table-layout: fixed;
+        }
+        .date-picker-wrapper .month-wrapper table .day.lastMonth,
+        .date-picker-wrapper .month-wrapper table .day.nextMonth {
+            display: block;
+        }
+        .date-picker-wrapper table .caption>th:first-of-type, .date-picker-wrapper table .caption>th:last-of-type {
+            width:auto;
+        }
+        .date-picker-wrapper .month-wrapper table td, .date-picker-wrapper .month-wrapper table th {
+            height:40px;
+        }
+        .date-picker-wrapper .month-wrapper table .week-name {
+            text-transform: initial;
+        }
+        
+    </style>
 </head>
 
 <body> <!-- 고정 status:: class="is-header-fixed" -->
@@ -34,6 +97,10 @@
             <div class="app-content has-bottom-menu">
                 <section class="app-section full no-gutter main-reserve">
                     <div class="main-reserve--top">
+                        <div class="input-wrap-text">
+                            <input id="inp_date_01" type="text" placeholder="날짜">
+                        </div>
+
                         <div class="input-wrap-select">
                             <select>
                                 <option>2021.01.01</option>
@@ -320,7 +387,45 @@
     <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/lib/current-device.min.js"></script>
     <script src="../assets/js/lib/swiper.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.daterangepicker.custom.js"></script>
+
     <script src="../assets/js/ui.js"></script>
+
+    <script>
+        $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
+            "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+            "week-1": "Mon",
+            "week-2": "Tue",
+            "week-3": "Wed",
+            "week-4": "Thu",
+            "week-5": "Fri",
+            "week-6": "Sat",
+            "week-7": "Sun",
+        }
+        var configObject = {
+            language: 'ko',
+            format: 'YYYY.MM.DD',
+            separator: ' ~ ',
+            singleDate : true,
+            showShortcuts: false,
+            singleMonth: true
+        }
+        $('#inp_date_01').dateRangePicker(configObject)
+        .on('datepicker-opened datepicker-closed', function(e){
+            switch(e.type){
+                case 'datepicker-opened':
+                    $('#inp_date_01').addClass('datepicker-opened');
+                    break;
+                case 'datepicker-closed':
+                    $('#inp_date_01').removeClass('datepicker-opened');
+                    break;
+            };
+        });
+        
+    </script>
 </body>
 
 </html>
