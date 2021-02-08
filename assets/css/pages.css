@@ -252,7 +252,7 @@ video {
 .total_rmcount {color:#828282;font-family:'Roboto', sans-serif;font-size:14px;line-height:19px;}
 .total_rmcount strong {color:#000;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
 .total_rmcount + .card-box {margin-top:10px;}
-.room-wrap .card-box {position:relative;padding:8px 12px 12px;}
+.room-wrap .card-box {position:relative;padding:8px 12px 12px;border:1px solid #eee;}
 .room-wrap .card-box ~ .card-box {margin-top:14px;}
 .room-wrap .card-head.control-btn {padding-right:86px;}
 .room-wrap .card-head.control-btn .sm-wt {position:absolute;top:11px;right:10px;}
@@ -262,7 +262,7 @@ video {
 .room-wrap .card-body .price-list {display:flex;flex-direction:row;margin-top:4px;font-size:14px;}
 .room-wrap .card-body .price-item {position:relative;padding-right:18px;margin-right:18px;}
 .room-wrap .card-body .price-item:first-child:after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background-color:#e0e0e0;}
-.room-wrap .card-body .price-item .val strong {padding-left:4px;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
+.room-wrap .card-body .price-item .amount strong {padding-left:4px;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
 .room-wrap .card-body .button-wrap {display:flex;flex-direction:row;justify-content:space-between;margin-top:17px;}
 .room-wrap .card-body .button-wrap button {width:calc(50% - 4px);padding:12px 0;font-size:14px;}
 .room-wrap .card-body .button-wrap button[disabled] {border:1px solid #e7e7e7;}
@@ -277,6 +277,7 @@ video {
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
 
 /* modal layer - dialog | 공통 */
+.layer.alert .layer-cont {font-size:18px;}
 .lb-title {display:block;font-size:18px;line-height:27px;}
 
 /* modal layer - dialog | 비밀번호 변경 */
@@ -287,5 +288,7 @@ video {
 
 .layer[data-layer-name="edit-room-info"] .sub-title {padding:22px 0 16px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:700;line-height:27px;}
 .layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
+
+.layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}
 
 /* [e]: UI-2 ***********************************************************/
