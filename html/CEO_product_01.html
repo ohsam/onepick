@@ -173,6 +173,10 @@
             left: 0;
             width: calc(50% - 18px);
             background-color: #037cff;
+
+            top: 50%;
+            transform: translateY(-51%);
+            height: 36px;
         }
         .date-picker-wrapper .month-wrapper table .day.checked:not(.first-date-selected):not(.last-date-selected):after {
             content: "";
@@ -182,6 +186,10 @@
             right: 0;
             width: calc(50% - 18px);
             background-color: #037cff;
+
+            top: 50%;
+            transform: translateY(-51%);
+            height: 36px;
         }
         .date-picker-wrapper .month-wrapper table .day.first-date-selected:before {
             content: "";
@@ -191,6 +199,11 @@
             right: 0;
             width: calc(50% - 18px);
             background-color: #037cff;
+            content: "";
+    
+            top: 50%;
+            transform: translateY(-51%);
+            height: 36px;
         }
         .date-picker-wrapper .month-wrapper table .day.last-date-selected:before {
             content: "";
@@ -200,6 +213,10 @@
             left: 0;
             width: calc(50% - 18px);
             background-color: #037cff;
+
+            top: 50%;
+            transform: translateY(-51%);
+            height: 36px;
         }
 
         /* single-date */
@@ -209,6 +226,10 @@
         }
         .date-picker-wrapper.single-date .month-wrapper table .day.first-date-selected:before {
             content: none;
+        }
+
+        .main-reserve--top input[type="text"] {
+            background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;
         }
     </style>
 </head>
@@ -559,6 +580,13 @@
                     $('#inp_date_01').removeClass('datepicker-opened');
                     break;
             };
+        });
+        $('.main-reserve--top > button').on('click', function(e){
+            var today = new Date();
+            var dateStr = today.getFullYear();
+            dateStr += '.' + ((today.getMonth()+1).toString().length < 2 ? '0' : '') + (today.getMonth()+1);
+            dateStr += '.' +  (today.getDate().toString().length < 2 ? '0' : '') +  today.getDate();
+            $('#inp_date_01').val(dateStr);
         });
         
     </script>
