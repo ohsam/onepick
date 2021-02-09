@@ -61,6 +61,11 @@ $(function(){
         $layers.css('z-index', '1').filter('[data-layer-name="'+layerName+'"]').css('z-index', '100');
         $tgLayer.show();
         $('body').addClass('lock');
+
+        if($(this).attr('data-callback')){
+            var callbackName = $(this).attr('data-callback');
+            window[callbackName]($(this).attr('data-callback-param') || false);
+        }
     });
     $('[data-close-layer]').on('click', function(e){
         var layerName = $(this).attr('data-close-layer');
@@ -72,6 +77,11 @@ $(function(){
         }
         $tgLayer.hide();
         $('body').removeClass('lock');
+
+        if($(this).attr('data-callback')){
+            var callbackName = $(this).attr('data-callback');
+            window[callbackName]($(this).attr('data-callback-param') || false);
+        }
     });
     
     // Gnb
@@ -135,6 +145,12 @@ $(function(){
     window.closeLayer = function(layerName){
         $tgLayer = $('[data-layer-name="'+layerName+'"]');
         $tgLayer.hide();
+    }
+    window.triggerClick = function(id){
+        console.log("triggerClick", id);
+        if(!id) return;
+        $tg = $('#'+id);
+        $tg.trigger('click');
     }
 
     /* UI-2 [s] */
