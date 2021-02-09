@@ -159,6 +159,13 @@ video {
 .tablist-ty03 [role="tab"][aria-selected="true"] {border:1px solid #037cff;background-color:#037cff;font-size:20px;font-weight:700;color:#fff;}
 .tablist-ty03 [role="tab"]:last-child {margin-left:16px;}
 
+.card-box {position:relative;padding:8px 12px 12px;border:1px solid #eee;}
+.card-box ~ .card-box {margin-top:14px;}
+.card-box .card-head.control-btn {padding-right:86px;}
+.card-box .sm-wt {position:absolute;top:11px;right:10px;}
+.card-box .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
+.card-box .card-body .time, .card-box .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
+
 .input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
 
 .grp-title {font-size:20px;font-weight:700;}
@@ -260,12 +267,6 @@ video {
 .total_rmcount {color:#828282;font-family:'Roboto', sans-serif;font-size:14px;line-height:19px;}
 .total_rmcount strong {color:#000;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
 .total_rmcount + .card-box {margin-top:10px;}
-.room-wrap .card-box {position:relative;padding:8px 12px 12px;border:1px solid #eee;}
-.room-wrap .card-box ~ .card-box {margin-top:14px;}
-.room-wrap .card-head.control-btn {padding-right:86px;}
-.room-wrap .sm-wt {position:absolute;top:11px;right:10px;}
-.room-wrap .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
-.room-wrap .card-body .time, .room-wrap .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
 .room-wrap .card-body .time {margin-top:6px;}
 .room-wrap .card-body .price-list {display:flex;flex-direction:row;margin-top:4px;font-size:14px;}
 .room-wrap .card-body .price-item {position:relative;padding-right:18px;margin-right:18px;}
@@ -286,6 +287,7 @@ video {
 
 /* CEO_room 정산 내역 */
 .calc-info {background:#f7f7f7;}
+.calc-info .num {font-family:'Roboto', sans-serif;font-weight:700;}
 .calc-info--top {display:flex;flex-direction:row;padding:13px 20px;background:#fff;}
 .calc-info--top .input-wrap-datetime:first-child input {width:100px;}
 .calc-info--top .input-wrap-datetime + .input-wrap-datetime {margin-left:12px;}
@@ -298,7 +300,6 @@ video {
 .calc-info--list .dates {color:#037cff;font-weight:700;}
 
 .calc-info--summary {padding:20px;background:#fff;}
-.calc-info--summary .num {font-family:'Roboto', sans-serif;font-weight:700;}
 .summary-box {padding:0 30px;border-radius:20px;background-image:url(../img/summary-bg-left.png), url(../img/summary-bg-right.png);background-repeat:no-repeat;background-position:0 0, 100% 0;background-size:30px auto, 30px auto;background-color:rgba(190,190,190,0.33);-webkit-box-shadow: 2px 2px 10px 0px rgba(190,190,190,0.6);box-shadow: 2px 2px 10px 0px rgba(190,190,190,0.6);}
 .summary-box.ty01 li {background:#037cff;color:#fff;}
 .summary-box.ty01 .calc-total {padding:17px 0 14.5px;border-bottom:1px dashed rgba(255,255,255,0.4);font-size:26px;line-height:42px;}
@@ -312,6 +313,18 @@ video {
 .summary-box.ty01 .calc-items .num {margin-right:2px;}
 
 .calc-info--tab .no-data-info {height:calc(100vh - 511px);justify-content:center;padding-top:0;}
+.calc-info--tab .card--list {padding:20px;}
+.calc-info--tab .card-body .time {margin-top:4px;}
+.calc-div-wrap {display:flex;flex-direction:row;align-items:flex-end;margin-top:8px;}
+.calc-div-wrap div {width:50%;}
+.calc-div-wrap .div--left dl {display:flex;flex-direction:row;flex-wrap:wrap;font-size:12px;}
+.calc-div-wrap .div--left dt {position:relative;width:67px;padding-right:8px;margin-right:8px;letter-spacing:-0.5px;}
+.calc-div-wrap .div--left dt::after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background:#e0e0e0;}
+.calc-div-wrap .div--left dd {min-width:24px;margin-left:0;}
+.calc-div-wrap .div--right {font-size:16px;}
+.calc-div-wrap .div--right .num {margin-right:2px;color:#037cff;font-size:22px;letter-spacing:-0.5px;}
+
+.calc-info--tab .sticky-wrapper.is-sticky {z-index:1;}
 
 /* modal layer - dialog | 공통 */
 .layer.alert .layer-cont {font-size:18px;}
