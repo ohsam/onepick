@@ -158,6 +158,8 @@ video {
 .tablist-ty03 [role="tab"][aria-selected="true"] {border:1px solid #037cff;background-color:#037cff;font-size:20px;font-weight:700;color:#fff;}
 .tablist-ty03 [role="tab"]:last-child {margin-left:16px;}
 
+.input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+
 .grp-title {font-size:20px;font-weight:700;}
 .bg-gray-t1 {background-color:#f6f7f7;}
 .mb20 {margin-bottom:20px;}
@@ -244,9 +246,13 @@ video {
 
 /* CEO_room 객실 유형 */
 .room-types div[role="tabpanel"] {min-height:calc(100vh - 180px);}
-.no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:29vw;} /* padding-top:120px */
-.room-types .box-cs-info {display:inline-block;padding:20px;margin-top:27.054vw;} /* margin-top:114px */
+.no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:120px;}
+.room-types .box-cs-info {display:inline-block;padding:20px;margin-top:114px;}
 .no-data-info .box-cs-info .contact {color:#a1a1a1;font-weight:400;}
+@media all and (max-height: 740px) {
+    .no-data-info {padding-top:29vw;}
+    .room-types .box-cs-info {margin-top:27.054vw;}
+}
 
 .room-wrap {padding:10px 20px 20px;}
 .total_rmcount {color:#828282;font-family:'Roboto', sans-serif;font-size:14px;line-height:19px;}
