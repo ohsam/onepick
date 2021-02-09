@@ -316,6 +316,34 @@
                         <div class="input-wrap-number unit time mt10">
                             <input type="text" placeholder="0"><span class="unitText">시간</span>
                         </div>
+                        <!-- data-time 의 시간으로만 체크 (ex: 00:59:59 => 00시)
+                            data-time-end 설정된 시간 포함되지 않음 (ex: 08:00:00 ~ 11:00:00 => 8,9,10)
+                            선택된 날짜 시간 | 로 구분되어 input hidden name="selectedTimeSection" 에 문자열 저장됨
+                            (ex: 2021-1-28 22:10:00|2021-1-28 23:11:00|2021-1-29 00:00:00 )
+                        -->
+                        <style>
+                            .btn-timepicker {width:100%;}
+                            .timepicker-wrapper .item-wrapper {display:flex;flex-wrap:wrap;padding:4px 0;}
+                            .timepicker-wrapper .item-wrapper + .item-wrapper {margin-top:4px;}
+                            .timepicker-wrapper .item-wrapper + .item-wrapper:before {content:'Next Day';display:block;width:100%;}
+                            .timepicker-wrapper .item-wrapper > li {display:inline-block;width:25%;padding:4px;}
+                            .timepicker-wrapper .item-wrapper > li button {width:100%;height:46px;}
+                        </style>
+                        <div class="mt10" data-js="timepicker" data-timepicker-days="2">
+                            <div class="input-wrap">
+                                <input type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                            </div>
+                            <input type="hidden" name="selectedTime" value="" data-timepicker-value>
+                            <div class="timepicker-wrapper">
+                                <ul class="item-wrapper">
+                                    <li><button type="button">00시</button></li>
+                                    <li><button type="button">01시</button></li>
+                                    <li><button type="button">02시</button></li>
+                                    <li><button type="button">03시</button></li>
+                                    <li><button type="button">04시</button></li>
+                                </ul>
+                            </div>
+                        </div>
                     </fieldset>
                 </section>
                 <section class="app-section">

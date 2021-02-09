@@ -116,6 +116,9 @@ $(function(){
             case "datepicker" :
                 datepicker(this);
                 break;
+            case "timepicker" :
+                timepicker(this);
+                break;
         }
     });
 
@@ -188,6 +191,50 @@ $(function(){
             });
         }
     }
+
+    function timepicker(el){
+        console.log('timepicker');
+        var $container = $(el);
+        var $btnTimepicker = $container.find('[data-timepicker-show]');
+        var $selectedTime = $container.find('[data-timepicker-value]');
+        var $wrapper = $container.find('.timepicker-wrapper');
+        var days = parseFloat($container.attr('data-timepicker-days')) || 1;
+        var itemStr = '';
+
+        /** Flow
+         * > check hidden value (seperate ~ )
+         * > if has value ? set picker-days
+         *   └ draw time items
+         *     └ set time items 
+         *     └ set button value (if next day ? add "다음날")
+         * > if null ? set from attr picker-days
+         *   └ draw time items
+         *
+         * 다음날 처리를 어떤식으로 할지 고민해야함
+         * */
+
+        for(var i=0; i<days; i++){
+            itemStr += '<ul class="item-wrapper">';
+            for(var j=0; j<24; j++){
+                itemStr += '<li><button type="button">'+ (j < 10 ? '0'+ j : j) +'시</button></li>' 
+            }
+            itemStr += '</ul>';
+        }
+        $wrapper.html(itemStr).on('click', 'button', function(e){
+            var time = $(this).parent().index();
+            var day = $(this).closest('.item-wrapper').index();
+
+            // temp
+            console.log(e.type, day+'_'+time);
+            $selectedTime.val(day+'_'+time).trigger('change');
+        });
+
+        $selectedTime.on('change', function(e){
+            console.log(e.type, this.value);
+            $btnTimepicker.val($(this).val());
+        });
+    }
+
 
     // window Fn
     window.openLayer = function(layerName){
