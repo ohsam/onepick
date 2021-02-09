@@ -113,8 +113,12 @@ $(function(){
             case "checkEmpty" :
                 checkEmpty(this);
                 break;
+            case "datepicker" :
+                datepicker(this);
+                break;
         }
     });
+
 
     function checkEmpty(el){
         var $container = $(el);
@@ -134,6 +138,57 @@ $(function(){
         }
     }
 
+    function datepicker(el){
+        if(!$.fn.dateRangePicker) {
+            console.error('dateRangePicker has not found');
+            return;
+        }
+        var $container = $(el);
+        var $datepicker = $container.find('[data-datepicker]');
+        var isSingleDate = $datepicker.attr('data-single-date');
+        isSingleDate = isSingleDate == 'false' || isSingleDate == undefined ? false : true;
+
+        $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
+            "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+            "week-1": "Mon",
+            "week-2": "Tue",
+            "week-3": "Wed",
+            "week-4": "Thu",
+            "week-5": "Fri",
+            "week-6": "Sat",
+            "week-7": "Sun",
+        }
+        var configObject = {
+            singleDate : isSingleDate,
+            language: 'ko',
+            format: 'YYYY.MM.DD',
+            separator: ' ~ ',
+            showShortcuts: false,
+            singleMonth: true
+        }
+        $datepicker.dateRangePicker(configObject)
+        .on('datepicker-opened datepicker-closed', function(e){
+            switch(e.type){
+                case 'datepicker-opened':
+                    $datepicker.addClass('datepicker-opened');
+                    break;
+                case 'datepicker-closed':
+                    $datepicker.removeClass('datepicker-opened');
+                    break;
+            };
+        });
+        // today
+        if(isSingleDate){
+            $container.find('[data-datepicker-today]').on('click', function(e){
+                var today = new Date();
+                var dateStr = today.getFullYear();
+                dateStr += '.' + ((today.getMonth()+1).toString().length < 2 ? '0' : '') + (today.getMonth()+1);
+                dateStr += '.' +  (today.getDate().toString().length < 2 ? '0' : '') +  today.getDate();
+                $datepicker.val(dateStr);
+            });
+        }
+    }
+
     // window Fn
     window.openLayer = function(layerName){
         var $tgLayer = $('[data-layer-name="'+layerName+'"]');
@@ -147,7 +202,6 @@ $(function(){
         $tgLayer.hide();
     }
     window.triggerClick = function(id){
-        console.log("triggerClick", id);
         if(!id) return;
         $tg = $('#'+id);
         $tg.trigger('click');

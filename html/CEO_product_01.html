@@ -10,228 +10,13 @@
     <meta name="description" content="description">
     <meta name="keywords" content="keywords">
 
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/js/lib/daterangepicker.min.css"/>
+
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/pages.css">
 
-    <!-- datepicker -->
-    <link rel="stylesheet" href="../assets/js/lib/daterangepicker.min.css"/>
-    <style type="text/css">
-        .date-picker-wrapper {
-            font-family: "Noto Sans KR", "Source Sans Pro", Arial, sans-serif;
-        }
-        .date-picker-wrapper .month-wrapper table .day.lalala {
-            background-color: orange;
-        }
-        .date-picker-wrapper.date-range-picker19 .day.first-date-selected {
-            background-color: red !important;
-        }
-        .date-picker-wrapper.date-range-picker19 .day.last-date-selected {
-            background-color: orange !important;
-        }
-
-        .date-picker-wrapper {
-            left:0 !important;
-            box-sizing: border-box;
-            padding: 0;
-            background-color:transparent;
-            box-shadow: none;
-            border: none;
-        }
-        .date-picker-wrapper .drp_top-bar {padding:0;z-index:1;}
-        .date-picker-wrapper .drp_top-bar .normal-top,
-        .date-picker-wrapper .drp_top-bar .error-top,
-        .date-picker-wrapper .drp_top-bar .default-top {display:none !important;}
-        .date-picker-wrapper .drp_top-bar .apply-btn {position:absolute;right:20px;top:10px;height:28px;
-            padding:3px 8px 4px;
-            font-size:14px;
-            background:#000;
-            border-radius:4px;
-            border:1px solid #000;}
-        .date-picker-wrapper.no-shortcuts {padding-bottom:initial;}
-        .date-picker-wrapper:before {content:'';position:fixed;left:0;display:block;
-            top:117px;
-            width:100%;
-            height:calc(100% - 117px);
-            background:rgba(0,0,0,0.5);
-        }
-        .date-picker-wrapper .month-wrapper {
-            padding: 0 16px 18px;
-            border: none;
-            border-radius: initial;
-        }
-        .date-picker-wrapper .month-wrapper table {
-            width:100%;
-            table-layout: fixed;
-        }
-        .date-picker-wrapper .month-wrapper table .day {
-            margin: 0 auto;
-            width: 36px;
-            font-size: 14px;
-            line-height: 21px;
-            padding: 8px 0 7px;
-        }
-        .date-picker-wrapper .month-wrapper table div.day.lastMonth,
-        .date-picker-wrapper .month-wrapper table div.day.nextMonth {
-            display: block;
-            color: #a1a1a1;
-        }
-        .date-picker-wrapper .month-wrapper table .caption>th {
-            height: 48px;
-            line-height: 48px;
-        }
-        .date-picker-wrapper .month-wrapper table .caption>th:first-of-type,
-        .date-picker-wrapper .month-wrapper table .caption>th:last-of-type {
-            width:auto;
-        }
-        .date-picker-wrapper .month-wrapper table .caption .prev,
-        .date-picker-wrapper .month-wrapper table .caption .next {
-            position: absolute;
-            top: 5px;
-            left: 50%;
-            width: 40px;
-            height: 40px;
-            margin-left: -20px;
-            color: transparent;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: 16px 16px;
-        }
-        .date-picker-wrapper .month-wrapper table .caption .prev {
-            transform: translate(-56px, 0);
-            background-image: url(../assets/img/icon/ic_date_picker_prev.png);
-        }
-        .date-picker-wrapper .month-wrapper table .caption .prev:before {
-            content: "prev";
-        }
-        .date-picker-wrapper .month-wrapper table .caption .next {
-            transform: translate(56px, 0);
-            background-image: url(../assets/img/icon/ic_date_picker_next.png);
-        }
-        .date-picker-wrapper .month-wrapper table .caption .next:before {
-            content: "next";
-        }
-        .date-picker-wrapper .month-wrapper table .caption .prev:hover,
-        .date-picker-wrapper .month-wrapper table .caption .next:hover {
-            background-color: transparent;
-            color: transparent;
-        }
-        .date-picker-wrapper .month-wrapper table .caption .month-name {
-            font-size: 18px;
-            font-weight: 500;
-            color: #000;
-        }
-        .date-picker-wrapper .month-wrapper table .caption .month-name:after {
-            content: "";
-            position: absolute;
-            top: 48px;
-            left: 20px;
-            right: 20px;
-            height: 1px;
-            background: #cacaca;
-            opacity: 0.5;
-        }
-        .date-picker-wrapper .month-wrapper table .caption .month-name .month-element {
-            vertical-align: bottom;
-        }
-        .date-picker-wrapper .month-wrapper table td,
-        .date-picker-wrapper .month-wrapper table th {
-            height: 46px;
-        }
-        .date-picker-wrapper .month-wrapper table tbody td,
-        .date-picker-wrapper .month-wrapper table tbody th {
-            position: relative;
-        }
-        .date-picker-wrapper .month-wrapper table .week-name {
-            height: 55px;
-            line-height: 55px;
-            text-transform: initial;
-        }
-        .date-picker-wrapper .month-wrapper table .week-name th {
-            height: 55px;
-            font-size: 10px;
-            line-height: 14px;
-            font-weight: 400;
-            color: #828282;
-        }
-        .date-picker-wrapper .month-wrapper table .day.checked:not(.first-date-selected):not(.last-date-selected),
-        .date-picker-wrapper .month-wrapper table .day.first-date-selected,
-        .date-picker-wrapper .month-wrapper table .day.last-date-selected {
-            color: #fff !important;
-            background-color: #037cff !important;
-        }
-        .date-picker-wrapper .month-wrapper table .day.first-date-selected {
-            border-radius: 50% 0 0 50%;
-        }
-        .date-picker-wrapper .month-wrapper table .day.last-date-selected {
-            border-radius: 0 50% 50% 0;
-        }
-        .date-picker-wrapper .month-wrapper table .day.checked:not(.first-date-selected):not(.last-date-selected):before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            bottom: 5px;
-            left: 0;
-            width: calc(50% - 18px);
-            background-color: #037cff;
-
-            top: 50%;
-            transform: translateY(-51%);
-            height: 36px;
-        }
-        .date-picker-wrapper .month-wrapper table .day.checked:not(.first-date-selected):not(.last-date-selected):after {
-            content: "";
-            position: absolute;
-            top: 5px;
-            bottom: 5px;
-            right: 0;
-            width: calc(50% - 18px);
-            background-color: #037cff;
-
-            top: 50%;
-            transform: translateY(-51%);
-            height: 36px;
-        }
-        .date-picker-wrapper .month-wrapper table .day.first-date-selected:before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            bottom: 5px;
-            right: 0;
-            width: calc(50% - 18px);
-            background-color: #037cff;
-            content: "";
     
-            top: 50%;
-            transform: translateY(-51%);
-            height: 36px;
-        }
-        .date-picker-wrapper .month-wrapper table .day.last-date-selected:before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            bottom: 5px;
-            left: 0;
-            width: calc(50% - 18px);
-            background-color: #037cff;
-
-            top: 50%;
-            transform: translateY(-51%);
-            height: 36px;
-        }
-
-        /* single-date */
-        .date-picker-wrapper.single-date {}
-        .date-picker-wrapper.single-date .month-wrapper table .day.first-date-selected {
-            border-radius: 50% 50% 50% 50%;
-        }
-        .date-picker-wrapper.single-date .month-wrapper table .day.first-date-selected:before {
-            content: none;
-        }
-
-        .main-reserve--top input[type="text"] {
-            background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;
-        }
-    </style>
 </head>
 
 <body> <!-- 고정 status:: class="is-header-fixed" -->
@@ -253,11 +38,11 @@
             <!-- page class:: has-bottom-menu, has-bottom-button -->
             <div class="app-content has-bottom-menu">
                 <section class="app-section full no-gutter main-reserve">
-                    <div class="main-reserve--top">
+                    <div class="main-reserve--top" data-js="datepicker">
                         <div class="input-wrap-text">
-                            <input id="inp_date_01" type="text" placeholder="날짜">
+                            <input id="inp_date_01" type="text" placeholder="날짜" data-datepicker data-single-date>
                         </div>
-                        <button class="sm-bk" type="button">오늘</button>
+                        <button class="sm-bk" type="button" data-datepicker-today>오늘</button>
                     </div>
                     <div class="main-reserve--tab">
                         <div class="tab-container">
@@ -542,45 +327,6 @@
 
     <script src="../assets/js/ui.js"></script>
 
-    <script>
-        $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
-            "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
-            "week-1": "Mon",
-            "week-2": "Tue",
-            "week-3": "Wed",
-            "week-4": "Thu",
-            "week-5": "Fri",
-            "week-6": "Sat",
-            "week-7": "Sun",
-        }
-        var configObject = {
-            language: 'ko',
-            format: 'YYYY.MM.DD',
-            separator: ' ~ ',
-            singleDate : true,
-            showShortcuts: false,
-            singleMonth: true
-        }
-        $('#inp_date_01').dateRangePicker(configObject)
-        .on('datepicker-opened datepicker-closed', function(e){
-            switch(e.type){
-                case 'datepicker-opened':
-                    $('#inp_date_01').addClass('datepicker-opened');
-                    break;
-                case 'datepicker-closed':
-                    $('#inp_date_01').removeClass('datepicker-opened');
-                    break;
-            };
-        });
-        $('.main-reserve--top > button').on('click', function(e){
-            var today = new Date();
-            var dateStr = today.getFullYear();
-            dateStr += '.' + ((today.getMonth()+1).toString().length < 2 ? '0' : '') + (today.getMonth()+1);
-            dateStr += '.' +  (today.getDate().toString().length < 2 ? '0' : '') +  today.getDate();
-            $('#inp_date_01').val(dateStr);
-        });
-        
-    </script>
 </body>
 
 </html>
