@@ -263,7 +263,7 @@ video {
 .room-wrap .card-box {position:relative;padding:8px 12px 12px;border:1px solid #eee;}
 .room-wrap .card-box ~ .card-box {margin-top:14px;}
 .room-wrap .card-head.control-btn {padding-right:86px;}
-.room-wrap .card-head.control-btn .sm-wt {position:absolute;top:11px;right:10px;}
+.room-wrap .sm-wt {position:absolute;top:11px;right:10px;}
 .room-wrap .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
 .room-wrap .card-body .time, .room-wrap .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
 .room-wrap .card-body .time {margin-top:6px;}
@@ -271,11 +271,11 @@ video {
 .room-wrap .card-body .price-item {position:relative;padding-right:18px;margin-right:18px;}
 .room-wrap .card-body .price-item:first-child:after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background-color:#e0e0e0;}
 .room-wrap .card-body .price-item .amount strong {padding-left:4px;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
-.room-wrap .card-body .button-wrap {display:flex;flex-direction:row;justify-content:space-between;margin-top:17px;}
-.room-wrap .card-body .button-wrap button {width:calc(50% - 4px);padding:12px 0;font-size:14px;}
-.room-wrap .card-body .button-wrap button[disabled] {border:1px solid #e7e7e7;}
-.room-wrap .card-body .button-wrap button.ty-ln {border:2px solid #037cff;background-color:#fff;color:#037cff;}
-.room-wrap .card-body .button-wrap button.ty-ln[disabled] {border:2px solid #e7e7e7;color:#a1a1a1;font-weight:400;}
+.room-wrap .card-footer .button-wrap {display:flex;flex-direction:row;justify-content:space-between;margin-top:17px;}
+.room-wrap .card-footer .button-wrap button {width:calc(50% - 4px);padding:12px 0;font-size:14px;}
+.room-wrap .card-footer .button-wrap button[disabled] {border:1px solid #e7e7e7;}
+.room-wrap .card-footer .button-wrap button.ty-ln {border:2px solid #037cff;background-color:#fff;color:#037cff;}
+.room-wrap .card-footer .button-wrap button.ty-ln[disabled] {border:2px solid #e7e7e7;color:#a1a1a1;font-weight:400;}
 
 /* CEO_room 객실 수정 */
 .form-wrap.room-edit .row {padding:10px 0;}
