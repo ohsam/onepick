@@ -32,11 +32,11 @@
         <main class="app-content-wrap">
             <!-- page class -->
             <div class="app-content has-bottom-menu">
-                <section class="app-section no-gutter calc-info">
+                <section class="app-section full no-gutter calc-info">
 
-                    <div class="calc-info--top">
+                    <div class="calc-info--top" data-js="datepicker">
                         <div class="input-wrap-datetime one-day">
-                            <input type="text" value="하루 선택">
+                            <input id="inp_date_01" type="text" placeholder="하루 선택" data-datepicker data-single-date>
                         </div>
 
                         <div class="input-wrap-datetime">
@@ -76,7 +76,7 @@
 
                     <div class="calc-info--tab">
                         <div class="tab-container">
-                            <div role="tablist" class="tablist-ty02 calc-tab-header" data-sticky-header><!-- sticky 기능 => data-sticky-header 추가 -->
+                            <div role="tablist" class="tablist-ty02 calc-tab-header" data-sticky-header data-sticky-top="56"><!-- sticky 기능 => data-sticky-header 추가 -->
                                 <button role="tab" aria-selected="true" aria-controls="tab_content1_1" id="tab1_1">정산 완료<em>0</em>건</button>
                                 <button role="tab" aria-selected="false" aria-controls="tab_content1_2" id="tab1_2">정산 대기<em>0</em>건</button>
                             </div>
@@ -148,6 +148,14 @@
     <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/lib/current-device.min.js"></script>
     <script src="../assets/js/lib/swiper.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.daterangepicker.custom.js"></script>
+
+    <!-- sticky -->
+    <script src="../assets/js/lib/jquery.sticky.js"></script><!-- 추가 -->
+
     <script src="../assets/js/ui.js"></script>
 </body>
 

@@ -288,8 +288,9 @@ video {
 /* CEO_room 정산 내역 */
 .calc-info {background:#f7f7f7;}
 .calc-info .num {font-family:'Roboto', sans-serif;font-weight:700;}
-.calc-info--top {display:flex;flex-direction:row;padding:13px 20px;background:#fff;}
-.calc-info--top .input-wrap-datetime:first-child input {width:100px;}
+.calc-info--top {display:flex;flex-direction:row;justify-content:space-between;padding:13px 20px;background:#fff;}
+.calc-info--top .input-wrap-datetime.one-day {min-width:100px;width:30%;}
+.calc-info--top .input-wrap-datetime:not(.one-day) {width:70%;}
 .calc-info--top .input-wrap-datetime + .input-wrap-datetime {margin-left:12px;}
 .calc-info--top .input-wrap-datetime input {height:34px;border:1px solid #eaeaea;border-radius:6px;font-size:14px;letter-spacing:-0.5px;}
 
@@ -317,7 +318,7 @@ video {
 .calc-info--tab .card-body .time {margin-top:4px;}
 .calc-div-wrap {display:flex;flex-direction:row;align-items:flex-end;margin-top:8px;}
 .calc-div-wrap div {width:50%;}
-.calc-div-wrap .div--left dl {display:flex;flex-direction:row;flex-wrap:wrap;font-size:12px;}
+.calc-div-wrap .div--left dl {display:flex;flex-direction:row;flex-wrap:wrap;max-width:110px;font-size:12px;}
 .calc-div-wrap .div--left dt {position:relative;width:67px;padding-right:8px;margin-right:8px;letter-spacing:-0.5px;}
 .calc-div-wrap .div--left dt::after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background:#e0e0e0;}
 .calc-div-wrap .div--left dd {min-width:24px;margin-left:0;}

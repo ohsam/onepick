@@ -340,6 +340,12 @@ $(function(){
         }, 200);
     }
 
+    $(window).on('load', function(){
+        var $stickyTarget = $('[data-sticky-header]');
+        var $stickyPos = $stickyTarget.attr('data-sticky-top');
+        $stickyTarget.sticky({ topSpacing: parseInt($stickyPos) });
+    });
+
     /* UI-2 [e] */
 });
 
