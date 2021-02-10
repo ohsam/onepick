@@ -55,6 +55,7 @@
 .main-reserve--top > button {position:absolute;right:20px;top:16px;}
 .main-reserve--top input[type="text"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
 .main-reserve--top input[type="text"].datepicker-opened {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
+
 .reservation-summary {padding:16px 20px 20px 20px;white-space:nowrap;overflow-x:auto;}
 .reservation-summary .reservation-item {display:inline-block;min-width:62px;padding-left:10px;border-left:1px solid #bdbdbd;}
 .reservation-summary .reservation-item + .reservation-item {margin-left:10px;}
@@ -91,7 +92,6 @@
 
 .reservation-card li.deadline .room-status .type {background-color:#bdbdbd;}
 .reservation-card li.deadline .room-status .item {color:#bdbdbd;}
-.reservation-card li.deadline .room-button .sm-wt {color:#bdbdbd;border-color:#e0e0e0;}
 
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
