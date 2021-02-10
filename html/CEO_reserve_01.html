@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>예약 취소 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header sub"><!-- class:: main/sub/popup -->
+                <h1>예약 취소</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-button">
+                <section class="app-section issue-check">
+                    
+                    <p class="reserv-num pt20">예약번호 <strong class="rnum">20120910320302</strong></p>
+
+                    <div class="form-wrap">
+                        <ul>
+                            <li>
+                                <label for="issueItem01">화장실 누수 발생
+                                    <div class="input-wrap">
+                                        <input id="issueItem01" class="chk_t01" type="checkbox" checked>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="issueItem02">보일러 고장
+                                    <div class="input-wrap">
+                                        <input id="issueItem02" class="chk_t01" type="checkbox">
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="issueItem03">전기 공사
+                                    <div class="input-wrap">
+                                        <input id="issueItem03" class="chk_t01" type="checkbox">
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                        <label for="issueItem04" class="etc">기타 사유</label>
+                        <div class="input-wrap">
+                            <textarea id="issueItem04" cols="30" rows="4" placeholder="예약 취소 사유를 작성해주세요."></textarea>
+                        </div>
+                        
+                    </div>
+                </section>
+                
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+                    <!-- common button -->
+                    <div class="button-wrap full">
+                        <button class="lg-bl" type="button" data-open-layer="confirm-cancel-msg">예약 취소 하기</button>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <div class="layer-wrap">
+
+        <!-- layer-name="confirm-cancel-msg" -->
+        <div class="layer confirm" data-layer-name="confirm-cancel-msg">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    <p class="reserv-num mt20 mb20">예약번호 <strong class="rnum">20120910320302</strong></p>
+                    예약을 취소하시겠습니까?<br>
+                    보내기를 누르면 고객님에게<br>
+                    메세지가 전달됩니다.
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">보내기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="dialog-cancel-yes" -->
+        <div class="layer dialog" data-layer-name="dialog-cancel-yes">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <div class="layer-title" role="heading">취소 상세</div>
+                </div>
+                <div class="layer-cont">
+
+                    <dl class="details-info mt30">
+                        <dt>예약번호</dt>
+                        <dd class="rnum">20120910320302</dd>
+                        <dt class="mt20">취소 일시</dt>
+                        <dd>2020.12.11(금요일) 17:00</dd>
+                        <dt class="mt20">취소 사유</dt>
+                        <dd>누수로 인해 부득이하게 예약 취소를 합니다.</dd>
+                    </dl>
+
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>예약 내역 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/js/lib/daterangepicker.min.css"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+
+    
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header main"><!-- class:: main/sub/popup -->
+                <h1>예약 내역</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-menu">
+                <section class="app-section full no-gutter main-reserve">
+                    <div class="main-reserve--top" data-js="datepicker">
+                        <div class="input-wrap-text">
+                            <input id="inp_date_01" type="text" placeholder="날짜" data-datepicker data-single-date>
+                        </div>
+                        <button class="sm-bk" type="button" data-datepicker-today>오늘</button>
+                    </div>
+                    <div class="main-reserve--tab">
+                        <div class="tab-container">
+                            <div role="tablist" class="tablist-ty01">
+                                <button role="tab" aria-selected="true" aria-controls="tab_content1_1" id="tab1_1">숙박</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content1_2" id="tab1_2">대실</button>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_1" aria-labelledby="tab1_1" class="show">
+                                <div class="reservation-summary">
+                                    <div class="reservation-item">
+                                        <strong class="text">총 예약</strong>
+                                        <div class="count">
+                                            <span class="num">38</span>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-item">
+                                        <strong class="text">총 잔여</strong>
+                                        <div class="count">
+                                            <span class="num">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-item">
+                                        <strong class="text">총 판매금액</strong>
+                                        <div class="amount">
+                                            <span class="num">340,000</span><em class="currency">원</em>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reservation-list">
+                                    <ul class="reservation-card">
+                                        <li>
+                                            <div class="room-info">
+                                                <a href="#">
+                                                    <strong class="name">스탠다드 A</strong>
+                                                    <p class="time">대실 오픈 마감 : 00시 ~ 00시</p>
+                                                </a>
+                                            </div>
+                                            <div class="room-status">
+                                                <strong class="type">판매</strong>
+                                                <div class="item">
+                                                    <span class="text">예약</span>
+                                                    <div class="count">
+                                                        <span class="num">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">잔여</span>
+                                                    <div class="count">
+                                                        <span class="num">8</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-price">
+                                                <div class="item">
+                                                    <span class="text">정상가</span>
+                                                    <div class="amount">
+                                                        <span class="num">50,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">판매가</span>
+                                                    <div class="amount">
+                                                        <span class="num">35,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-button button-wrap">
+                                                <a href="#" class="sm-wt" type="button">판매설정</a>
+                                            </div>
+                                        </li>
+                                        <li class="deadline">
+                                            <div class="room-info">
+                                                <a href="#">
+                                                    <strong class="name">스탠다드 A</strong>
+                                                    <p class="time">대실 오픈 마감 : 00시 ~ 00시</p>
+                                                </a>
+                                            </div>
+                                            <div class="room-status">
+                                                <strong class="type">판매</strong>
+                                                <div class="item">
+                                                    <span class="text">예약</span>
+                                                    <div class="count">
+                                                        <span class="num">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">잔여</span>
+                                                    <div class="count">
+                                                        <span class="num">8</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-price">
+                                                <div class="item">
+                                                    <span class="text">정상가</span>
+                                                    <div class="amount">
+                                                        <span class="num">50,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">판매가</span>
+                                                    <div class="amount">
+                                                        <span class="num">35,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-button button-wrap">
+                                                <a href="#" class="sm-wt" type="button">판매설정</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="room-info">
+                                                <a href="#">
+                                                    <strong class="name">스탠다드 A</strong>
+                                                    <p class="time">대실 오픈 마감 : 00시 ~ 00시</p>
+                                                </a>
+                                            </div>
+                                            <div class="room-status">
+                                                <strong class="type">판매</strong>
+                                                <div class="item">
+                                                    <span class="text">예약</span>
+                                                    <div class="count">
+                                                        <span class="num">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">잔여</span>
+                                                    <div class="count">
+                                                        <span class="num">8</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-price">
+                                                <div class="item">
+                                                    <span class="text">정상가</span>
+                                                    <div class="amount">
+                                                        <span class="num">50,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">판매가</span>
+                                                    <div class="amount">
+                                                        <span class="num">35,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-button button-wrap">
+                                                <a href="#" class="sm-wt" type="button">판매설정</a>
+                                            </div>
+                                        </li>
+                                        <li class="deadline">
+                                            <div class="room-info">
+                                                <a href="#">
+                                                    <strong class="name">스탠다드 A</strong>
+                                                    <p class="time">대실 오픈 마감 : 00시 ~ 00시</p>
+                                                </a>
+                                            </div>
+                                            <div class="room-status">
+                                                <strong class="type">판매</strong>
+                                                <div class="item">
+                                                    <span class="text">예약</span>
+                                                    <div class="count">
+                                                        <span class="num">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">잔여</span>
+                                                    <div class="count">
+                                                        <span class="num">8</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-price">
+                                                <div class="item">
+                                                    <span class="text">정상가</span>
+                                                    <div class="amount">
+                                                        <span class="num">50,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <span class="text">판매가</span>
+                                                    <div class="amount">
+                                                        <span class="num">35,000</span><em class="currency">원</em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="room-button button-wrap">
+                                                <a href="#" class="sm-wt" type="button">판매설정</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_2" aria-labelledby="tab1_2">
+                                <div class="reservation-summary">
+                                    <div class="reservation-item empty">
+                                        <strong class="text">총 예약</strong>
+                                        <div class="count">
+                                            <span class="num">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-item empty">
+                                        <strong class="text">총 잔여</strong>
+                                        <div class="count">
+                                            <span class="num">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="reservation-item empty">
+                                        <strong class="text">총 판매금액</strong>
+                                        <div class="amount">
+                                            <span class="num">0</span><em class="currency">원</em>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reservation-list">
+                                    <p class="no-data">예약 내역이 존재하지 않습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </section>
+
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+
+                    <!-- main(depth1) menu -->
+                    <div class="floating-menu-wrap">
+                        <div class="button-wrap-menu">
+                            <a href="#" class="btn-menu-home on" role="button">홈</a>
+                            <a href="#" class="btn-menu-reserve" role="button">예약내역</a>
+                            <a href="#" class="btn-menu-rooms" role="button">객실유형</a>
+                            <a href="#" class="btn-menu-calc" role="button">정산내역</a>
+                            <a href="#" class="btn-menu-review" role="button">리뷰</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+        
+        <!-- layer-name="terms" -->
+        <div class="layer" data-layer-name="terms">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- layer-wrap [e] -->
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.daterangepicker.custom.js"></script>
+
+    <script src="../assets/js/ui.js"></script>
+
+</body>
+
+</html>

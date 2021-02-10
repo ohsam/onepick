@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>메인 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <header class="app-header-wrap">
+            <div class="app-header main"><!-- class:: main/sub/popup -->
+                <!-- normal Type
+                    <h1>페이지 타이틀</h1> -->
+                <!-- header-layer Type -->
+                <h1><button class="btn-header-layer" type="button">천안 엠파이어</button></h1>
+
+                <button class="btn-hd-notifications" type="button" data-open-util="notification">알림</button>
+                <button class="btn-hd-menu" type="button" data-open-util="gnb">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+
+            <!-- 숙박장 변경 -->
+            <div class="app-header-layer">
+                <div class="layer-box change-location">
+                    <div class="change-location--header">
+                        <p class="title">사장님 숙박 사업장</p>
+                        <div class="desc">보고자하는 숙박 사업장을 선택하면 <br/>해당 숙박 사업장으로 이동합니다.</div>
+                    </div>
+                    <ul class="change-location--list">
+                        <li class="current"><a href="#"><span class="name">인천 엠파이어</span><span class="hidden">선택됨</span></a></li>
+                        <li><a href="#"><span class="name">인천 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">부천 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">성남 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                        <li><a href="#"><span class="name">천안 엠파이어</span><span class="hidden">선택되지 않음</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layer-wrap">
+                <!-- layer-name="notification" -->
+                <div class="layer full" data-layer-name="notification">
+                    <div class="layer-inner">
+                        <div class="layer-head"><strong class="title">알림</strong></div>
+                        <div class="layer-cont">
+                            <p class="push-guide">알림은 최근 3개월 이내까지만 제공됩니다.</p>
+                            <div class="push-list">
+                                <ul>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">상품예약을 확인해주세요.</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">앱이 업데이트 되었습니다.</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem ex quibusdam porro repellat inventore et eaque consequatur obcaecati tenetur veniam culpa eum eos deserunt error, aspernatur commodi ut ullam sint.</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                    <li>
+                                        <a href="#none">
+                                            <strong class="title">메시지</strong>
+                                            <span class="date">2019.05.05 09:00</span>
+                                        </a>
+                                        <button class="btn-delete" type="button">삭제</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button-wrap full">
+                                <button type="button" class="btn-more">더보기</button>
+                            </div>
+                        </div>
+                        <button class="btn-layer-close" data-close-util><i class="btn-hd-close"></i></button>
+                    </div>
+                </div>
+
+                <!-- layer-name="gnb" -->
+                <div class="layer full" data-layer-name="gnb">
+                    <div class="layer-inner">
+                        <div class="layer-head"><strong class="title">제휴점 관리 메뉴</strong></div>
+                        <div class="layer-cont">
+                            <div class="gnb-header">
+                                <div class="onepick-company">
+                                    <strong class="name">천안 엠파이어</strong>
+                                </div>
+                            </div>
+                            <div class="gnb-content">
+                                <ul class="onepick-management">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ico-my"></i>
+                                            <span>내 정보 관리 (아이디 추가, 변경)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ico-guide"></i>
+                                            <span>제휴점 관리 앱 가이드</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ico-notice"></i>
+                                            <span>공지사항</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ico-setting"></i>
+                                            <span>설정</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb-footer">
+                                <div class="onepick-call">
+                                    <a href="">
+                                        <i class="ico-phone"></i>
+                                        <span>원픽 남부 지사 배소운</span>
+                                    </a>
+                                    <a href="">
+                                        <i class="ico-phone"></i>
+                                        <span>제휴 고객 센터</span>
+                                    </a>
+                                </div>
+                                <div class="onepick-info">
+                                    <p>원픽 제휴점 전용 고객 센터 : 1899-1303<br />이용시간 : 오전 9시30분 ~ 오전 3시</p>
+                                </div>
+                                <div class="onepick-link">
+                                    <a href="">이용약관</a>
+                                    <span>|</span>
+                                    <a href="">개인정보 처리방침</a>
+                                    <span>|</span>
+                                    <a href="">사업자 정보확인</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn-layer-close" data-close-util><i class="btn-hd-close"></i></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-button">
+                <section class="app-section">
+                    <fieldset>
+                        <legend>input</legend>
+                        <div class="input-wrap-text">
+                            <input type="text" placeholder="이름">
+                        </div>
+                        <div class="input-wrap-pass">
+                            <input type="password" placeholder="비밀번호">
+                            <button type="button">비밀번호 표시</button>
+                        </div>
+                        <div class="input-wrap-certi mt10">
+                            <input type="text" placeholder="구글 인증번호 입력">
+                            <button type="button">버튼이름</button>
+                        </div>
+                        <div class="input-wrap-select mt10">
+                            <select>
+                                <option>14:00 ~ 다음날 11시</option>
+                                <option>14:00 ~ 다음날 11시</option>
+                                <option>14:00 ~ 다음날 11시</option>
+                                <option>14:00 ~ 다음날 11시</option>
+                            </select>
+                        </div>
+                        <div class="input-wrap-number counter mt10">
+                            <input type="number" value="0" data-minimum="0" data-maximum="100">
+                            <button type="button" class="minus" data-amount="-1">-</button>
+                            <button type="button" class="plus" data-amount="1">+</button>
+                        </div>
+                        <div class="input-wrap-number unit mt10">
+                            <input type="text" placeholder="0"><span class="unitText">원</span>
+                            <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
+                            <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
+                        </div>
+                        <div class="input-wrap-number unit time mt10">
+                            <input type="text" placeholder="0"><span class="unitText">시간</span>
+                        </div>
+                        
+                        <style>
+                            .btn-timepicker {width:100%;}
+                            .timepicker-wrapper .item-wrapper {display:flex;flex-wrap:wrap;padding:4px 0;}
+                            .timepicker-wrapper .item-wrapper + .item-wrapper {margin-top:4px;}
+                            .timepicker-wrapper .item-wrapper + .item-wrapper:before {content:'Next Day';display:block;width:100%;}
+                            .timepicker-wrapper .item-wrapper > li {display:inline-block;width:25%;padding:4px;}
+                            .timepicker-wrapper .item-wrapper > li button {width:100%;height:46px;}
+                        </style>
+                        <div class="mt10" data-js="timepicker" data-timepicker-days="2">
+                            <div class="input-wrap">
+                                <input type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                            </div>
+                            <input type="hidden" name="selectedTime" value="" data-timepicker-value>
+                            <div class="timepicker-wrapper">
+                                <ul class="item-wrapper">
+                                    <li><button type="button">00시</button></li>
+                                    <li><button type="button">01시</button></li>
+                                    <li><button type="button">02시</button></li>
+                                    <li><button type="button">03시</button></li>
+                                    <li><button type="button">04시</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <section class="app-section">
+                    <fieldset>
+                        <legend>Check/Radio</legend>
+                        <div class="input-wrap">
+                            <input class="chk_t01" type="checkbox" checked>
+                            <input class="chk_t01" type="checkbox" disabled>
+                        </div>
+                        <div class="input-wrap mt10">
+                            <input class="chk_t02" type="checkbox" checked>
+                            <input class="chk_t02" type="checkbox" disabled>
+                        </div>
+                        <div class="input-wrap mt10">
+                            <input class="chk_t03" type="checkbox" checked>
+                            <input class="chk_t03" type="checkbox" disabled>
+                        </div>
+                        <div class="input-wrap-radio mt10">
+                            <input class="rd_t01" type="radio" name="rd01" id="rd01_01">
+                            <input class="rd_t01" type="radio" name="rd01" id="rd01_02">
+                        </div>
+                    </fieldset>
+                </section>
+                <section class="app-section">
+                    <fieldset>
+                        <legend>button</legend>
+                        <div class="button-wrap">
+                            <button class="btn-delete" type="button">삭제</button>
+                            <button class="btn-hd-close" type="button">닫기</button>
+                            <button class="btn-hd-back" type="button">뒤로가기</button>
+                            <button class="btn-hd-notifications" type="button">알림</button>
+                            <button class="btn-hd-menu" type="button">메뉴</button>
+                        </div>
+                        <div class="button-wrap-menu">
+                            <a href="#" class="btn-menu-home" role="button">홈</a>
+                            <a href="#" class="btn-menu-reserve" role="button">예약내역</a>
+                            <a href="#" class="btn-menu-rooms" role="button">객실유형</a>
+                            <a href="#" class="btn-menu-calc" role="button">정산내역</a>
+                            <a href="#" class="btn-menu-review" role="button">리뷰</a>
+                        </div>
+                        <div class="button-wrap mt10">
+                            <button class="sm-wt" type="button">버튼이름</button>
+                            <button class="sm-bk" type="button">버튼이름</button>
+                        </div>
+                        <div class="button-wrap full mt10">
+                            <button type="button" class="btn-more">더보기</button>
+                        </div>
+                        <div class="button-wrap full mt10">
+                            <button class="md-bl" type="button">확인</button>
+                        </div>
+                        <div class="button-wrap dialog mt10">
+                            <button class="md-gr" type="button">취소</button>
+                            <button class="md-bl" type="button">확인</button>
+                        </div>
+                        <div class="button-wrap mt10">
+                            <button class="md-bk" type="button">인증하기</button>
+                        </div>
+                        <div class="button-wrap full mt10">
+                            <button class="lg-bl" type="button">확인</button>
+                        </div>
+                        <div class="button-wrap full mt10">
+                            <button class="lg-bl" type="button" disabled>완료</button>
+                        </div>
+                    </fieldset>
+                </section>
+                <section class="app-section">
+                    <fieldset>
+                        <legend>Tab</legend>
+                        <div class="tab-container">
+                            <div role="tablist" class="tablist-ty01">
+                                <button role="tab" aria-selected="true" aria-controls="tab_content1_1" id="tab1_1">Nils Frahm</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content1_2" id="tab1_2">Agnes Obel</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content1_3" id="tab1_3">Joke</button>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_1" aria-labelledby="tab1_1" class="show">
+                                <p class="spacer s2">#tab_content1_1</p>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_2" aria-labelledby="tab1_2">
+                                <p class="spacer s1">#tab_content1_2</p>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content1_3" aria-labelledby="tab1_3">
+                                <p>#tab_content1_3</p>
+                            </div>
+                        </div>
+                        <div class="tab-container mt10">
+                            <div role="tablist" class="tablist-ty02">
+                                <button role="tab" aria-selected="true" aria-controls="tab_content2_1" id="tab2_1">정산 완료<em>12</em>건</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content2_2" id="tab2_2">정산 대기<em>22</em>건</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content2_3" id="tab2_3">정산 취소<em>32</em>건</button>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content2_1" aria-labelledby="tab2_1" class="show">
+                                <p class="spacer s2">#tab_content2_1</p>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content2_2" aria-labelledby="tab2_2">
+                                <p class="spacer s1">#tab_content2_2</p>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content2_3" aria-labelledby="tab2_3">
+                                <p>#tab_content2_3</p>
+                            </div>
+                        </div>
+                        <div class="tab-container mt30">
+                            <div role="tablist" class="tablist-ty03">
+                                <button role="tab" aria-selected="true" aria-controls="tab_content3_1" id="tab3_1">숙박</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content3_2" id="tab3_2">대실</button>
+                            </div>
+                            <!-- 숙박 [s] -->
+                            <div tabindex="0" role="tabpanel" id="tab_content3_1" aria-labelledby="tab3_1" class="show">
+                                <p class="spacer s2">#tab_content3_1</p>
+                            </div>
+                            <!-- 숙박 [e] -->
+    
+                            <!-- 대실 [s] -->
+                            <div tabindex="0" role="tabpanel" id="tab_content3_2" aria-labelledby="tab3_2">
+                                <p class="spacer s1">#tab_content3_2</p>
+                            </div>
+                            <!-- 대실 [e] -->
+                        </div>
+                    </fieldset>
+                </section>
+
+                <section class="app-section">
+                    <fieldset>
+                        <legend>Layer/Popup</legend>
+                        <div class="button-wrap mt10">
+                            <button class="sm-wt" type="button" data-open-layer="terms">전체 팝업</button>
+                            <button class="sm-bk" type="button" data-open-layer="popup-event">이벤트</button>
+                            <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">앱 종료</button>
+                            <button class="sm-bk" type="button" data-open-layer="confirm-cancel-saleset">숙박판매설정취소</button>
+                            <button class="sm-bk" type="button" data-open-layer="alert-version-update">업데이트</button>
+                            <button class="sm-bk" type="button" data-open-layer="alert-prepare">준비중</button>
+                            <button class="sm-bk" type="button" data-open-layer="dialog-sample">dialog sample</button>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+                    <!-- common button -->
+                    <div class="button-wrap full">
+                        <button class="lg-bl" type="button" >완료</button>
+                    </div>
+                    <!-- main(depth1) menu -->
+                    <div class="floating-menu-wrap">
+                        <div class="button-wrap-menu">
+                            <a href="#" class="btn-menu-home" role="button">홈</a>
+                            <a href="#" class="btn-menu-reserve" role="button">예약내역</a>
+                            <a href="#" class="btn-menu-rooms" role="button">객실유형</a>
+                            <a href="#" class="btn-menu-calc" role="button">정산내역</a>
+                            <a href="#" class="btn-menu-review" role="button">리뷰</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+            </div>
+
+        </main>
+        <!-- app-content-wrap [e] -->
+
+        <!-- app-footer-wrap [s] 제작중 -->
+        <!-- <footer class="app-footer-wrap">
+            <div class="app-footer">
+                app-footer
+            </div>
+        </footer> -->
+        <!-- app-footer-wrap [e] -->
+
+        <div class="spacer s1"></div>
+    </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+        <!-- layer-name="popup-event" -->
+        <div class="layer event" data-layer-name="popup-event">
+            <div class="layer-inner">
+                <div class="image-cont">
+                    <img src="http://ipsumimage.appspot.com/680x920,ffd700?l=Sample+Image|(1x)+340X460|(2x)+680x920">
+                </div>
+                <div class="button-wrap">
+                    <div class="input-wrap">
+                        <input class="chk_t02" type="checkbox" id="chk_01">
+                        <label for="chk_01">다시 보지 않기</label>
+                    </div>
+                    <button class="btn-close" type="button" data-close-layer>닫기</button>
+                </div>
+            </div>
+      </div>
+
+        <!-- layer-name="confirm-exit-app" -->
+        <div class="layer confirm" data-layer-name="confirm-exit-app">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    뒤로 한 번 더 누르시거나 확인을 누르시면 앱이 종료됩니다.
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="alert-version-update" -->
+        <div class="layer alert" data-layer-name="alert-version-update">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    새 버전이 업데이트되었습니다.<br />
+                    업데이트 진행 후 원픽 서비스를 사용할 수 있습니다. 
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="alert-prepare" -->
+        <div class="layer alert" data-layer-name="alert-prepare">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    서비스가 준비 중입니다.<br />
+                    빠른 시일 내에 업데이트 하겠습니다. 
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="dialog-sample" -->
+        <div class="layer dialog" data-layer-name="dialog-sample">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <strong class="title">변경할 비밀번호를 입력하세요</strong>
+                    <span class="desc">(영문+숫자 6자리로 입력)</span>
+                </div>
+                <div class="layer-cont">
+                    CONTENT
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="confirm-cancel-saleset" -->
+        <div class="layer confirm" data-layer-name="confirm-cancel-saleset">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    설정하신 숙박 판매 설정을 <br/>취소하시겠습니까?
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer="confirm-cancel-saleset">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="terms" -->
+        <div class="layer full" data-layer-name="terms">
+            <div class="layer-inner">
+                <div class="layer-head"><strong class="title">layer-head</strong></div>
+                <div class="layer-cont">
+                    <p>layer-name="terms"</p>
+                    <div class="button-wrap mt10">
+                        <button class="sm-wt" type="button" data-open-layer="personal-information-policy">전체 팝업의 팝업</button>
+                        <button class="sm-bk" type="button" data-open-layer="alert-version-update">전체 팝업의 alert</button>
+                        <button class="sm-bk" type="button" data-open-layer="confirm-exit-app">전체 팝업의 confirm</button>
+                        <button class="sm-bk" type="button" data-open-layer="dialog-sample">전체 팝업의 dialog</button>
+                    </div>
+                </div>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
+            </div>
+        </div>
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer full" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong class="title">layer-head</strong></div>
+                <div class="layer-cont">
+                    layer-name="personal-information-policy"
+                </div>
+                <button class="btn-layer-close" data-close-layer><i class="btn-hd-close"></i></button>
+            </div>
+        </div>
+        
+    </div>
+    <!-- layer-wrap [e] -->
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>

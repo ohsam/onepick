@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+/* Splash */
+.splash {height:100%;padding:0;background:url('../img/splash_bg.png') no-repeat;background-size:100% 100%;}
+.splash .text-box {position:absolute;top:210px;right:40px;color:#fff;}
+.splash .text-box .logo {position:relative;width:192px;height:56px;font-size:10px;color:transparent;background:url('../img/logo_w.png') no-repeat;background-size:contain;}
+.splash .text-box .sub {margin-top:90px;font-size:24px;font-weight:400;text-align:right;line-height:30px;letter-spacing:-1.2px;}
+.splash .text-box .sub strong {font-weight:700;}
+.splash .text-box .desc {margin-top:14px;font-size:12px;font-weight:400;text-align:right;}
+
+/* Login */
+.login {padding-top:56px;}
+.login h1 {font-size:20px;}
+.login .logo {position:relative;display:inline-block;width:122px;height:36px;margin-right:9px;font-size:10px;color:transparent;background:url('../img/logo.png') no-repeat;background-size:contain;vertical-align:bottom;}
+.login .content-box {position:relative;margin-top:108px;}
+.login .content-box .button-wrap {margin-top:70px;}
+.login .content-box .input-wrap {margin-top:30px;}
+.login .content-box .input-wrap label {margin-left:4px;}
+.login .bottom-box {position:absolute;width:100%;left:0;bottom:50px;text-align:center;}
+.login .bottom-box > a {position:relative;display:inline-block;color:#a1a1a1;}
+.login .bottom-box > a + a {margin-left:66px;}
+.login .bottom-box > a + a:before {content:'';position:absolute;left:-33px;top:5px;display:block;width:1px;height:13px;background:#a1a1a1;}
+.login .validation-message {position:absolute;width:100%;top:130px;}
+.login .validation-message span {text-align:center;}
+
+/* CEO 아이디 찾기 */
+.find-id {}
+.find-id .form-wrap {padding-top:84px;}
+
+/* CEO 아이디 확인 */
+.verification-id {}
+.verification-id .verification-info {padding-top:196px;}
+.verification-id .find-pw-link {position:relative;padding-top:190px;text-align:center;}
+
+.verification-info {text-align:center;}
+.verification-info .text {font-size:16px;line-height:24px;}
+.verification-info .data {margin-top:58px;display:block;font-size:40px;color:#037cff;}
+
+/* CEO 비밀번호 찾기 */
+.find-pw {}
+.find-pw .form-wrap {padding-top:30px;}
+
+/* CEO 비밀번호 변경 */
+.change-pw {}
+.change-pw .form-wrap {padding-top:50px;}
+.change-pw .form-wrap .form-head {padding-bottom:46px;}
+.change-pw .validation-message {position:relative;padding-top:20px;padding-bottom:22px;}
+.change-pw .validation-message span {position:absolute;top:20px;left:0;width:100%;text-align:center;}
+
+/* CEO main-reserve */
+.main-reserve {background:#f6f7f7;}
+.main-reserve--top {position:relative;height:60px;padding:5px 84px 5px 20px;border-bottom:1px solid #eee;background:#fff;overflow:hidden;}
+.main-reserve--top .input-wrap-select {width:150px;}
+.main-reserve--top .input-wrap-select select {font-size:20px;border:none;}
+.main-reserve--top > button {position:absolute;right:20px;top:16px;}
+.main-reserve--top input[type="text"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+.main-reserve--top input[type="text"].datepicker-opened {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
+.reservation-summary {padding:16px 20px 20px 20px;white-space:nowrap;overflow-x:auto;}
+.reservation-summary .reservation-item {display:inline-block;min-width:62px;padding-left:10px;border-left:1px solid #bdbdbd;}
+.reservation-summary .reservation-item + .reservation-item {margin-left:10px;}
+.reservation-summary .reservation-item .text {display:block;padding-bottom:4px;font-size:12px;line-height:18px;font-weight:400;color:#828282;}
+.reservation-summary .reservation-item .num {font-size:26px;line-height:30px;font-weight:600;}
+.reservation-summary .reservation-item .currency {font-size:20px;font-style:normal;}
+.reservation-summary .reservation-item.empty * {color:#a1a1a1;}
+
+.reservation-list {padding:0 20px;}
+.reservation-list .no-data {padding:150px 0 210px;font-size:16px;line-height:24px;text-align:center;}
+
+.reservation-card {}
+.reservation-card li {position:relative;margin-bottom:14px;border:1px solid #eee;border-radius:6px;background-color:#fff;}
+.reservation-card .room-info a {width:calc(100% - 100px);padding:7px 12px 13px 12px;}
+.reservation-card .room-info .name {font-size:20px;}
+.reservation-card .room-info .name:after {content:"";display:inline-block;width:32px;height:32px;background:url('../img/icon/ic_more_arrow.png') no-repeat center center;background-size:32px 32px;vertical-align:text-top;}
+.reservation-card .room-info .time {margin-top:3px;font-size:14px;color:#828282;}
+.reservation-card .room-status {position:relative;margin:0 auto;width:calc(100% - 32px - 32px);padding-left:46px;text-align:center;border-radius:23px;background-color:#f7f7f7;overflow:hidden;}
+.reservation-card .room-status .type {position:absolute;top:0;left:0;width:46px;height:46px;font-size:16px;line-height:46px;font-weight:500;text-align:center;color:#fff;border-radius:23px;background:#037cff;overflow:hidden;}
+.reservation-card .room-status .item {display:inline-block;padding:10px 20px 11px;font-size:18px;color:#037cff;}
+.reservation-card .room-status .count {display:inline-block;}
+.reservation-card .room-status .item:last-child {color:#000;}
+.reservation-card .room-price {position:relative;padding:12px 20px;text-align:center;}
+.reservation-card .room-price:before {content:"";position:absolute;top:20px;left:50%;width:1px;height:10px;background-color:#e0e0e0;}
+.reservation-card .room-price:after {content:"";display:block;clear:both;}
+.reservation-card .room-price .item {float:left;width:50%;color:#828282;}
+.reservation-card .room-price .amount {display:inline-block;}
+.reservation-card .room-price .text {font-size:14px;font-weight:400;}
+.reservation-card .room-price .num {font-size:16px;}
+.reservation-card .room-price .currency {font-size:14px;font-style:normal;font-weight:400;}
+.reservation-card .room-button {position:absolute;top:10px;right:10px;}
+
+.reservation-card li.deadline .room-status .type {background-color:#bdbdbd;}
+.reservation-card li.deadline .room-status .item {color:#bdbdbd;}
+.reservation-card li.deadline .room-button .sm-wt {color:#bdbdbd;border-color:#e0e0e0;}
+
+/* CEO app-main */
+.recent-notice {background-color:#eee;}
+.recent-notice a {display:flex;padding:14px 20px;}
+.recent-notice .title {flex-grow:1;font-size:18px;line-height:28px;font-weight:500;color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.recent-notice .date {flex-shrink:0;padding-left:10px;font-size:14px;color:#a1a1a1;align-self:center;}
+
+.condition-toggle {padding:0 20px;}
+.condition-toggle .input-wrap {display:flex;padding:14px 0;}
+.condition-toggle .input-wrap + .input-wrap {border-top:1px solid #eee;}
+.condition-toggle .input-wrap label {flex-grow:1;align-self:center;}
+.condition-toggle .input-wrap input {flex-shrink:0;}
+.condition-toggle .input-wrap .type {font-size:18px;line-height:27px;font-weight:500;}
+.condition-toggle .input-wrap .case {display:inline-block;font-size:14px;line-height:22px;font-weight:400;color:#828282;vertical-align:text-top;}
+
+.status-summary {position:relative; padding:26px 20px;background-color:#f7f7f7;;}
+.status-summary .status-item {}
+.status-summary .status-item + .status-item {margin-top:20px;padding-top:18px;border-top:1px solid #e0e0e0;}
+.status-summary .status-title {font-size:20px;}
+.status-summary .status-reservation {display:flex;margin-top:16px;margin-left:-8px;margin-right:-8px;text-align:center;}
+.status-summary .status-reservation li {margin-left:8px;margin-right:8px;width:50%;padding:15px 10px 10px;border-radius:6px;background-color:#fff;box-shadow:2px 2px 10px #bebebe, 0 0 10px #fafbff;}
+.status-summary .status-reservation .name {display:block;font-size:14px;font-weight:400;}
+.status-summary .status-reservation .count {margin-top:4px;display:block;font-size:36px;line-height:42px;font-weight:600;color:#037cff;}
+.status-summary .status-sales {margin-top:16px;}
+.status-summary .status-sales:after {content:"";display:block;clear:both;}
+.status-summary .status-sales .text {display:block;font-size:14px;line-height:20px;font-weight:400;}
+.status-summary .status-sales .amount {display:inline-block;}
+.status-summary .status-sales .amount .num {font-size:36px;line-height:42px;font-weight:600;}
+.status-summary .status-sales .amount .currency {font-size:30px;line-height:42px;font-style:normal;}
+.status-summary .status-sales .button-wrap {float:right;margin-top:8px;display:inline-block;}
+.status-summary .status-button {position:absolute;top:10px;right:10px;}
+
+
+
+
+
+
+
+
+
+.white {color:#fff;}
+.grey, .gray {color:#888;}
+.imageFitW > img {width:100%;height:auto;}
+
+/* Swiper */
+.swiper-wrapper {position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property: transform;box-sizing: content-box;}
+.swiper-slide {flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;}
+.swiper-page-wrap {margin-top:20px;}
+.swiper-pagination {text-align:center;/*overflow:hidden;*/}
+.swiper-pagination-bullet {display:inline-block;margin:0 6px;width:21px;height:21px;border:2px solid #fff;border-radius:50%;}
+.swiper-pagination-bullet-active {border-color:#ae1a4a !important;}
+.swiper-pagination-bullet:nth-child(1) {background-color:#fff;border-color:#ddd;}
+.swiper-pagination-bullet:nth-child(2) {background-color:#2c2c2c;}
+.swiper-pagination-bullet:nth-child(3) {background-color:#ababab;}
+
+/* ios video border */
+video {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+
+/* [s]: UI-2 ***********************************************************/
+.tablist-ty03 {display:flex;justify-content:center;}
+.tablist-ty03 [role="tab"] {width:auto;padding:8px 40px 11px;border:1px solid #e0e0e0;border-radius:25px;background-color:#fff;font-size:20px;font-weight:700;color:#a1a1a1;}
+.tablist-ty03 [role="tab"][aria-selected="true"] {border:1px solid #037cff;background-color:#037cff;font-size:20px;font-weight:700;color:#fff;}
+.tablist-ty03 [role="tab"]:last-child {margin-left:16px;}
+
+.card-box {position:relative;padding:8px 12px 12px;border:1px solid #eee;}
+.card-box ~ .card-box {margin-top:14px;}
+.card-box .card-head.control-btn {padding-right:86px;}
+.card-box .sm-wt {position:absolute;top:11px;right:10px;}
+.card-box .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
+.card-box .card-body .time, .card-box .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
+
+.input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+
+.grp-title {font-size:20px;font-weight:700;}
+.bg-gray-t1 {background-color:#f6f7f7;}
+.mb20 {margin-bottom:20px;}
+.mb60 {margin-bottom:60px;}
+.pt20 {padding-top:20px;}
+.fl-r {float:right;}
+.hidden {position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+.layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
+.layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
+.bg-white-rd10 {background-color:#fff;border-radius:10px;}
+
+/* 임시 */
+.bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;}
+.floating-menu-wrap.full button {width:100%;}
+
+/* CEO_manage 내 정보 관리 */
+.my-info-top {padding:10px 20px;}
+.my-info-top .row {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:14px 0;}
+.my-info-top .text {font-size:20px;font-weight:700;line-height:27px;}
+.my-info-bottom {padding:0 20px;}
+.my-info-bottom .my-info-title {padding:20px 0 8px;border-bottom:1px solid #000;font-size:18px;color:#8b8b8b;line-height:27px;}
+
+.list-ty-myinfo {margin-top:20px;padding-bottom:20px;}
+.list-ty-myinfo li {padding:16px 0;border-bottom:1px solid #e0e0e0;}
+.list-ty-myinfo .name {line-height:24px;}
+.list-ty-myinfo .biznum {margin-top:2px;font-family:'Roboto', sans-serif;font-size:22px;font-weight:700;line-height:27px;}
+
+/* CEO_manage 제휴점 관리 앱 가이드 */
+.h-scroll {overflow-x:auto;margin:0 auto;padding:0 5px;background:#f6f7f7;}
+.h-scroll-wrap {/* overflow:hidden; */font-size:0;white-space:nowrap;}
+.h-scroll-item {display:inline-block;width:auto;border:none;background:transparent;}
+.h-scroll-item .item-text {position:relative;display:block;height:56px;padding:14px 15px 15px;font-size:18px;color:#a2a2a2;white-space:nowrap;}
+.h-scroll-item.on .item-text {color:#037cff;font-weight:700;letter-spacing:0;}
+
+.qna-guide-list {padding-bottom:20px;}
+.qna-guide-list .accordion-list {padding:0 20px;}
+.qna-guide-list .item-q {position:relative;width:100%;height:56px;padding:12px 0 16px;border:none;border-bottom:1px solid #e0e0e0;background:#fff;font-size:18px;text-align:left;}
+.item-q::after {content:"";position:absolute;top:10px;right:-10px;display:block;width:40px;height:40px;}
+.item-q[aria-expanded="true"]::after {background:url(../img/icon/ic_acc_close.png) no-repeat 0 0;background-size:contain;}
+.item-q[aria-expanded="false"]::after {background:url(../img/icon/ic_acc_open.png) no-repeat 0 0;background-size:contain;}
+.qna-guide-list .item-a .a-content {padding:10px 14px;border:1px solid #e0e0e0;border-top:none;}
+
+
+/* CEO_manage 이용약관,개인정보 처리방침,사업자 정보 확인 */
+.doc-wrap {padding:14px 20px 20px;letter-spacing:-0.03px;}
+
+/* CEO_manage 공지-목록 */
+.list-ty-notice li {margin-top:4px;}
+.list-ty-notice .notice-item {position:relative;display:block;padding:14px 24px 14px 0;border-bottom:1px solid #e0e0e0;}
+.list-ty-notice .notice-item::after {content:'';position:absolute;top:26px;right:-9px;display:block;width:24px;height:25px;background:url(../img/icon/ic_arr_more.png) no-repeat 0 0;background-size:contain;}
+.list-ty-notice .title {display:block;font-size:18px;line-height:27px;letter-spacing:-0.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.list-ty-notice .date {display:block;margin-top:5px;font-family:'Roboto', sans-serif;font-size:14px;font-weight:400;color:#828282;line-height:1.2em;letter-spacing:0;}
+
+/* CEO_manage 공지-내용 */
+.content-ty-notice {}
+.content-ty-notice .title-date {padding:15px 0 8px;border-bottom:1px solid #e0e0e0;}
+.content-ty-notice .title {display:block;font-size:18px;line-height:27px;letter-spacing:-0.5px;}
+.content-ty-notice .date {display:block;margin-top:8px;font-family:'Roboto', sans-serif;font-size:14px;color:#828282;line-height:1.2em;letter-spacing:0;}
+.content-ty-notice .content-box {margin-top:14px;}
+.content-ty-notice .content-box p {margin-bottom:22px;}
+.content-ty-notice .content-box img {width:100% !important;max-width:100%;height:100% !important;}
+
+/* CEO_manage 설정 */
+.settings .input-wrap {position:relative;display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:8px 0;}
+.settings .input-wrap.top {padding-bottom:17px;border-bottom:1px solid #eee;}
+.version-info {position:fixed;bottom:0;left:0;right:0;padding: 0 20px 20px;}
+.version-info .text {display:block;height:64px;border:1px solid #e0e0e0;border-radius:6px;font-size:20px;line-height:64px;text-align:center;}
+.version-info .num {font-family:'Roboto', sans-serif;}
+
+/* CEO_reserve 예약 취소 */
+.reserv-num, .details-info dt {font-weight:400;color:#121212;}
+.details-info {margin-bottom:83px;}
+.details-info dd {margin:4px 0 0;font-size:18px;}
+.rnum {display:inline-block;margin-left:6px;font-family:'Roboto', sans-serif;font-size:18px;font-weight:700;color:#037cff;line-height:21px;}
+
+.issue-check {margin-top:27px;}
+.issue-check li {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:15px 0 14px;border-bottom:1px solid #e0e0e0;}
+.issue-check li:first-child {margin-top:27px;}
+.issue-check label {width:100%;font-size:18px;}
+.issue-check label::after {content:'';clear:both;display:table;}
+.issue-check label .input-wrap {float:right;}
+.issue-check .etc {display:block;margin:20px 0 8px;}
+.issue-check textarea {width:100%;padding:8px 16px;border-color:#eee;}
+
+/* CEO_room 객실 유형 */
+.room-types {background:#f7f7f7;}
+.room-types div[role="tabpanel"] {min-height:calc(100vh - 180px);}
+.no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:120px;}
+.room-types .box-cs-info {display:inline-block;padding:20px;margin-top:114px;}
+.no-data-info .box-cs-info .contact {color:#a1a1a1;font-weight:400;}
+@media all and (max-height: 740px) {
+    .no-data-info {padding-top:29vw;}
+    .room-types .box-cs-info {margin-top:27.054vw;}
+}
+
+.room-wrap {padding:10px 20px 20px;}
+.total_rmcount {color:#828282;font-family:'Roboto', sans-serif;font-size:14px;line-height:19px;}
+.total_rmcount strong {color:#000;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
+.total_rmcount + .card-box {margin-top:10px;}
+.room-wrap .card-body .time {margin-top:6px;}
+.room-wrap .card-body .price-list {display:flex;flex-direction:row;margin-top:4px;font-size:14px;}
+.room-wrap .card-body .price-item {position:relative;padding-right:18px;margin-right:18px;}
+.room-wrap .card-body .price-item:first-child:after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background-color:#e0e0e0;}
+.room-wrap .card-body .price-item .amount strong {padding-left:4px;font-family:'Roboto', sans-serif;font-size:16px;font-weight:700;}
+.room-wrap .card-footer .button-wrap {display:flex;flex-direction:row;justify-content:space-between;margin-top:17px;}
+.room-wrap .card-footer .button-wrap button {width:calc(50% - 4px);padding:12px 0;font-size:14px;}
+.room-wrap .card-footer .button-wrap button[disabled] {border:1px solid #e7e7e7;}
+.room-wrap .card-footer .button-wrap button.ty-ln {border:2px solid #037cff;background-color:#fff;color:#037cff;}
+.room-wrap .card-footer .button-wrap button.ty-ln[disabled] {border:2px solid #e7e7e7;color:#a1a1a1;font-weight:400;}
+
+/* CEO_room 객실 수정 */
+.form-wrap.room-edit .row {padding:10px 0;}
+.form-wrap.room-edit .row dl {display:flex;flex-direction:row;justify-content:space-between;align-items:flex-start;}
+.form-wrap.room-edit .row dt {width:100px;padding-top:11px;}
+.form-wrap.room-edit .row dd {width:calc(100% - 100px);margin:0;}
+.form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
+
+/* CEO_room 정산 내역, 정산 내역 상세 */
+.calc-info, .info-details {background:#f7f7f7;}
+.calc-info .num, .info-details .num {font-family:'Roboto', sans-serif;font-weight:700;}
+.calc-info--top {display:flex;flex-direction:row;justify-content:space-between;padding:13px 20px;background:#fff;}
+.calc-info--top .input-wrap-datetime.one-day {min-width:100px;width:30%;}
+.calc-info--top .input-wrap-datetime:not(.one-day) {width:70%;}
+.calc-info--top .input-wrap-datetime + .input-wrap-datetime {margin-left:12px;}
+.calc-info--top .input-wrap-datetime input {height:34px;border:1px solid #eaeaea;border-radius:6px;font-size:14px;letter-spacing:-0.5px;}
+
+.calc-info--list {display:flex;flex-direction:column;padding:10px 20px 0;font-size:14px;background:#fff;}
+
+.calc-info--list li + li {margin-top:4px;}
+.calc-info--list .dtitle {position:relative;padding-right:14px;margin-right:14px;color:#828282;}
+.calc-info--list .dtitle::after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background:#a1a1a1;}
+.calc-info--list .dates {color:#037cff;font-weight:700;}
+
+.info-details .calc-info--list {padding-top:16px;}
+.info-details .calc-info--list .dates {color:#000;font-weight:500;}
+.info-details .card-box {padding:10px;}
+.info-details .calc-tbl {width:100%;}
+.info-details .calc-tbl th, .info-details .calc-tbl td {line-height:24px;letter-spacing:-0.5px;}
+.info-details .calc-tbl th {position:relative;padding-left:2px;color:#828282;font-size:14px;font-weight:500;text-align:left;}
+.info-details .calc-tbl td {padding-left:12px;color:#121212;}
+.info-details .calc-tbl strong {font-weight:700;}
+.info-details .calc-tbl .em-bl {color:#037cff;}
+.info-details .calc-tbl .em-rd {color:#e53935;}
+.info-details .calc-tbl tr:nth-child(2) th, .info-details .calc-tbl tr:nth-child(2) td,
+.info-details .calc-tbl tr:nth-child(5) th, .info-details .calc-tbl tr:nth-child(5) td,
+.info-details .calc-tbl tr:nth-child(9) th, .info-details .calc-tbl tr:nth-child(9) td {padding-bottom:10px;}
+.info-details .calc-tbl .div-top th, .info-details .calc-tbl .div-top td {padding-top:10px;border-top:1px solid #e0e0e0;}
+
+.calc-info--summary {padding:20px;background:#fff;}
+.summary-box {padding:0 30px;border-radius:10px;-webkit-box-shadow: 2px 2px 10px 0px rgba(190,190,190,0.6);box-shadow: 2px 2px 10px 0px rgba(190,190,190,0.6);}
+.summary-box .num {margin-right:2px;}
+.summary-box.ty01 {background-image:url(../img/summary-bg-left.png), url(../img/summary-bg-right.png);background-repeat:no-repeat;background-position:0 50%, 100% 50%;background-size:30px auto, 30px auto;background-color:rgba(190,190,190,0.33);}
+.summary-box.ty01 li {background:#037cff;color:#fff;}
+.summary-box.ty01 .calc-total {padding:17px 0 14.5px;border-bottom:1px dashed rgba(255,255,255,0.4);font-size:26px;line-height:42px;}
+.summary-box.ty01 .calc-total .num {font-size:36px;letter-spacing:-0.7px;}
+.summary-box .calc-items {padding:15.5px 0 20px;}
+.summary-box .calc-items li {display:flex;flex-direction:row;justify-content:space-between;font-size:14px;}
+.summary-box .calc-items li + li {margin-top:4px;}
+.summary-box .calc-items .stitle {width:27%;min-width:72px;letter-spacing:-0.5px;}
+.summary-box .calc-items .val01 {width:20%;min-width:50px;}
+.summary-box .calc-items .val02 {width:53%;}
+
+.summary-box.ty02 {border-top:1px solid #037cff;border-bottom:1px solid #037cff;background-image:url(../img/summary-bg2-left.png), url(../img/summary-bg2-right.png);background-repeat:no-repeat;background-position:0 50%, 100% 50%;background-size:30px auto, 30px auto;background-color:rgba(190,190,190,0.33);}
+.summary-box.ty02 li {background-color:#fff;}
+.summary-box.ty02 .calc-total {position:relative;padding:18px 0 17.5px 52px;border-bottom:1px dashed #e0e0e0;font-size:20px;line-height:35px;color:#037cff;}
+.summary-box.ty02 .calc-total .tag {position:absolute;top:50%;left:0;padding:0 6px 0 5px;border-radius:4px;margin-top:-10px;color:#fff;font-size:12px;font-weight:700;line-height:20px;}
+.summary-box.ty02 .calc-total .tag.normal {background-color:#037cff;}
+.summary-box.ty02 .calc-total .tag.wait {background-color:#e53935;}
+.summary-box.ty02 .calc-total .num {font-size:30px;letter-spacing:-0.7px;}
+.summary-box.ty02 .calc-items .num {color:#037cff;}
+
+.calc-info--tab .no-data-info {height:calc(100vh - 511px);justify-content:center;padding-top:0;}
+.calc-info--tab .card--list {padding:20px;}
+.calc-info--tab .card-body .time {margin-top:4px;}
+.calc-div-wrap {display:flex;flex-direction:row;align-items:flex-end;margin-top:8px;}
+.calc-div-wrap div {width:50%;}
+.calc-div-wrap .div--left dl {display:flex;flex-direction:row;flex-wrap:wrap;max-width:110px;font-size:12px;}
+.calc-div-wrap .div--left dt {position:relative;width:67px;padding-right:8px;margin-right:8px;letter-spacing:-0.5px;}
+.calc-div-wrap .div--left dt::after {content:"";position:absolute;top:50%;right:0;display:block;width:1px;height:10px;margin-top:-5px;background:#e0e0e0;}
+.calc-div-wrap .div--left dd {min-width:24px;margin-left:0;}
+.calc-div-wrap .div--right {font-size:16px;}
+.calc-div-wrap .div--right .num {margin-right:2px;color:#037cff;font-size:22px;letter-spacing:-0.5px;}
+
+.calc-info--tab .sticky-wrapper.is-sticky {z-index:1;}
+
+/* CEO_room 정산 내역 상세 */
+
+
+/* modal layer - dialog | 공통 */
+.layer.alert .layer-cont {font-size:18px;}
+.lb-title {display:block;font-size:18px;line-height:27px;}
+
+/* modal layer - dialog | 비밀번호 변경 */
+.layer[data-layer-name="dialog-pw-edit"] .change-pw .form-wrap {padding:62px 0 78px;font-size:18px;}
+
+.layer-wrap .layer[data-layer-name="confirm-book-status"].confirm .layer-cont {padding:30px 0 58px;font-size:18px;}
+.layer-wrap .room-name {margin-bottom:3px;color:#037cff;font-size:20px;font-weight:700;}
+
+.layer[data-layer-name="edit-room-info"] .sub-title {padding:22px 0 16px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:700;line-height:27px;}
+.layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
+
+.layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}
+
+/* [e]: UI-2 ***********************************************************/
