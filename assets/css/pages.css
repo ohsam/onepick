@@ -322,7 +322,7 @@ video {
 .summary-box.ty01 {background-image:url(../img/summary-bg-left.png), url(../img/summary-bg-right.png);background-repeat:no-repeat;background-position:0 50%, 100% 50%;background-size:30px auto, 30px auto;background-color:rgba(190,190,190,0.33);}
 .summary-box.ty01 li {background:#037cff;color:#fff;}
 .summary-box.ty01 .calc-total {padding:17px 0 14.5px;border-bottom:1px dashed rgba(255,255,255,0.4);font-size:26px;line-height:42px;}
-.summary-box.ty01 .calc-total .num {font-size:36px;}
+.summary-box.ty01 .calc-total .num {font-size:36px;letter-spacing:-0.7px;}
 .summary-box .calc-items {padding:15.5px 0 20px;}
 .summary-box .calc-items li {display:flex;flex-direction:row;justify-content:space-between;font-size:14px;}
 .summary-box .calc-items li + li {margin-top:4px;}
@@ -332,11 +332,11 @@ video {
 
 .summary-box.ty02 {border-top:1px solid #037cff;border-bottom:1px solid #037cff;background-image:url(../img/summary-bg2-left.png), url(../img/summary-bg2-right.png);background-repeat:no-repeat;background-position:0 50%, 100% 50%;background-size:30px auto, 30px auto;background-color:rgba(190,190,190,0.33);}
 .summary-box.ty02 li {background-color:#fff;}
-.summary-box.ty02 .calc-total {position:relative;padding:18px 0 17.5px 60px;border-bottom:1px dashed #e0e0e0;font-size:20px;line-height:35px;color:#037cff;}
+.summary-box.ty02 .calc-total {position:relative;padding:18px 0 17.5px 52px;border-bottom:1px dashed #e0e0e0;font-size:20px;line-height:35px;color:#037cff;}
 .summary-box.ty02 .calc-total .tag {position:absolute;top:50%;left:0;padding:0 6px 0 5px;border-radius:4px;margin-top:-10px;color:#fff;font-size:12px;font-weight:700;line-height:20px;}
 .summary-box.ty02 .calc-total .tag.normal {background-color:#037cff;}
 .summary-box.ty02 .calc-total .tag.wait {background-color:#e53935;}
-.summary-box.ty02 .calc-total .num {font-size:30px;}
+.summary-box.ty02 .calc-total .num {font-size:30px;letter-spacing:-0.7px;}
 .summary-box.ty02 .calc-items .num {color:#037cff;}
 
 .calc-info--tab .no-data-info {height:calc(100vh - 511px);justify-content:center;padding-top:0;}
