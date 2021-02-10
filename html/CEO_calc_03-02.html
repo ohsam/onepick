@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>정산 완료 상세 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header sub"><!-- class:: main/sub/popup -->
+                <h1>스탠다드 A 정산 상세</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content">
+                <section class="app-section full no-gutter info-details">
+
+                    <ul class="calc-info--list">
+                        <li><span class="dtitle">정산일</span><span class="dates">2020.12.1(화)</span></li>
+                        <li><span class="dtitle">입실일</span><span class="dates">2020.12.1(화) ~ 2020.12.5(토)</span></li>
+                    </ul>
+
+                    <div class="calc-info--summary">
+                        <ul class="summary-box ty02">
+                            <li class="calc-total al-r">
+                                <span class="tag wait">정상대기</span><!-- normal: 정상완료 , wait: 정상대기 -->
+                                <strong class="num">560,000</strong><span>원</span>
+                            </li>
+                            <li>
+                                <ul class="calc-items">
+                                    <li>
+                                        <div class="stitle">예약 완료</div>
+                                        <div class="val01 al-r"><span class="num">4</span>건</div>
+                                        <div class="val02 al-r"><span class="num">690,000</span>원</div>
+                                    </li>
+                                    <li>
+                                        <div class="stitle">취소 정산</div>
+                                        <div class="val01 al-r"><span class="num">1</span>건</div>
+                                        <div class="val02 al-r"><span class="num">-130,000</span>원</div>
+                                    </li>
+                                    <li>
+                                        <div class="stitle">입실 후 취소</div>
+                                        <div class="val01 al-r"><span class="num">0</span>건</div>
+                                        <div class="val02 al-r"><span class="num">0</span>원</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="calc-info--tab">
+                        <div class="tab-container">
+                            <div role="tablist" class="tablist-ty02 calc-tab-header" data-sticky-header data-sticky-top="56"><!-- sticky 기능 => data-sticky-header 추가 -->
+                                <button role="tab" aria-selected="true" aria-controls="tab_content001_1" id="tab001_1">예약 완료</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content001_2" id="tab001_2">취소 정산</button>
+                                <button role="tab" aria-selected="false" aria-controls="tab_content001_3" id="tab001_3">입실 후 취소</button>
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content001_1" aria-labelledby="tab001_1" class="show">
+                                
+                                <div class="card--list">
+                                    <!-- card [s] -->
+                                    <div class="card-box bg-white-rd10">
+                                        <table class="calc-tbl">
+                                            <caption class="hidden">예약 완료 상세 내용</caption>
+                                            <colgroup>
+                                                <col style="width:25%;min-width:70px;" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">예약번호</th>
+                                                    <td><strong>201204102773</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예약 상태</th>
+                                                    <td>예약 정상</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">정산금액</th>
+                                                    <td><strong class="em-bl">130,000원</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산일</th>
+                                                    <td>2020.12.10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산상태</th>
+                                                    <td>정산완료</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">판매가</th>
+                                                    <td>170,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">포인트</th>
+                                                    <td>600P</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">적립할인</th>
+                                                    <td>10,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">제휴할인</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">예약일</th>
+                                                    <td>2020.12.04</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">입/퇴실일</th>
+                                                    <td>2020.12.04 ~ 2020.12.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">이용유형</th>
+                                                    <td>숙박</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">객실타입</th>
+                                                    <td>일반실</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- card [e] -->
+
+                                    <!-- card [s] -->
+                                    <div class="card-box bg-white-rd10">
+                                        <table class="calc-tbl">
+                                            <caption class="hidden">예약 완료 상세 내용</caption>
+                                            <colgroup>
+                                                <col style="width:25%;min-width:70px;" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">예약번호</th>
+                                                    <td><strong>201204102773</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예약 상태</th>
+                                                    <td>예약 정상</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">정산금액</th>
+                                                    <td><strong class="em-bl">130,000원</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산일</th>
+                                                    <td>2020.12.10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산상태</th>
+                                                    <td>정산완료</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">판매가</th>
+                                                    <td>170,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">포인트</th>
+                                                    <td>600P</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">적립할인</th>
+                                                    <td>10,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">제휴할인</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">예약일</th>
+                                                    <td>2020.12.04</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">입/퇴실일</th>
+                                                    <td>2020.12.04 ~ 2020.12.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">이용유형</th>
+                                                    <td>숙박</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">객실타입</th>
+                                                    <td>일반실</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- card [e] -->
+                                </div>
+
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content001_2" aria-labelledby="tab001_2">
+
+                                <div class="card--list">
+                                    <!-- card [s] -->
+                                    <div class="card-box bg-white-rd10">
+                                        <table class="calc-tbl">
+                                            <caption class="hidden">취소 정산 상세 내용</caption>
+                                            <colgroup>
+                                                <col style="width:25%;min-width:70px;" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">예약번호</th>
+                                                    <td><strong>201204102773</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예약 상태</th>
+                                                    <td><span class="em-rd">예약 취소 2021.01.01 00:00</span></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">정산금액</th>
+                                                    <td><strong class="em-bl">130,000원</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산일</th>
+                                                    <td>2020.12.10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산상태</th>
+                                                    <td>정산완료</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">판매가</th>
+                                                    <td>170,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">포인트</th>
+                                                    <td>600P</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">적립할인</th>
+                                                    <td>10,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">제휴할인</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">예약일</th>
+                                                    <td>2020.12.04</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">입/퇴실일</th>
+                                                    <td>2020.12.04 ~ 2020.12.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">이용유형</th>
+                                                    <td>숙박</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">객실타입</th>
+                                                    <td>일반실</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- card [e] -->
+                                </div>
+
+                            </div>
+
+                            <div tabindex="0" role="tabpanel" id="tab_content001_3" aria-labelledby="tab001_3">
+
+                                <div class="card--list">
+                                    <!-- card [s] -->
+                                    <div class="card-box bg-white-rd10">
+                                        <table class="calc-tbl">
+                                            <caption class="hidden">입실 후 취소 상세 내용</caption>
+                                            <colgroup>
+                                                <col style="width:25%;min-width:70px;" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">예약번호</th>
+                                                    <td><strong>201204102773</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">예약 상태</th>
+                                                    <td><span class="em-rd">예약 취소 2021.01.01 00:00</span></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">정산금액</th>
+                                                    <td><strong class="em-bl">130,000원</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산일</th>
+                                                    <td>2020.12.10</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">정산상태</th>
+                                                    <td>정산완료</td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">판매가</th>
+                                                    <td>170,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">포인트</th>
+                                                    <td>600P</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">적립할인</th>
+                                                    <td>10,000원</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">제휴할인</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr class="div-top"><!-- 구분선 -->
+                                                    <th scope="col">예약일</th>
+                                                    <td>2020.12.04</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">입/퇴실일</th>
+                                                    <td>2020.12.04 ~ 2020.12.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">이용유형</th>
+                                                    <td>숙박</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">객실타입</th>
+                                                    <td>일반실</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- card [e] -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>                   
+
+
+                </section>
+
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <div class="layer-wrap">
+
+        <!-- layer-name="confirm-cancel-msg" -->
+        <div class="layer confirm" data-layer-name="confirm-cancel-msg">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    <p class="reserv-num mt20 mb20">예약번호 <strong class="rnum">20120910320302</strong></p>
+                    예약을 취소하시겠습니까?<br>
+                    보내기를 누르면 고객님에게<br>
+                    메세지가 전달됩니다.
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">보내기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="dialog-cancel-yes" -->
+        <div class="layer dialog" data-layer-name="dialog-cancel-yes">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <div class="layer-title" role="heading">취소 상세</div>
+                </div>
+                <div class="layer-cont">
+
+                    <dl class="details-info mt30">
+                        <dt>예약번호</dt>
+                        <dd class="rnum">20120910320302</dd>
+                        <dt class="mt20">취소 일시</dt>
+                        <dd>2020.12.11(금요일) 17:00</dd>
+                        <dt class="mt20">취소 사유</dt>
+                        <dd>누수로 인해 부득이하게 예약 취소를 합니다.</dd>
+                    </dl>
+
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.daterangepicker.custom.js"></script>
+
+    <!-- sticky -->
+    <script src="../assets/js/lib/jquery.sticky.js"></script>
+
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>
