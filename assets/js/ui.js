@@ -150,6 +150,7 @@ $(function(){
         var $datepicker = $container.find('[data-datepicker]');
         var isSingleDate = $datepicker.attr('data-single-date');
         isSingleDate = isSingleDate == 'false' || isSingleDate == undefined ? false : true;
+        var container = $datepicker.attr('data-container') || 'body';
 
         $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
             "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
@@ -167,7 +168,8 @@ $(function(){
             format: 'YYYY.MM.DD',
             separator: ' ~ ',
             showShortcuts: false,
-            singleMonth: true
+            singleMonth: true,
+            container: container
         }
         $datepicker.dateRangePicker(configObject)
         .on('datepicker-opened datepicker-closed', function(e){
