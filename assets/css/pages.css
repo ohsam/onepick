@@ -62,12 +62,14 @@
 .reservation-summary .reservation-item .num {font-size:26px;line-height:30px;font-weight:600;}
 .reservation-summary .reservation-item .currency {font-size:20px;font-style:normal;}
 .reservation-summary .reservation-item.empty * {color:#a1a1a1;}
+.reservation-summary + .reservation-list {padding-top:0;}
 
-.reservation-list {padding:0 20px;}
+.reservation-list {padding:20px;}
 .reservation-list .no-data {padding:150px 0 210px;font-size:16px;line-height:24px;text-align:center;}
 
 .reservation-card {}
-.reservation-card li {position:relative;margin-bottom:14px;border:1px solid #eee;border-radius:6px;background-color:#fff;}
+.reservation-card li {position:relative;border:1px solid #eee;border-radius:6px;background-color:#fff;}
+.reservation-card li + li {margin-top:14px;}
 .reservation-card .room-info a {width:calc(100% - 100px);padding:7px 12px 13px 12px;}
 .reservation-card .room-info .name {font-size:20px;}
 .reservation-card .room-info .name:after {content:"";display:inline-block;width:32px;height:32px;background:url('../img/icon/ic_more_arrow.png') no-repeat center center;background-size:32px 32px;vertical-align:text-top;}
