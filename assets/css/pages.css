@@ -253,14 +253,14 @@ video {
 .issue-check textarea {width:100%;padding:8px 16px;border-color:#eee;}
 
 /* CEO_room 객실 유형 */
-.room-types {background:#f7f7f7;}
-.room-types div[role="tabpanel"] {min-height:calc(100vh - 180px);}
+.main--room-types {background:#f7f7f7;}
+.main--room-types div[role="tabpanel"] {min-height:calc(100vh - 180px);}
 .no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:120px;}
-.room-types .box-cs-info {display:inline-block;padding:20px;margin-top:114px;}
+.main--room-types .box-cs-info {display:inline-block;padding:20px;margin-top:114px;}
 .no-data-info .box-cs-info .contact {color:#a1a1a1;font-weight:400;}
 @media all and (max-height: 740px) {
     .no-data-info {padding-top:29vw;}
-    .room-types .box-cs-info {margin-top:27.054vw;}
+    .main--room-types .box-cs-info {margin-top:27.054vw;}
 }
 
 .room-wrap {padding:10px 20px 20px;}
@@ -286,8 +286,8 @@ video {
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
 
 /* CEO_room 정산 내역, 정산 내역 상세 */
-.calc-info, .info-details {background:#f7f7f7;}
-.calc-info .num, .info-details .num {font-family:'Roboto', sans-serif;font-weight:700;}
+.main--calc-info, .info-details, .main--review {background:#f7f7f7;}
+.main--calc-info .num, .info-details .num {font-family:'Roboto', sans-serif;font-weight:700;}
 .calc-info--top {display:flex;flex-direction:row;justify-content:space-between;padding:13px 20px;background:#fff;}
 .calc-info--top .input-wrap-datetime.one-day {min-width:100px;width:30%;}
 .calc-info--top .input-wrap-datetime:not(.one-day) {width:70%;}

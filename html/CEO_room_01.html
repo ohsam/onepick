@@ -35,7 +35,7 @@
         <main class="app-content-wrap">
             <!-- page class -->
             <div class="app-content has-bottom-menu">
-                <section class="app-section no-gutter room-types">
+                <section class="app-section no-gutter main--room-types">
 
                     <div class="room-types--tab">
                         <div class="tab-container">
@@ -325,15 +325,17 @@
                                 </div>
 
                                 <div class="row">
-                                    <dl>
+                                    <dl data-js="datepicker">
                                         <dt><label for="rtForm06">적용 일자</label></dt>
                                         <dd>
                                             <div class="input-wrap-datetime">
-                                                <input id="rtForm06" type="text" name="datefilter" value="당일 날짜">
+                                                <input id="rtForm06" type="text" name="datefilter" placeholder="당일 날짜" data-datepicker data-single-date>
                                             </div>
                                         </dd>
                                     </dl>
                                 </div>
+
+                                <div data-container></div>
                             </div>
                         </div>
                         <!-- 대실 [e] -->
