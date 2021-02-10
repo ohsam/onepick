@@ -342,8 +342,12 @@ $(function(){
 
     $(window).on('load', function(){
         var $stickyTarget = $('[data-sticky-header]');
-        var $stickyPos = $stickyTarget.attr('data-sticky-top');
-        $stickyTarget.sticky({ topSpacing: parseInt($stickyPos) });
+        if ($stickyTarget.length > 0) {
+            var $stickyPos = $stickyTarget.attr('data-sticky-top');
+            $stickyTarget.sticky({ topSpacing: parseInt($stickyPos) });
+        } else {
+            return false;
+        }
     });
 
     /* UI-2 [e] */
