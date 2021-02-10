@@ -353,8 +353,11 @@ video {
 
 .calc-info--tab .sticky-wrapper.is-sticky {z-index:1;}
 
-/* CEO_room 정산 내역 상세 */
-
+/* CEO_room 리뷰 */
+.pictures-wrap {padding:20px 0;}
+.pictures-wrap .picture-item {position:relative;overflow:hidden;width:100%;padding-top:65.625%;border-radius:6px;-webkit-box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);} /* aspect ration */
+.pictures-wrap .picture-item + .picture-item {margin-top:14px;}
+.pictures-wrap .picture-item img {position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;}
 
 /* modal layer - dialog | 공통 */
 .layer.alert .layer-cont {font-size:18px;}
