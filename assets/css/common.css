@@ -326,6 +326,9 @@ a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 .button-wrap-menu [class^="btn-menu-"] {margin:0 auto;}
 .text-link {font-size:16px;line-height:22px;color:#a1a1a1;}
 .text-link:visited {color:#a1a1a1;}
+.text-more {font-size:14px;line-height:24px;color:#000;}
+.text-more:visited {color:#000;}
+.text-more:after {content:"";display:inline-block;width:24px;height:24px;background:url('../img/icon/ic_more_plus.png') no-repeat center top;background-size:24px 24px;vertical-align:top;}
 
 /* Tab */
 .tablist-ty01 {display:flex;}
