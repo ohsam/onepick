@@ -329,21 +329,29 @@
                             .timepicker-wrapper .item-wrapper > li.section button {background-color:yellow !important;}
                             
                         </style>
+                        <!-- 
+                            data-js="timepicker" 로 동작합니다
+                            data-timepicker-days= 당일/여러날 일 수
+                            data-timepicker-show 로 여닫기, 선택 날짜 표시 (여닫기 미구현)
+                            data-timepicker-value 의 value 로 선택날짜 데이터 전달 (초기값)
+                            data-timepicker-day 현재 쓰이지 않음 (여러날 시 Next Day, 다음날 로만 표시됨)
+                            현재 reset, cancel 기능 없음
+                        -->
                         <div class="mt10" data-js="timepicker" data-timepicker-days="2">
                             <div class="input-wrap">
                                 <input type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
                             </div>
                             <input type="hidden" name="selectedTime" value="d1 09:00 ~ d2 14:00" data-timepicker-value>
                             <div class="timepicker-wrapper">
+                                <!-- sample
                                 <ul class="item-wrapper" data-timepicker-day="d1">
                                     <li><button type="button">00시</button></li>
                                     <li><button type="button">01시</button></li>
                                     <li><button type="button">02시</button></li>
                                     <li><button type="button">03시</button></li>
-                                    <li><button type="button">04시</button></li>
-                                </ul>
+                                </ul> -->
                             </div>
-                        </div>
+                        </div>                        
                     </fieldset>
                 </section>
                 <section class="app-section">

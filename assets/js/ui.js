@@ -201,40 +201,102 @@ $(function(){
         var $selectedTime = $container.find('[data-timepicker-value]');
         var $wrapper = $container.find('.timepicker-wrapper');
         var days = parseFloat($container.attr('data-timepicker-days')) || 1;
+        var splitter = ' ~ ';
+        var isComplete = {"start":false};
+        var dataObj = {
+            "start": [],
+            "end": []
+        }
+        /*
+        var sample = {
+            "start": ["d1", "08:00"],
+            "end": ["d2", "09:00"],
+        }*/
+        
         var itemStr = '';
-
-        /** Flow
-         * > check hidden value (seperate ~ )
-         * > if has value ? set picker-days
-         *   └ draw time items
-         *     └ set time items 
-         *     └ set button value (if next day ? add "다음날")
-         * > if null ? set from attr picker-days
-         *   └ draw time items
-         *
-         * 다음날 처리를 어떤식으로 할지 고민해야함
-         * */
-
         for(var i=0; i<days; i++){
-            itemStr += '<ul class="item-wrapper">';
+            itemStr += '<ul class="item-wrapper" data-timepicker-day="d'+ (i+1) +'">';
             for(var j=0; j<24; j++){
                 itemStr += '<li><button type="button">'+ (j < 10 ? '0'+ j : j) +'시</button></li>' 
             }
             itemStr += '</ul>';
         }
-        $wrapper.html(itemStr).on('click', 'button', function(e){
-            var time = $(this).parent().index();
-            var day = $(this).closest('.item-wrapper').index();
 
-            // temp
-            console.log(e.type, day+'_'+time);
-            $selectedTime.val(day+'_'+time).trigger('change');
+        // button click
+        $wrapper.html(itemStr).on('click', 'button', function(e){
+            var items = $wrapper.find('li');
+            var day = $(this).closest('.item-wrapper').index();
+            var time = $(this).parent().index();
+
+            if(!isComplete.start){
+                items.removeClass('start section end');
+                $(this).parent().addClass('start');
+                dataObj.start[0] = day;
+                dataObj.start[1] = time;
+                isComplete.start = true;
+            }else{
+                dataObj.end[0] = day;
+                dataObj.end[1] = time;
+                // end 날짜가 이전이거나, 같은날의 시간이 이전일 경우
+                if(day < dataObj.start[0] || (day == dataObj.start[0] && time < dataObj.start[1])){
+                    dataObj = {...dataObj, "temp":[...dataObj.start]};
+                    dataObj.start = [...dataObj.end];
+                    dataObj.end = [...dataObj.temp];
+                }
+                var data = {
+                    "start": ['d'+(dataObj.start[0]+1), (dataObj.start[1] < 10 ? '0' : '') + dataObj.start[1] + ':00'],
+                    "end": ['d'+(dataObj.end[0]+1), (dataObj.end[1] < 10 ? '0' : '') + dataObj.end[1] + ':00']
+                }
+                setTimeValue(data);
+            }
         });
 
         $selectedTime.on('change', function(e){
-            console.log(e.type, this.value);
-            $btnTimepicker.val($(this).val());
+            setTimeValue(getTimeValue());
         });
+
+        // getter
+        function getTimeValue(){
+            var timeVal = $selectedTime.val();
+            if(!timeVal) return false;
+            timeVal = timeVal.split(splitter);
+            return {
+                "start": timeVal[0].split(' '),
+                "end": timeVal[1].split(' ')
+            }
+        }
+        // setter
+        function setTimeValue(dataObj){
+            if(!dataObj) return;
+
+            // hidden value
+            var valueStr = dataObj.start[0] + ' ' + dataObj.start[1] + splitter + dataObj.end[0] + ' ' + dataObj.end[1];
+            $selectedTime.val(valueStr);
+
+            // text display
+            var timeStr = (dataObj.start[0] != 'd1' ? '다음날' : '') + dataObj.start[1] + splitter + (dataObj.end[0] != 'd1' ? '다음날' : '') + dataObj.end[1];
+            $btnTimepicker.val(timeStr);
+
+            // button display
+            var startIndex = 24 * (parseFloat(dataObj.start[0].split('d')[1]) - 1) + (parseFloat(dataObj.start[1].split(':')[0]));
+            var endIndex = 24 * (parseFloat(dataObj.end[0].split('d')[1]) - 1) + (parseFloat(dataObj.end[1].split(':')[0]));
+            var items = $wrapper.find('li');
+            items.each(function(i, el){
+                if(i == startIndex){
+                    $(this).addClass('start');
+                }else if(i > startIndex && i < endIndex){
+                    $(this).addClass('section');
+                }else if(i == endIndex){
+                    $(this).addClass('end');
+                }
+            });
+
+            // flags
+            isComplete.start = false;
+            console.log('selectedTime.value::',$selectedTime.val());
+        }
+
+        setTimeValue(getTimeValue());
     }
 
 
