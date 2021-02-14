@@ -69,8 +69,8 @@
 .reservation-list .no-data {padding:150px 0 210px;font-size:16px;line-height:24px;text-align:center;}
 
 .reservation-card {}
-.reservation-card li {position:relative;border:1px solid #eee;border-radius:6px;background-color:#fff;}
-.reservation-card li + li {margin-top:14px;}
+.reservation-card > li {position:relative;border:1px solid #eee;border-radius:6px;background-color:#fff;}
+.reservation-card > li + li {margin-top:14px;}
 .reservation-card .room-info a {width:calc(100% - 100px);padding:7px 12px 13px 12px;}
 .reservation-card .room-info .name {font-size:20px;}
 .reservation-card .room-info .name:after {content:"";display:inline-block;width:32px;height:32px;background:url('../img/icon/ic_more_arrow.png') no-repeat center center;background-size:32px 32px;vertical-align:text-top;}
@@ -92,6 +92,25 @@
 
 .reservation-card li.deadline .room-status .type {background-color:#bdbdbd;}
 .reservation-card li.deadline .room-status .item {color:#bdbdbd;}
+
+/* CEO detail-list */
+.detail-list {padding:20px;background:#f6f7f7;}
+.detail-card {}
+.detail-card > li {position:relative;padding:0 12px;border:1px solid #eee;border-radius:6px;background-color:#fff;}
+.detail-card > li + li {margin-top:14px;}
+.detail-card .detail-guest {padding-top:8px;padding-bottom:8px;}
+.detail-card .detail-guest .name {display:block;width:calc(100% - 80px);font-size:20px;color:#000;}
+.detail-card .detail-guest .info {margin-top:7px;font-size:14px;color:#828282;font-weight:400;}
+.detail-card .detail-status {display:none;padding-top:9px;padding-bottom:11px;border-top:1px solid #e0e0e0;}
+.detail-card .detail-status .text {font-size:14px;}
+.detail-card .detail-status .type01 {color:#e53935;}
+.detail-card .detail-status .type02 {color:#037cff;}
+.detail-card .detail-status .text-more {float:right;}
+.detail-card .detail-button {position:absolute;top:10px;right:10px;}
+.detail-card + .button-wrap {margin-top:20px;}
+
+.detail-card .cancel .detail-guest .name {color:#858585;}
+.detail-card .cancel .detail-status {display:block;}
 
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
