@@ -392,7 +392,7 @@ video {
 .layer-wrap .room-name {margin-bottom:3px;color:#037cff;font-size:20px;font-weight:700;}
 
 .layer[data-layer-name="edit-room-info"] .sub-title {padding:22px 0 16px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:700;line-height:27px;}
-.layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
+.layer[data-layer-name="edit-room-info"] .layer-cont > .button-wrap {padding-bottom:20px;}
 
 .layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}
 
