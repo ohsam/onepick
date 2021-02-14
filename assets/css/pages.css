@@ -144,10 +144,10 @@
 .recent-notice .date {flex-shrink:0;padding-left:10px;font-size:14px;color:#a1a1a1;align-self:center;}
 
 .condition-toggle {padding:0 20px;}
-.condition-toggle .input-wrap {display:flex;padding:14px 0;}
+.condition-toggle .input-wrap {display:inline-block;width:100%;padding:14px 0;vertical-align:top;}
 .condition-toggle .input-wrap + .input-wrap {border-top:1px solid #eee;}
-.condition-toggle .input-wrap label {flex-grow:1;align-self:center;}
-.condition-toggle .input-wrap input {flex-shrink:0;}
+.condition-toggle .input-wrap label {float:left;padding-top:5px;}
+.condition-toggle .input-wrap input {float:right;}
 .condition-toggle .input-wrap .type {font-size:18px;line-height:27px;font-weight:500;}
 .condition-toggle .input-wrap .case {display:inline-block;font-size:14px;line-height:22px;font-weight:400;color:#828282;vertical-align:text-top;}
 
@@ -171,11 +171,12 @@
 /* CEO room-settings */
 .room-settings {}
 .room-settings .tab-container {margin-top:30px;}
-.room-settings .condition-toggle {padding:30px 0 10px 0;}
-.room-settings .condition-toggle .input-wrap {padding:8px 0;}
+.room-settings .condition-toggle {padding:48px 0 10px 0;}
+.room-settings .condition-toggle .input-wrap {padding:0px 0;}
 
 .room-name {position:relative;padding-top:10px;}
 .room-name .room-input input {padding-right:100px;}
+.room-name .room-input button {position:absolute;bottom:13px;right:0;}
 .room-name .room-button {position:absolute;bottom:13px;right:0;}
 
 .layer[data-layer-name="confirm-save-settings"] .layer-inner {}
@@ -349,6 +350,7 @@ a.lg-wt,button.lg-wt {border:1px solid #000;color:#000;background:#fff;}
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
 
 .form-wrap.room-edit {position:relative;}
+.form-wrap.room-edit.disabled:after,
 .form-wrap.room-edit.unable:after {content:"";position:absolute;top:0;left:-20px;right:-20px;height:100%;background-color:#f5f5f5;opacity:0.9;}
 
 /* CEO_room 정산 내역, 정산 내역 상세 */
@@ -474,6 +476,7 @@ a.lg-wt,button.lg-wt {border:1px solid #000;color:#000;background:#fff;}
 .layer-wrap .room-name {margin-bottom:3px;color:#037cff;font-size:20px;font-weight:700;}
 
 .layer[data-layer-name="edit-room-info"] .sub-title {padding:22px 0 16px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:700;line-height:27px;}
+/* TODO: UI-2 수정요청:: 모든 버튼에 간격이 적용됩니다 (ex:timepicker) */
 .layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
 
 .layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}

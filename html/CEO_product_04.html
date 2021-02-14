@@ -25,7 +25,7 @@
                 <h1>판매설정</h1>
                 <button class="btn-hd-notifications" type="button">알림</button>
                 <button class="btn-hd-menu" type="button">메뉴</button>
-                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-back" type="button" data-open-layer="confirm-cancel-saleset">뒤로가기</button>
                 <button class="btn-hd-close" type="button">닫기</button>
             </div>
         </header>
@@ -37,10 +37,8 @@
             <div class="app-content has-bottom-button">
                 <section class="app-section full room-settings">
                     <div class="room-name">
-                        <div class="room-input">
+                        <div class="room-input" data-js="releaseDisabled">
                             <input type="text" value="스텐다드 A" maxlength="10" disabled>
-                        </div>
-                        <div class="room-button button-wrap">
                             <button class="sm-wt" type="button">객실 명 변경</button>
                         </div>
                     </div>
@@ -57,13 +55,13 @@
                                         <strong class="type">숙박 만실</strong>
                                         <span class="case">방이 없을때</span>
                                     </label>
-                                    <input id="condition01" class="chk_t03" type="checkbox">
+                                    <input id="condition01" class="chk_t03" type="checkbox" data-js="checkevent_01" data-checkevent-target="#room-edit_01">
                                 </div>
                             </div>
 
                             <!-- 숙박 만실 checkbox off: <div class="form-wrap room-edit mt15"> -->
-                            <!-- 숙박 만실 checkbox on: <div class="form-wrap room-edit mt15 unable"> -->
-                            <div class="form-wrap room-edit mt15">
+                            <!-- 숙박 만실 checkbox on: <div class="form-wrap room-edit mt15 disabled"> -->
+                            <div class="form-wrap room-edit mt15" id="room-edit_01">
                                 <div class="row">
                                     <!-- 
                                         data-js="timepicker" 로 동작합니다
@@ -146,13 +144,13 @@
                                         <dt><label for="rtForm06">적용 일자</label></dt>
                                         <dd>
                                             <div class="input-wrap-datetime">
-                                                <input id="rtForm06" type="text" name="datefilter" placeholder="당일 날짜" data-datepicker data-single-date data-container="#applyDate02" data-inline="true">
+                                                <input id="rtForm06" type="text" name="datefilter" placeholder="당일 날짜" data-datepicker data-single-date data-container="#applyDate01" data-inline="true">
                                             </div>
                                         </dd>
                                     </dl>
                                 </div>
 
-                                <div id="applyDate02"></div><!-- datepicker inline -->
+                                <div id="applyDate01"></div><!-- datepicker inline -->
                             </div>
                         </div>
                         <!-- 숙박 [e] -->
@@ -162,10 +160,10 @@
                             <div class="form-wrap room-edit mt30">
                                 <div class="row">
                                     <dl>
-                                        <dt><label for="rtForm01">가능 시간</label></dt>
+                                        <dt><label for="rpForm01">가능 시간</label></dt>
                                         <dd>
                                             <div class="input-wrap-number unit time">
-                                                <input id="rtForm01" type="text" placeholder="0"><span class="unitText">시간</span>
+                                                <input id="rpForm01" type="text" placeholder="0"><span class="unitText">시간</span>
                                             </div>
                                         </dd>
                                     </dl>
@@ -203,10 +201,10 @@
 
                                 <div class="row">
                                     <dl>
-                                        <dt><label for="rtForm03">잔여 객실수</label></dt>
+                                        <dt><label for="rpForm03">잔여 객실수</label></dt>
                                         <dd>
                                             <div class="input-wrap-number counter fl-r">
-                                                <input id="rtForm03" type="number" value="0" data-minimum="0" data-maximum="30">
+                                                <input id="rpForm03" type="number" value="0" data-minimum="0" data-maximum="30">
                                                 <button type="button" class="minus" data-amount="-1">-</button>
                                                 <button type="button" class="plus" data-amount="1">+</button>
                                             </div>
@@ -216,10 +214,10 @@
 
                                 <div class="row">
                                     <dl>
-                                        <dt><label for="rtForm04">정상 금액</label></dt>
+                                        <dt><label for="rpForm04">정상 금액</label></dt>
                                         <dd>
                                             <div class="input-wrap-number unit">
-                                                <input id="rtForm04" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <input id="rpForm04" type="text" placeholder="0"><span class="unitText">원</span>
                                                 <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
                                                 <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
                                             </div>
@@ -229,10 +227,10 @@
 
                                 <div class="row">
                                     <dl>
-                                        <dt><label for="rtForm05">판매 금액</label></dt>
+                                        <dt><label for="rpForm05">판매 금액</label></dt>
                                         <dd>
                                             <div class="input-wrap-number unit">
-                                                <input id="rtForm05" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <input id="rpForm05" type="text" placeholder="0"><span class="unitText">원</span>
                                                 <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
                                                 <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
                                             </div>
@@ -242,10 +240,10 @@
 
                                 <div class="row">
                                     <dl data-js="datepicker">
-                                        <dt><label for="rtForm06">적용 일자</label></dt>
+                                        <dt><label for="rpForm06">적용 일자</label></dt>
                                         <dd>
                                             <div class="input-wrap-datetime">
-                                                <input id="rtForm06" type="text" name="datefilter" placeholder="당일 날짜" data-datepicker data-single-date data-container="#applyDate02" data-inline="true">
+                                                <input id="rpForm06" type="text" name="datefilter" placeholder="당일 날짜" data-datepicker data-single-date data-container="#applyDate02" data-inline="true">
                                             </div>
                                         </dd>
                                     </dl>
@@ -306,6 +304,19 @@
                 <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer="">취소</button>
                     <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="confirm-cancel-saleset" -->
+        <div class="layer confirm" data-layer-name="confirm-cancel-saleset">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    설정하신 숙박 판매 설정을 <br/>취소하시겠습니까?
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer>취소</button>
+                    <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
             </div>
         </div>

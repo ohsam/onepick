@@ -59,7 +59,8 @@ $(function(){
         }
         var $layers = $('[data-layer-name]');
         $layers.css('z-index', '1').filter('[data-layer-name="'+layerName+'"]').css('z-index', '100');
-        $tgLayer.show();
+        $tgLayer.data('focus-back-target', $(this))
+            .show().find('> *:first-child').attr('tabindex', '0').focus();
         $('body').addClass('lock');
 
         if($(this).attr('data-callback')){
@@ -75,7 +76,7 @@ $(function(){
         }else{
             $tgLayer = $(this).closest('.layer');
         }
-        $tgLayer.hide();
+        $tgLayer.hide().attr('tabindex', '').data('focus-back-target').focus();
         $('body').removeClass('lock');
 
         if($(this).attr('data-callback')){
@@ -119,6 +120,12 @@ $(function(){
             case "timepicker" :
                 timepicker(this);
                 break;
+            case "releaseDisabled" :
+                releaseDisabled(this);
+                break;
+            case "checkevent_01" :
+                checkevent_01(this);
+                break;
         }
     });
 
@@ -150,13 +157,10 @@ $(function(){
         var $datepicker = $container.find('[data-datepicker]');
         var isSingleDate = $datepicker.attr('data-single-date');
         isSingleDate = isSingleDate == 'false' || isSingleDate == undefined ? false : true;
+        var isInline = $datepicker.attr('data-inline');
+        isInline = isInline == 'false' || isInline == undefined ? false : true;
         var container = $datepicker.attr('data-container') || 'body';
-        var inline = Boolean($datepicker.attr('data-inline'));
         
-        if( inline != true ) {
-            inline = false;
-        }
-
         $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
             "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
             "week-1": "Mon",
@@ -168,15 +172,16 @@ $(function(){
             "week-7": "Sun",
         }
         var configObject = {
-            singleDate : isSingleDate,
             language: 'ko',
             format: 'YYYY.MM.DD',
             separator: ' ~ ',
             showShortcuts: false,
             singleMonth: true,
             container: container,
-            inline: inline
+            singleDate : isSingleDate,
+            inline: isInline
         }
+        
         $datepicker.dateRangePicker(configObject)
         .on('datepicker-opened datepicker-closed', function(e){
             switch(e.type){
@@ -325,6 +330,29 @@ $(function(){
         setTimeValue(getTimeValue());
     }
 
+    function releaseDisabled(el){
+        $button = $(el).find('button').eq(0);
+        if($button.length < 1) return;
+        $button.on('click', function(e){
+            var $target = $(this).siblings('input').eq(0);
+            var val = $target.val();
+            $target.get(0).disabled = false;
+            $target.val('').val(val).focus();
+        })
+    }
+
+    function checkevent_01(el){
+        var $checkbox = $(el);
+        var $eventTarget = $($checkbox.attr('data-checkevent-target')).eq(0);
+        $checkbox.on('change', function(e){
+            if(e.target.checked){
+                $eventTarget.addClass('disabled');
+            }else{
+                $eventTarget.removeClass('disabled');
+            }
+        }).trigger('change');
+    }
+
 
     // window Fn
     window.openLayer = function(layerName){
@@ -332,17 +360,21 @@ $(function(){
         if(!$tgLayer.hasClass('full')){
             $('[data-layer-name]').filter(':not(.full)').hide();
         }
-        $tgLayer.show();
+        $tgLayer.data('focus-back-target', $('*:focus').eq(0))
+            .show().find('> *:first-child').attr('tabindex', '0').focus();
+        $('body').addClass('lock');
     }
     window.closeLayer = function(layerName){
         $tgLayer = $('[data-layer-name="'+layerName+'"]');
-        $tgLayer.hide();
+        $tgLayer.hide().attr('tabindex', '').data('focus-back-target').focus();
+        $('body').removeClass('lock');
     }
     window.triggerClick = function(id){
         if(!id) return;
         $tg = $('#'+id);
         $tg.trigger('click');
     }
+
 
     /* UI-2 [s] */
     

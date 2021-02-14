@@ -47,10 +47,10 @@
                             <div class="detail-status">
                                 <span class="text type01">취소완료</span>
                                 <!-- <span class="text type02">체크인 최종 확인 완료</span> -->
-                                <a href="#" class="text-more">취소 상세 보기</a>
+                                <a href="javascript:void(0);" class="text-more" data-open-layer="dialog-cancel-yes">취소 상세 보기</a>
                             </div>
                             <div class="detail-button button-wrap">
-                                <a href="#" class="sm-wt unable">예약상세</a>
+                                <a href="#" class="sm-wt" disabled>예약상세</a>
                             </div>
                         </li>
                         <li class="cancel">
@@ -69,7 +69,7 @@
                                 <!-- <a href="#" class="text-more">취소 상세 보기</a> -->
                             </div>
                             <div class="detail-button button-wrap">
-                                <a href="#" class="sm-wt">예약상세</a>
+                                <a href="./CEO_product_03.html" class="sm-wt">예약상세</a>
                             </div>
                         </li>
                         <li>
@@ -88,7 +88,7 @@
                                 <!-- <a href="#" class="text-more">취소 상세 보기</a> -->
                             </div>
                             <div class="detail-button button-wrap">
-                                <a href="#" class="sm-wt">예약상세</a>
+                                <a href="./CEO_product_03.html" class="sm-wt">예약상세</a>
                             </div>
                         </li>
                         <li>
@@ -107,7 +107,7 @@
                                 <!-- <a href="#" class="text-more">취소 상세 보기</a> -->
                             </div>
                             <div class="detail-button button-wrap">
-                                <a href="#" class="sm-wt">예약상세</a>
+                                <a href="./CEO_product_03.html" class="sm-wt">예약상세</a>
                             </div>
                         </li>
                     </ul>
@@ -143,6 +143,30 @@
                     layer-cont full
                 </div>
                 <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+
+        <!-- layer-name="dialog-cancel-yes" -->
+        <div class="layer dialog" data-layer-name="dialog-cancel-yes">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <div class="layer-title" role="heading">취소 상세</div>
+                </div>
+                <div class="layer-cont">
+
+                    <dl class="details-info mt30">
+                        <dt>예약번호</dt>
+                        <dd class="rnum">20120910320302</dd>
+                        <dt class="mt20">취소 일시</dt>
+                        <dd>2020.12.11(금요일) 17:00</dd>
+                        <dt class="mt20">취소 사유</dt>
+                        <dd>누수로 인해 부득이하게 예약 취소를 합니다.</dd>
+                    </dl>
+
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
             </div>
         </div>
     </div>
