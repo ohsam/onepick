@@ -112,6 +112,29 @@
 .detail-card .cancel .detail-guest .name {color:#858585;}
 .detail-card .cancel .detail-status {display:block;}
 
+/* CEO detail-view */
+.detail-view {}
+.detail-guest {padding-top:10px;padding-bottom:20px;}
+.detail-guest .name {font-size:20px;}
+.detail-guest .number {color:#121212;}
+.detail-guest .number span {padding-left:5px;color:#037cff;font-weight:600;}
+.detail-reservation {}
+.detail-reservation:after {content:"";display:block;clear:both;}
+.detail-reservation > li {float:left;width:100%;padding:6px 0 20px;border-top:1px solid #eee;clear:both;}
+.detail-reservation > li:last-child {padding-bottom:0;}
+.detail-reservation > li.half {width:calc(50% - 8px);}
+.detail-reservation > li.half + li.half {margin-left:16px;clear:none;}
+.detail-reservation .title {display:block;font-size:14px;line-height:20px;font-weight:400;color:#828282;}
+.detail-reservation .info {margin-top:6px;padding-top:6px;border-top:1px solid #000;color:#121212;}
+.detail-reservation .info > li:after {content:"";display:block;clear:both;}
+.detail-reservation .info .key {float:left;font-weight:500;}
+.detail-reservation .info .value {float:right;text-align:right;}
+.detail-reservation .info .guide {display:block;margin-top:4px;margin-bottom:10px;font-size:12px;font-weight:400;color:#828282;}
+.detail-reservation .amount .currency {font-style:normal;}
+.detail-reservation .amount .num {font-weight:600;}
+.detail-reservation .amount .num.type01 {color:#037cff;}
+.detail-reservation .amount .num.type02 {color:#e53935;}
+
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
 .recent-notice a {display:flex;padding:14px 20px;}

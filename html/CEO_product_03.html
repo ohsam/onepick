@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>예약 상세 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header sub"><!-- class:: main/sub/popup -->
+                <h1>예약 상세</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-button">
+                <section class="app-section full detail-view">
+                    <div class="detail-guest">
+                        <strong class="name">예약자: <span>홍길동</span></strong>
+                        <p class="number">예약번호 <span>20120910320302</span></p>
+                    </div>
+                    <ul class="detail-reservation">
+                        <li>
+                            <span class="title">예약자 정보</span>
+                            <ul class="info">
+                                <li>안심번호 : 0500718015281</li>
+                                <li>방문형태 : 차량</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="title">예약 정보</span>
+                            <ul class="info">
+                                <li>이용유형 : 숙박/1박</li>
+                                <li>객실정보 : 일반실</li>
+                                <li>예약일시 : 2020.12.30(월) 15:07</li>
+                            </ul>
+                        </li>
+                        <li class="half">
+                            <span class="title">입실 일시</span>
+                            <ul class="info">
+                                <li>2020.12.11(금요일)<br>17:00</li>
+                            </ul>
+                        </li>
+                        <li class="half">
+                            <span class="title">퇴실 일시</span>
+                            <ul class="info">
+                                <li>2020.12.11(금요일)<br>17:00</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="title">결제 정보</span>
+                            <ul class="info">
+                                <li>
+                                    <strong class="key">판매가</strong>
+                                    <span class="value">
+                                        <div class="amount">
+                                            <span class="num type01">25,000</span><em class="currency">원</em>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong class="key">입금예정가</strong>
+                                    <span class="value">
+                                        <div class="amount">
+                                            <span class="num type02">22,500</span><em class="currency">원</em>
+                                        </div>
+                                        <span class="guide">(10% 부가세포함)</span>
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong class="key">적립 할인</strong>
+                                    <span class="value">
+                                        <div class="amount">
+                                            <span class="num">1,000</span><em class="currency">원</em>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong class="key">제휴 포인트</strong>
+                                    <span class="value">
+                                        <div class="amount">
+                                            <span class="type">(Kt맴버십) </span><span class="num">1,000</span><em class="currency">P</em>
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+                    <!-- common button -->
+                    <div class="button-wrap full">
+                        <button class="lg-bl" type="button">체크인 최종 확인</button>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+        
+        <!-- layer-name="terms" -->
+        <div class="layer" data-layer-name="terms">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- layer-wrap [e] -->
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>
