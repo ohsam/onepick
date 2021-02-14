@@ -438,6 +438,23 @@ $(function(){
         } else {
             return false;
         }
+
+        $('body .date-picker-wrapper .drp_top-bar .apply-btn').val('검색');
+        $('.calc-info--top').append('<button type="button" class="cancel-btn" id="cancelBtn">취소</button>');
+        
+    });
+
+    // $.each( $('.btn-toggle'), function() {
+
+    //     // 정산 calendar - setting : today
+    //     var today = new Date().toLocaleDateString('ko-KR');
+    //     $('.btn-toggle').hasClass('one-day') ? $(this).val(today) : $(this).val('');
+
+    // });
+
+    $.each( $('#cancelBtn'), function(e) { 
+        e.stopPropagation();
+        $('#oneDay').data('dateRangePicker').close();
     });
 
     /* UI-2 [e] */
