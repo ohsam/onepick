@@ -305,6 +305,9 @@ a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 .button-wrap.dialog a + a,.button-wrap.dialog button + button {margin-left:12px;}
 .btn-more {font-size:16px;line-height:32px;color:#828282;border:none;background-color:transparent;}
 .btn-more:after {content:"";display:inline-block;width:32px;height:32px;vertical-align:top;background:url('../img/icon/ic_more.png') no-repeat center center;background-size:32px 32px;}
+.btn-cancel {font-size:16px;line-height:24px;color:#e53935;}
+.btn-cancel:visited {color:#e53935;}
+.btn-cancel:before {content:"";display:inline-block;width:24px;height:24px;vertical-align:top;background:url('../img/icon/ic_cancel.png') no-repeat center center;background-size:24px 24px;}
 .btn-delete {width:24px;height:24px;font-size:0;color:transparent;border:none;background:url('../img/icon/icon_delete_circ.png') no-repeat center center;background-size:24px 24px;}
 .btn-refresh {width:40px;height:40px;font-size:0;color:transparent;border:none;background:url('../img/icon/ic_refresh.png') no-repeat center center;background-size:40px 40px;}
 .btn-hd-close {width:50px;height:50px;font-size:0;color:transparent;border:none;background:url('../img/icon/ic_close.png') no-repeat center center;background-size:50px 50px;}

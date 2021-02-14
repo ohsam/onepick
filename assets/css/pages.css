@@ -118,6 +118,8 @@
 .detail-guest .name {font-size:20px;}
 .detail-guest .number {color:#121212;}
 .detail-guest .number span {padding-left:5px;color:#037cff;font-weight:600;}
+.detail-guest .button-wrap .btn-cancel {position:fixed;top:0;right:0;padding:16px 20px 15px 10px;z-index:100;}
+
 .detail-reservation {}
 .detail-reservation:after {content:"";display:block;clear:both;}
 .detail-reservation > li {float:left;width:100%;padding:6px 0 20px;border-top:1px solid #eee;clear:both;}
