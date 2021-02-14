@@ -317,41 +317,68 @@
                             <input type="text" placeholder="0"><span class="unitText">시간</span>
                         </div>
                         
-                        <style>
-                            .btn-timepicker {width:100%;}
-                            .timepicker-wrapper .item-wrapper {display:flex;flex-wrap:wrap;padding:4px 0;}
-                            .timepicker-wrapper .item-wrapper + .item-wrapper {margin-top:4px;}
-                            .timepicker-wrapper .item-wrapper + .item-wrapper:before {content:'Next Day';display:block;width:100%;}
-                            .timepicker-wrapper .item-wrapper > li {display:inline-block;width:25%;padding:4px;}
-                            .timepicker-wrapper .item-wrapper > li button {width:100%;height:46px;border:1px solid #ccc;background:lightgray;}
-                            .timepicker-wrapper .item-wrapper > li.start button {background-color:red !important;}
-                            .timepicker-wrapper .item-wrapper > li.end button {background-color:blue !important;}
-                            .timepicker-wrapper .item-wrapper > li.section button {background-color:yellow !important;}
-                            
-                        </style>
                         <!-- 
                             data-js="timepicker" 로 동작합니다
                             data-timepicker-days= 당일/여러날 일 수
-                            data-timepicker-show 로 여닫기, 선택 날짜 표시 (여닫기 미구현)
+                            data-timepicker-show 로 여닫기, 선택한 날짜 표시
                             data-timepicker-value 의 value 로 선택날짜 데이터 전달 (초기값)
                             data-timepicker-day 현재 쓰이지 않음 (여러날 시 Next Day, 다음날 로만 표시됨)
                             현재 reset, cancel 기능 없음
                         -->
                         <div class="mt10" data-js="timepicker" data-timepicker-days="2">
-                            <div class="input-wrap">
-                                <input type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                            <div class="timepicker--button">
+                                <label for="inp_time01">입/퇴실</label>
+                                <div class="input-wrap">
+                                    <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                                </div>
                             </div>
                             <input type="hidden" name="selectedTime" value="d1 09:00 ~ d2 14:00" data-timepicker-value>
-                            <div class="timepicker-wrapper">
-                                <!-- sample
-                                <ul class="item-wrapper" data-timepicker-day="d1">
-                                    <li><button type="button">00시</button></li>
-                                    <li><button type="button">01시</button></li>
-                                    <li><button type="button">02시</button></li>
-                                    <li><button type="button">03시</button></li>
-                                </ul> -->
+                            <div class="timepicker--content">
+                                <div class="text-box">
+                                    <p>입실 ~ 퇴실 시간 설정</p>
+                                    <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
+                                </div>
+                                <div class="timepicker-wrapper">
+                                    <!-- sample
+                                    <ul class="item-wrapper" data-timepicker-day="d1">
+                                        <li><button type="button">00시</button></li>
+                                        <li><button type="button">01시</button></li>
+                                        <li><button type="button">02시</button></li>
+                                        <li><button type="button">03시</button></li>
+                                    </ul> -->
+                                </div>
+                                <div class="button-wrap full mt10">
+                                    <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                </div>
                             </div>
-                        </div>                        
+                        </div>
+                        <div class="mt10" data-js="timepicker" data-timepicker-days="1">
+                            <div class="timepicker--button">
+                                <label for="inp_time01">오픈마감</label>
+                                <div class="input-wrap">
+                                    <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                                </div>
+                            </div>
+                            <input type="hidden" name="selectedTime" value="d1 09:00 ~ d2 14:00" data-timepicker-value>
+                            <div class="timepicker--content">
+                                <div class="text-box">
+                                    <p>오픈 ~ 마감 시간 설정</p>
+                                    <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
+                                </div>
+                                <div class="timepicker-wrapper">
+                                    <!-- sample
+                                    <ul class="item-wrapper" data-timepicker-day="d1">
+                                        <li><button type="button">00시</button></li>
+                                        <li><button type="button">01시</button></li>
+                                        <li><button type="button">02시</button></li>
+                                        <li><button type="button">03시</button></li>
+                                    </ul> -->
+                                </div>
+                                <div class="button-wrap full mt10">
+                                    <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                 </section>
                 <section class="app-section">

@@ -199,7 +199,9 @@ $(function(){
         var $container = $(el);
         var $btnTimepicker = $container.find('[data-timepicker-show]');
         var $selectedTime = $container.find('[data-timepicker-value]');
+        var $content = $container.find('.timepicker--content');
         var $wrapper = $container.find('.timepicker-wrapper');
+        var $btnClose = $container.find('[data-timepicker-close]');
         var days = parseFloat($container.attr('data-timepicker-days')) || 1;
         var splitter = ' ~ ';
         var isComplete = {"start":false};
@@ -253,6 +255,24 @@ $(function(){
 
         $selectedTime.on('change', function(e){
             setTimeValue(getTimeValue());
+        });
+
+        $btnTimepicker.on('click', function(e){
+            if($content.length > 0){
+                $content.slideToggle();
+            }else{
+                $wrapper.slideToggle();
+            }
+            $(this).toggleClass('timepicker-opened');
+        });
+
+        $btnClose.on('click', function(e){
+            if(isComplete.start){
+                $wrapper.find('li').removeClass('start section end');
+                setTimeValue(getTimeValue());
+            }
+            $btnTimepicker.removeClass('timepicker-opened').focus();
+            $content.slideUp();
         });
 
         // getter

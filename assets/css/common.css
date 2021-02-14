@@ -569,4 +569,25 @@ a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 	content: none;
 }
 
+/* timepicker */
+[data-js="timepicker"] {}
+[data-js="timepicker"] .timepicker--button {display:inline-block;width:100%;vertical-align:top;}
+[data-js="timepicker"] .timepicker--button label {float:left;width:100px;padding-top:11px;font-size:18px;}
+[data-js="timepicker"] .timepicker--button .input-wrap {float:right;width:calc(100% - 100px);}
+[data-js="timepicker"] .timepicker--button .input-wrap .btn-timepicker {width:100%;height:48px;border:1px solid #e5e5e5;border-radius:6px;background: #fff url(../img/icon/icon_function_element_dropdown.png) no-repeat right 4px center;background-size: 28px 28px;text-align:left;}
+[data-js="timepicker"] .timepicker--button .input-wrap .btn-timepicker.timepicker-opened {background: #fff url(../img/icon/icon_function_element_dropup.png) no-repeat right 4px center;background-size: 28px 28px;}
+[data-js="timepicker"] .timepicker--content {display:none;padding-top:10px;}
+[data-js="timepicker"] .timepicker--content .text-box {padding:20px 0 10px;border-top:1px solid #eee;}
+[data-js="timepicker"] .timepicker--content .text-box p {font-size:18px;}
+[data-js="timepicker"] .timepicker--content .text-box .desc {margin-top:4px;color:#a1a1a1;}
+[data-js="timepicker"] .timepicker--content .timepicker-wrapper {display:block;margin:0 -4px;}
+.timepicker-wrapper {display:none;}
+.timepicker-wrapper .item-wrapper {display:flex;flex-wrap:wrap;padding:4px 0;}
+.timepicker-wrapper .item-wrapper + .item-wrapper {margin-top:4px;}
+.timepicker-wrapper .item-wrapper + .item-wrapper:before {content:'Next Day';display:block;width:100%;margin-left:4px;}
+.timepicker-wrapper .item-wrapper > li {display:inline-block;width:25%;padding:4px;}
+.timepicker-wrapper .item-wrapper > li button {width:100%;height:46px;border:1px solid #bfbfbf;border-radius:4px;background:#fff;}
+.timepicker-wrapper .item-wrapper > li.start button {color:#fff;border-color:#037cff;background-color:#037cff !important;}
+.timepicker-wrapper .item-wrapper > li.end button {color:#fff;border-color:#037cff;background-color:#037cff !important;}
+.timepicker-wrapper .item-wrapper > li.section button {color:#fff;border-color:#037cff;background-color:#037cff !important;}
 

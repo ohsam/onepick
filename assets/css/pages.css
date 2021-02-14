@@ -288,6 +288,7 @@ video {
 .form-wrap.room-edit .row {padding:10px 0;}
 .form-wrap.room-edit .row dl {display:flex;flex-direction:row;justify-content:space-between;align-items:flex-start;}
 .form-wrap.room-edit .row dt {width:100px;padding-top:11px;}
+.form-wrap.room-edit .row dt label {font-size:18px;}
 .form-wrap.room-edit .row dd {width:calc(100% - 100px);margin:0;}
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
 

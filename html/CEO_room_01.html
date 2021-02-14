@@ -203,19 +203,41 @@
                         <div tabindex="0" role="tabpanel" id="tab_content03_1" aria-labelledby="tab03_1" class="show">
                             <div class="form-wrap room-edit mt30">
                                 <div class="row">
-                                    <dl>
-                                        <dt><label for="rmForm01">입/퇴실</label></dt>
-                                        <dd>
-                                            <div class="input-wrap-select">
-                                                <select id="rmForm01">
-                                                    <option>14:00 ~ 다음날 11시</option>
-                                                    <option>14:00 ~ 다음날 11시</option>
-                                                    <option>14:00 ~ 다음날 11시</option>
-                                                    <option>14:00 ~ 다음날 11시</option>
-                                                </select>
+                                    <!-- 
+                                        data-js="timepicker" 로 동작합니다
+                                        data-timepicker-days= 당일/여러날 일 수
+                                        data-timepicker-show 로 여닫기, 선택한 날짜 표시
+                                        data-timepicker-value 의 value 로 선택날짜 데이터 전달 (초기값)
+                                        data-timepicker-day 현재 쓰이지 않음 (여러날 시 Next Day, 다음날 로만 표시됨)
+                                        현재 reset, cancel 기능 없음
+                                    -->
+                                    <div data-js="timepicker" data-timepicker-days="2">
+                                        <div class="timepicker--button">
+                                            <label for="inp_time01">입/퇴실</label>
+                                            <div class="input-wrap">
+                                                <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
                                             </div>
-                                        </dd>
-                                    </dl>
+                                        </div>
+                                        <input type="hidden" name="selectedTime" value="d1 09:00 ~ d2 14:00" data-timepicker-value>
+                                        <div class="timepicker--content">
+                                            <div class="text-box">
+                                                <p>입실 ~ 퇴실 시간 설정</p>
+                                                <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
+                                            </div>
+                                            <div class="timepicker-wrapper">
+                                                <!-- sample
+                                                <ul class="item-wrapper" data-timepicker-day="d1">
+                                                    <li><button type="button">00시</button></li>
+                                                    <li><button type="button">01시</button></li>
+                                                    <li><button type="button">02시</button></li>
+                                                    <li><button type="button">03시</button></li>
+                                                </ul> -->
+                                            </div>
+                                            <div class="button-wrap full mt10">
+                                                <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row">
@@ -275,14 +297,33 @@
                                 </div>
 
                                 <div class="row">
-                                    <dl>
-                                        <dt><label for="rtForm02">오픈 마감</label></dt>
-                                        <dd>
-                                            <div class="input-wrap-datetime">
-                                                <input id="rtForm02" type="text" value="14:00 ~ 다음날 11시">
+                                    <div data-js="timepicker" data-timepicker-days="1">
+                                        <div class="timepicker--button">
+                                            <label for="inp_time01">오픈마감</label>
+                                            <div class="input-wrap">
+                                                <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
                                             </div>
-                                        </dd>
-                                    </dl>
+                                        </div>
+                                        <input type="hidden" name="selectedTime" value="d1 09:00 ~ d1 18:00" data-timepicker-value>
+                                        <div class="timepicker--content">
+                                            <div class="text-box">
+                                                <p>오픈 ~ 마감 시간 설정</p>
+                                                <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
+                                            </div>
+                                            <div class="timepicker-wrapper">
+                                                <!-- sample
+                                                <ul class="item-wrapper" data-timepicker-day="d1">
+                                                    <li><button type="button">00시</button></li>
+                                                    <li><button type="button">01시</button></li>
+                                                    <li><button type="button">02시</button></li>
+                                                    <li><button type="button">03시</button></li>
+                                                </ul> -->
+                                            </div>
+                                            <div class="button-wrap full mt10">
+                                                <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="row">
