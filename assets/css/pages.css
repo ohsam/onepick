@@ -167,10 +167,12 @@ video {
 .card-box .sm-wt {position:absolute;top:11px;right:10px;}
 .card-box .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
 .card-box .card-body .time, .card-box .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
+.card-box .num {font-family:'Roboto', sans-serif;}
 
 .input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
 
-
+input[type="text"] {-webkit-appearance:none;appearance:none;}	
+textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;border-color:#eee;-webkit-outline:none;outline:none;}
 
 .grp-title {font-size:20px;font-weight:700;}
 .bg-gray-t1 {background-color:#f6f7f7;}
@@ -182,6 +184,9 @@ video {
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 .layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
 .bg-white-rd10 {background-color:#fff;border-radius:10px;}
+
+a.lg-bk,button.lg-bk {border:1px solid #000;color:#fff;background:#000;}	
+a.lg-wt,button.lg-wt {border:1px solid #000;color:#000;background:#fff;}
 
 /* 임시 */
 .bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;}
@@ -256,7 +261,8 @@ video {
 .issue-check label::after {content:'';clear:both;display:table;}
 .issue-check label .input-wrap {float:right;}
 .issue-check .etc {display:block;margin:20px 0 8px;}
-.issue-check textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;border-color:#eee;}
+/* .issue-check textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;border-color:#eee;} */	
+
 
 /* CEO_room 객실 유형 */
 .main--room-types {background:#f7f7f7;}
@@ -347,7 +353,8 @@ video {
 .summary-box.ty02 .calc-items .num {color:#037cff;}
 
 .calc-info--tab .no-data-info {height:calc(100vh - 511px);justify-content:center;padding-top:0;}
-.calc-info--tab .card--list {padding:20px;}
+.ios.mobile .calc-info--tab .no-data-info {height:calc(100vh - 69px - 511px);}
+.card--list {padding:20px;}
 .calc-info--tab .card-body .time {margin-top:4px;}
 .calc-div-wrap {display:flex;flex-direction:row;align-items:flex-end;margin-top:8px;}
 .calc-div-wrap div {width:50%;}
@@ -358,9 +365,11 @@ video {
 .calc-div-wrap .div--right {font-size:16px;}
 .calc-div-wrap .div--right .num {margin-right:2px;color:#037cff;font-size:22px;letter-spacing:-0.5px;}
 
-.calc-info--tab .sticky-wrapper.is-sticky {z-index:1;}
+.sticky-wrapper.is-sticky {z-index:1;}
 
 /* CEO_room 리뷰 */
+.main--review .no-data-info {height:calc(100vh - 442px);padding-top:0;justify-content:center;}	
+.ios.mobile .main--review  .no-data-info {height:calc(100vh - 69px - 442px);}
 .review-summary-box {padding:0 20px 20px;background-color:#fff;}
 .review-summary-box .text {padding:16px 0;border-bottom:1px solid #eee;font-size:20px;line-height:29px;text-align:center;}
 .review-summary-box .num {font-family:'Roboto', sans-serif;font-weight:400;}
@@ -375,6 +384,26 @@ video {
 .review-summary-box .rating-bar {width:calc(100% - 152px);}
 .review-summary-box .bar-wrap {position:relative;overflow:hidden;width:100%;height:10px;background-color:#e8e8e8;border-radius:5px;} 
 .review-summary-box .bar {position:absolute;top:0;left:0;height:100%;background-color:#037cff;border-radius:5px;}
+
+.review-info--tab .card-box {padding:12px;}	
+.review-info--tab .time {position:absolute;top:15px;right:10px;color:#828282;font-size:12px;font-weight:400;}	
+.review-info--tab .rating {font-size:30px;font-weight:700;line-height:35px;}	
+.review-info--tab .writer {margin-top:8px;font-family:'Roboto', sans-serif;font-size:14px;font-weight:700;}	
+.review-text {margin-top:6px;color:#828282;font-size:16px;font-weight:400;letter-spacing:-0.5px;}	
+.thumb-wrap {position:relative;display:inline-block;width:100%;margin-top:12px;}	
+.thumb-list li {float:left;}	
+.thumb-list li + li {margin-left:10px;}	
+.thumb-list li:last-child {margin-left:4px;}	
+.thumb-list .rect-box {position:relative;overflow:hidden;width:22.22vw;height:22.22vw;padding-top:100%;border-radius:6px;-webkit-box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);}	
+.thumb-list .rect-box img {position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;}	
+.thumb-list .more .ico-more {position:absolute;top:50%;right:-8px;display:block;margin-top:-20px;width:40px;height:40px;background:url(../img/icon/ic_more_bk.png) no-repeat 0 0;background-size:contain;}	
+.reply {margin-top:18px;}	
+.reply textarea, .textarea {margin-bottom:6px;background-color:#f7f7f7;border-color:#f0f0f0;border-radius:4px;}	
+.reply .textarea {position:relative;padding:34px 10px 10px 12px;}	
+.reply .sub-tit {position:absolute;top:8px;left:12px;font-size:14px;}	
+.reply .time {position:absolute;top:10px;right:12px;font-size:12px;font-weight:400;}	
+.reply .text {font-weight:400;line-height:23px;}	
+.reply--read .sm-wt {position:relative;top:auto;right:auto;}
 
 .pictures-wrap {padding:20px 0;}
 .pictures-wrap .picture-item {position:relative;overflow:hidden;width:100%;padding-top:65.625%;border-radius:6px;-webkit-box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.25);} /* aspect ration */
@@ -392,8 +421,12 @@ video {
 .layer-wrap .room-name {margin-bottom:3px;color:#037cff;font-size:20px;font-weight:700;}
 
 .layer[data-layer-name="edit-room-info"] .sub-title {padding:22px 0 16px;border-bottom:1px solid #e0e0e0;font-size:20px;font-weight:700;line-height:27px;}
-.layer[data-layer-name="edit-room-info"] .layer-cont > .button-wrap {padding-bottom:20px;}
+.layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
 
 .layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}
+
+.inline-wrapper.date-picker-wrapper:before {position:relative;}	
+.inline-wrapper.date-picker-wrapper .month-wrapper {padding:0;}	
+.inline-wrapper.date-picker-wrapper .month-wrapper table .caption .month-name:after {left:0;right:0;}
 
 /* [e]: UI-2 ***********************************************************/
