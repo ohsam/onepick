@@ -137,6 +137,12 @@
 .detail-reservation .amount .num.type01 {color:#037cff;}
 .detail-reservation .amount .num.type02 {color:#e53935;}
 
+/* CEO room-settings */
+.room-settings {}
+.room-name {position:relative;padding-top:10px;}
+.room-name .room-input input {padding-right:100px;}
+.room-name .room-button {position:absolute;bottom:13px;right:0;}
+
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
 .recent-notice a {display:flex;padding:14px 20px;}
