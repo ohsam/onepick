@@ -137,12 +137,6 @@
 .detail-reservation .amount .num.type01 {color:#037cff;}
 .detail-reservation .amount .num.type02 {color:#e53935;}
 
-/* CEO room-settings */
-.room-settings {}
-.room-name {position:relative;padding-top:10px;}
-.room-name .room-input input {padding-right:100px;}
-.room-name .room-button {position:absolute;bottom:13px;right:0;}
-
 /* CEO app-main */
 .recent-notice {background-color:#eee;}
 .recent-notice a {display:flex;padding:14px 20px;}
@@ -174,12 +168,18 @@
 .status-summary .status-sales .button-wrap {float:right;margin-top:8px;display:inline-block;}
 .status-summary .status-button {position:absolute;top:10px;right:10px;}
 
+/* CEO room-settings */
+.room-settings {}
+.room-settings .tab-container {margin-top:30px;}
+.room-settings .condition-toggle {padding:30px 0 10px 0;}
+.room-settings .condition-toggle .input-wrap {padding:8px 0;}
 
+.room-name {position:relative;padding-top:10px;}
+.room-name .room-input input {padding-right:100px;}
+.room-name .room-button {position:absolute;bottom:13px;right:0;}
 
-
-
-
-
+.layer[data-layer-name="confirm-save-settings"] .layer-inner {}
+.layer[data-layer-name="confirm-save-settings"] .layer-inner .layer-cont {padding-top:20px;padding-bottom:40px;}
 
 
 .white {color:#fff;}
@@ -347,6 +347,9 @@ a.lg-wt,button.lg-wt {border:1px solid #000;color:#000;background:#fff;}
 .form-wrap.room-edit .row dt label {font-size:18px;}
 .form-wrap.room-edit .row dd {width:calc(100% - 100px);margin:0;}
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
+
+.form-wrap.room-edit {position:relative;}
+.form-wrap.room-edit.unable:after {content:"";position:absolute;top:0;left:-20px;right:-20px;height:100%;background-color:#f5f5f5;opacity:0.9;}
 
 /* CEO_room 정산 내역, 정산 내역 상세 */
 .main--calc-info, .info-details, .main--review {background:#f7f7f7;}
