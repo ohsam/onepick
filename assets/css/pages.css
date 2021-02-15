@@ -425,7 +425,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .calc-div-wrap .div--right {font-size:16px;}
 .calc-div-wrap .div--right .num {margin-right:2px;color:#037cff;font-size:22px;letter-spacing:-0.5px;}
 
-.sticky-wrapper.is-sticky div[data-sticky-header] {z-index:1 !important;}
+/* .sticky-wrapper.is-sticky div[data-sticky-header] {z-index:1 !important;} */
 
 /* CEO_room 리뷰 */
 .main--review .no-data-info {height:calc(100vh - 442px);padding-top:0;justify-content:center;}	
