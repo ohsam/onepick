@@ -200,9 +200,11 @@ $(function(){
             switch(e.type){
                 case 'datepicker-opened':
                     $datepicker.addClass('datepicker-opened');
+                    $opener.addClass('datepicker-opened');
                     break;
                 case 'datepicker-closed':
                     $datepicker.removeClass('datepicker-opened');
+                    $opener.removeClass('datepicker-opened');
                     break;
             };
         }).on('initComplete', function(e){
