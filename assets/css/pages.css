@@ -236,8 +236,8 @@ textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;bo
 .layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
 .bg-white-rd10 {background-color:#fff;border-radius:10px;}
 
-a.lg-bk,button.lg-bk {border:1px solid #000;color:#fff;background:#000;}	
-a.lg-wt,button.lg-wt {border:1px solid #000;color:#000;background:#fff;}
+a.lg-bk,button.md-bk {border:1px solid #000;color:#fff;background:#000;}	
+a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 
 /* 임시 */
 .bottom-floating-menu-wrap {position:fixed;left:0;bottom:0;right:0;}
