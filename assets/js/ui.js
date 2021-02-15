@@ -476,17 +476,16 @@ $(function(){
         
     });
 
-    // $.each( $('.btn-toggle'), function() {
-
-    //     // 정산 calendar - setting : today
-    //     var today = new Date().toLocaleDateString('ko-KR');
-    //     $('.btn-toggle').hasClass('one-day') ? $(this).val(today) : $(this).val('');
-
-    // });
-
-    $.each( $('#cancelBtn'), function(e) { 
-        e.stopPropagation();
-        $('#oneDay').data('dateRangePicker').close();
+    $.each( $('[data-datepicker'), function() { 
+        // daterangepicker toggle 버튼 
+        $(this).on('click', function(e) {
+            var onOff = $(this).attr('data-toggle');
+            onOff === 'off' ? $(this).attr('data-toggle','on') : $(this).attr('data-toggle', 'off');
+            
+            if( $(this).attr('data-toggle') === 'off') { 
+                $(this).data('dateRangePicker').close();
+            }
+        });
     });
 
     /* UI-2 [e] */
