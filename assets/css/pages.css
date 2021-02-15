@@ -220,9 +220,9 @@ video {
 .card-box .card-body .time, .card-box .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
 .card-box .num {font-family:'Roboto', sans-serif;}
 
-.input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;text-align:left;}
-.input-wrap-datetime input[data-toggle="on"] {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
-.input-wrap-datetime input[data-toggle="off"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+.input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;text-align:left;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+/* .input-wrap-datetime input[data-toggle="on"] {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
+.input-wrap-datetime input[data-toggle="off"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;} */
 
 
 input[type="text"] {-webkit-appearance:none;appearance:none;}	
@@ -360,7 +360,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .main--calc-info, .info-details, .main--review {background:#f7f7f7;}
 .main--calc-info .num, .info-details .num {font-family:'Roboto', sans-serif;font-weight:700;}
 .calc-info--top {display:flex;flex-direction:row;justify-content:space-between;padding:13px 20px;background:#fff;}
-.calc-info--top .input-wrap-datetime button {width:100%;background:transparent;line-height:34px;border:1px solid #e0e0e0;border-radius:6px;font-size:14px;}
+.calc-info--top .input-wrap-datetime button {width:100%;height:34px;padding:0 10px;border:1px solid #e0e0e0;border-radius:6px;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;font-size:14px;text-align:left;line-height:34px;}
 .calc-info--top .input-wrap-datetime.one-day {min-width:100px;width:30%;}
 .calc-info--top .input-wrap-datetime .datepicker-opened {border-color:#037cff;color:#037cff;}
 .calc-info--top .input-wrap-datetime.range-day {width:calc(70% - 12px);}
@@ -485,9 +485,5 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .layer[data-layer-name="edit-room-info"] .button-wrap {padding-bottom:20px;}
 
 .layer .gray-box {display:inline-block;padding:6px 8px 8px 9px;border:1px solid #e5e5e5;border-radius:6px;color:#037cff;font-size:14px;}
-
-.inline-wrapper.date-picker-wrapper:before {position:relative;}	
-.inline-wrapper.date-picker-wrapper .month-wrapper {padding:0;}	
-.inline-wrapper.date-picker-wrapper .month-wrapper table .caption .month-name:after {left:0;right:0;}
 
 /* [e]: UI-2 ***********************************************************/
