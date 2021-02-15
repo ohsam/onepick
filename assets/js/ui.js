@@ -471,22 +471,22 @@ $(function(){
             return false;
         }
 
-        $('body .date-picker-wrapper .drp_top-bar .apply-btn').val('검색');
-        $('.calc-info--top').append('<button type="button" class="cancel-btn" id="cancelBtn">취소</button>');
+        // $('body .date-picker-wrapper .drp_top-bar .apply-btn').val('검색');
+        // $('.calc-info--top').append('<button type="button" class="cancel-btn" id="cancelBtn">취소</button>');
         
     });
 
-    $.each( $('[data-datepicker'), function() { 
-        // daterangepicker toggle 버튼 
-        $(this).on('click', function(e) {
-            var onOff = $(this).attr('data-toggle');
-            onOff === 'off' ? $(this).attr('data-toggle','on') : $(this).attr('data-toggle', 'off');
+    // $.each( $('[data-datepicker'), function() { 
+    //     // daterangepicker toggle 버튼 
+    //     $(this).on('click', function(e) {
+    //         var onOff = $(this).attr('data-toggle');
+    //         onOff === 'off' ? $(this).attr('data-toggle','on') : $(this).attr('data-toggle', 'off');
             
-            if( $(this).attr('data-toggle') === 'off') { 
-                $(this).data('dateRangePicker').close();
-            }
-        });
-    });
+    //         if( $(this).attr('data-toggle') === 'off') { 
+    //             $(this).data('dateRangePicker').close();
+    //         }
+    //     });
+    // });
 
     /* UI-2 [e] */
 });
