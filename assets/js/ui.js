@@ -223,7 +223,7 @@ $(function(){
 
         $opener.on('click', function(e){
             e.stopPropagation();
-            $datepicker.data('dateRangePicker').open();
+            $datepicker.trigger('click');
         });
 
         // today
