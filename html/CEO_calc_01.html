@@ -39,15 +39,13 @@
 
                     <div class="calc-info--top" >
                         <div class="input-wrap-datetime one-day" data-js="datepicker">
-                            <!-- <button type="button" class="btn-toggle" id="oneDay" data-datepicker data-single-date>하루 선택</button> -->
                             <button type="button" class="btn-toggle" data-datepicker-opener>하루선택</button>
                             <input type="text" tabindex="-1" style="height:0px;border:none;" data-datepicker data-single-date data-apply>
                         </div>
 
                         <div class="input-wrap-datetime range-day" data-js="datepicker">
-                            <!-- <button type="button" class="btn-toggle" data-datepicker >기간 선택(1개월 유효검색)</button> -->
                             <button type="button" class="btn-toggle" data-datepicker-opener >기간 선택(1개월 유효검색)</button>
-                            <input type="text" tabindex="-1" style="height:0px;border:none;" data-datepicker data-apply>
+                            <input type="text" tabindex="-1" style="height:0px;border:none;" data-datepicker data-apply data-max-days="31">
                         </div>
                     </div>
 

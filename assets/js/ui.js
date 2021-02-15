@@ -162,6 +162,7 @@ $(function(){
         isInline = isInline == 'false' || isInline == undefined ? false : true;
         var isApply = $datepicker.attr('data-apply');
         isApply = isApply == 'false' || isApply == undefined ? false : true;
+        var maxDays = $datepicker.attr('data-max-days') || 0;
         var container = $datepicker.attr('data-container') || 'body';
         var $btnApply = null;
 
@@ -183,7 +184,8 @@ $(function(){
             singleMonth: true,
             container: container,
             singleDate : isSingleDate,
-            inline: isInline
+            inline: isInline,
+            maxDays: maxDays
         }
         if(isApply){
             configObject.getValue = function(){
