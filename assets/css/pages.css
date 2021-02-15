@@ -360,8 +360,10 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .main--calc-info, .info-details, .main--review {background:#f7f7f7;}
 .main--calc-info .num, .info-details .num {font-family:'Roboto', sans-serif;font-weight:700;}
 .calc-info--top {display:flex;flex-direction:row;justify-content:space-between;padding:13px 20px;background:#fff;}
+.calc-info--top .input-wrap-datetime button {width:100%;background:transparent;line-height:34px;border:1px solid #e0e0e0;border-radius:6px;font-size:14px;}
 .calc-info--top .input-wrap-datetime.one-day {min-width:100px;width:30%;}
-.calc-info--top .input-wrap-datetime:not(.one-day) {width:70%;}
+.calc-info--top .input-wrap-datetime .datepicker-opened {border-color:#037cff;color:#037cff;}
+.calc-info--top .input-wrap-datetime.range-day {width:calc(70% - 12px);}
 .calc-info--top .input-wrap-datetime + .input-wrap-datetime {margin-left:12px;}
 .calc-info--top .input-wrap-datetime input {height:34px;border:1px solid #eaeaea;border-radius:6px;font-size:14px;letter-spacing:-0.5px;}
 
