@@ -155,12 +155,16 @@ $(function(){
         }
         var $container = $(el);
         var $datepicker = $container.find('[data-datepicker]');
+        var $opener = $container.find('[data-datepicker-opener]');
         var isSingleDate = $datepicker.attr('data-single-date');
         isSingleDate = isSingleDate == 'false' || isSingleDate == undefined ? false : true;
         var isInline = $datepicker.attr('data-inline');
         isInline = isInline == 'false' || isInline == undefined ? false : true;
+        var isApply = $datepicker.attr('data-apply');
+        isApply = isApply == 'false' || isApply == undefined ? false : true;
         var container = $datepicker.attr('data-container') || 'body';
-        
+        var $btnApply = null;
+
         $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
             "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
             "week-1": "Mon",
@@ -181,6 +185,15 @@ $(function(){
             singleDate : isSingleDate,
             inline: isInline
         }
+        if(isApply){
+            configObject.getValue = function(){
+                return $datepicker.val();
+	        }
+            configObject.setValue = function(s){
+                $datepicker.val(s);
+                $btnApply.val(s+' 조회하기');
+	        }
+        }
         
         $datepicker.dateRangePicker(configObject)
         .on('datepicker-opened datepicker-closed', function(e){
@@ -192,7 +205,25 @@ $(function(){
                     $datepicker.removeClass('datepicker-opened');
                     break;
             };
+        }).on('initComplete', function(e){
+            if(isApply){
+                var datepickerEl = $datepicker.data('dateRangePicker').getDatePicker();
+                $btnApply = $('<input type="button" value="조회하기">');
+                datepickerEl.find('.month-wrapper').append($('<div class="apply-box">').append($btnApply));
+                $btnApply.on('click', function(e){
+                    if($datepicker.val()){
+                        console.log('btnApply click');
+                        $datepicker.data('dateRangePicker').close();
+                    }
+                });
+            }
         });
+
+        $opener.on('click', function(e){
+            e.stopPropagation();
+            $datepicker.data('dateRangePicker').open();
+        });
+
         // today
         if(isSingleDate){
             $container.find('[data-datepicker-today]').on('click', function(e){

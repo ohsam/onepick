@@ -1354,6 +1354,9 @@
                 setTime('time2', hour, min);
             });
 
+            setTimeout(function(){
+                self.trigger('initComplete');
+            }, 10);
         }
 
 
