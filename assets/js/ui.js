@@ -255,6 +255,7 @@ $(function(){
             "start": [],
             "end": []
         }
+        var saveData;
         /*
         var sample = {
             "start": ["d1", "08:00"],
@@ -282,6 +283,7 @@ $(function(){
                 dataObj.start[0] = day;
                 dataObj.start[1] = time;
                 isComplete.start = true;
+                $btnClose.get(0).disabled = true;
             }else{
                 dataObj.end[0] = day;
                 dataObj.end[1] = time;
@@ -291,11 +293,11 @@ $(function(){
                     dataObj.start = [...dataObj.end];
                     dataObj.end = [...dataObj.temp];
                 }
-                var data = {
+                saveData = {
                     "start": ['d'+(dataObj.start[0]+1), (dataObj.start[1] < 10 ? '0' : '') + dataObj.start[1] + ':00'],
                     "end": ['d'+(dataObj.end[0]+1), (dataObj.end[1] < 10 ? '0' : '') + dataObj.end[1] + ':00']
                 }
-                setTimeValue(data);
+                setTimeValue(saveData, true);
             }
         });
 
@@ -310,13 +312,15 @@ $(function(){
                 $wrapper.slideToggle();
             }
             $(this).toggleClass('timepicker-opened');
+            $(this).hasClass('timepicker-opened') ? setTimeValue(getTimeValue()) : null;
         });
 
         $btnClose.on('click', function(e){
-            if(isComplete.start){
-                $wrapper.find('li').removeClass('start section end');
-                setTimeValue(getTimeValue());
-            }
+            // if(isComplete.start){
+            //     $wrapper.find('li').removeClass('start section end');
+            //     setTimeValue(getTimeValue());
+            // }
+            setTimeValue(saveData);
             $btnTimepicker.removeClass('timepicker-opened').focus();
             $content.slideUp();
         });
@@ -332,22 +336,33 @@ $(function(){
             }
         }
         // setter
-        function setTimeValue(dataObj){
-            if(!dataObj) return;
+        function setTimeValue(dataObj, displayOnly){
+            if(!dataObj){
+                isComplete.start = false;
+                $btnClose.get(0).disabled = true;
+                $wrapper.find('li').removeClass('start section end');
+                return;
+            }else{
+                saveData = {...dataObj};
+            }
 
-            // hidden value
-            var valueStr = dataObj.start[0] + ' ' + dataObj.start[1] + splitter + dataObj.end[0] + ' ' + dataObj.end[1];
-            $selectedTime.val(valueStr);
+            // pass if not submit
+            if(!displayOnly){
+                // hidden value
+                var valueStr = dataObj.start[0] + ' ' + dataObj.start[1] + splitter + dataObj.end[0] + ' ' + dataObj.end[1];
+                $selectedTime.val(valueStr);
 
-            // text display
-            var timeStr = (dataObj.start[0] != 'd1' ? '다음날' : '') + dataObj.start[1] + splitter + (dataObj.end[0] != 'd1' ? '다음날' : '') + dataObj.end[1];
-            $btnTimepicker.val(timeStr);
+                // text display
+                var timeStr = (dataObj.start[0] != 'd1' ? '다음날' : '') + dataObj.start[1] + splitter + (dataObj.end[0] != 'd1' ? '다음날' : '') + dataObj.end[1];
+                $btnTimepicker.val(timeStr);
+            }
 
             // button display
             var startIndex = 24 * (parseFloat(dataObj.start[0].split('d')[1]) - 1) + (parseFloat(dataObj.start[1].split(':')[0]));
             var endIndex = 24 * (parseFloat(dataObj.end[0].split('d')[1]) - 1) + (parseFloat(dataObj.end[1].split(':')[0]));
             var items = $wrapper.find('li');
             items.each(function(i, el){
+                $(this).removeClass('start section end');
                 if(i == startIndex){
                     $(this).addClass('start');
                 }else if(i > startIndex && i < endIndex){
@@ -359,7 +374,10 @@ $(function(){
 
             // flags
             isComplete.start = false;
-            console.log('selectedTime.value::',$selectedTime.val());
+            $btnClose.get(0).disabled = false;
+            if(!displayOnly){
+                console.log('selectedTime.value::',$selectedTime.val());
+            }
         }
 
         setTimeValue(getTimeValue());
