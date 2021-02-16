@@ -25,7 +25,7 @@ a, a:visited {text-decoration: none;color: initial;}
 button {margin:0;padding:0;}
 
 /* a, button, */
-input:focus,
+input:focus, button:focus, textarea:focus,
 select:focus {outline: none;}
 
 .touchonly {display: none;}
@@ -331,6 +331,8 @@ a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 .btn-menu-review.on {background:url('../img/icon/ic_menu_review_on.png') no-repeat center top;background-size:36px 36px;}
 .button-wrap-menu {padding:0 20px;display:flex;}
 .button-wrap-menu [class^="btn-menu-"] {margin:0 auto;}
+.button-wrap-menu [class^="btn-menu-"].on {color:#037cff;}
+.button-wrap-menu [class^="btn-menu-"]:visited {color:#a1a1a1;}
 .text-link {font-size:16px;line-height:22px;color:#a1a1a1;}
 .text-link:visited {color:#a1a1a1;}
 .text-more {font-size:14px;line-height:24px;color:#000;}
