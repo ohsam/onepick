@@ -53,8 +53,11 @@
 .main-reserve--top .input-wrap-select {width:150px;}
 .main-reserve--top .input-wrap-select select {font-size:20px;border:none;}
 .main-reserve--top > button {position:absolute;right:20px;top:16px;}
-.main-reserve--top input[type="text"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
-.main-reserve--top input[type="text"].datepicker-opened {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
+.main-reserve--top input[type="text"],
+.main-reserve--top input[type="button"] {background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
+.main-reserve--top input[type="text"].datepicker-opened,
+.main-reserve--top input[type="button"].datepicker-opened {background:#fff url('../img/icon/icon_function_element_dropup.png') no-repeat right 4px center;background-size:28px 28px;}
+.main-reserve--top input[type="button"] {width:100%;height:56px;font-size:18px;border:none;text-align:left;}
 
 .reservation-summary {padding:16px 20px 20px 20px;white-space:nowrap;overflow-x:auto;}
 .reservation-summary .reservation-item {display:inline-block;min-width:62px;padding-left:10px;border-left:1px solid #bdbdbd;}
