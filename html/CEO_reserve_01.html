@@ -59,12 +59,17 @@
                                     </div>
                                 </label>
                             </li>
+                            <li>
+                                <label for="issueItem04">기타 사유
+                                    <div class="input-wrap">
+                                        <input id="issueItem04" name="reason" class="rd_t01" type="radio">
+                                    </div>
+                                </label>
+                            </li>
                         </ul>
-                        <label for="issueItem04" class="etc">기타 사유</label>
                         <div class="input-wrap">
-                            <textarea id="issueItem04" cols="30" rows="4" placeholder="예약 취소 사유를 작성해주세요."></textarea>
+                            <textarea id="issueItem05" cols="30" rows="4" placeholder="예약 취소 사유를 작성해주세요." disabled></textarea>
                         </div>
-                        
                     </div>
                 </section>
                 
@@ -131,6 +136,20 @@
     <script src="../assets/js/lib/current-device.min.js"></script>
     <script src="../assets/js/lib/swiper.min.js"></script>
     <script src="../assets/js/ui.js"></script>
+
+    
+    <script>
+        // 기타 사유 동작은 개발 소스와 별도임(개발에서 선적용)
+        $(function(){
+            $('input[type=radio][name=reason]').change(function() {
+                if($('#issueItem04').prop('checked') == true) {
+                    $('#issueItem05').prop('disabled', false);
+                } else {
+                    $('#issueItem05').prop('disabled', true);
+                }
+            });
+        });
+    </script>
 
 </body>
 

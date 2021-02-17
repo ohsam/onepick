@@ -312,7 +312,8 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .rnum {display:inline-block;margin-left:6px;font-family:'Roboto', sans-serif;font-size:18px;font-weight:700;color:#037cff;line-height:21px;}
 
 .issue-check {margin-top:27px;}
-.issue-check li {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:15px 0 14px;border-bottom:1px solid #e0e0e0;}
+.issue-check li {display:flex;flex-direction:row;align-items:center;justify-content:space-between;padding:15px 0 14px;}
+.issue-check li:not(:last-child) {border-bottom:1px solid #e0e0e0;}
 .issue-check li:first-child {margin-top:27px;}
 .issue-check label {width:100%;font-size:18px;}
 .issue-check label::after {content:'';clear:both;display:table;}
