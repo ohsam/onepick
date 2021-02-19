@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>객실 수정 | 원픽 관리자</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/js/lib/daterangepicker.min.css"/>
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+
+<body> <!-- 고정 status:: class="is-header-fixed" -->
+    <div class="app-wrap">
+        <!-- app-header-wrap [s] -->
+        <header class="app-header-wrap">
+            <div class="app-header sub"><!-- class:: main/sub/popup -->
+                <h1>객실 수정</h1>
+                <button class="btn-hd-notifications" type="button">알림</button>
+                <button class="btn-hd-menu" type="button">메뉴</button>
+                <button class="btn-hd-back" type="button" data-open-layer="confirm-cancel-saleset">뒤로가기</button>
+                <button class="btn-hd-close" type="button">닫기</button>
+            </div>
+        </header>
+        <!-- app-header-wrap [e] -->
+
+        <!-- app-content-wrap [s] -->
+        <main class="app-content-wrap">
+            <!-- page class:: has-bottom-menu, has-bottom-button -->
+            <div class="app-content has-bottom-button">
+                <section class="app-section full room-settings">
+                    <div class="room-name">
+                        <div class="room-input">
+                            <input type="text" value="스텐다드 A" readonly>
+                        </div>
+                    </div>
+
+                    <div class="tab-container">
+                        <div role="tablist" class="tablist-ty03">
+                            <button role="tab" aria-selected="true" aria-controls="tab_content03_1" id="tab03_1">숙박</button>
+                            <button role="tab" aria-selected="false" aria-controls="tab_content03_2" id="tab03_2">대실</button>
+                        </div>
+                        <!-- 숙박 [s] -->
+                        <div tabindex="0" role="tabpanel" id="tab_content03_1" aria-labelledby="tab03_1" class="show">
+                            <div class="form-wrap room-edit mt30">
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rmForm01">입/퇴실</label></dt>
+                                        <dd>
+                                            <!-- 사전 입/퇴실 탬플릿 마스터 값을 가져와 뿌려짐 -->
+                                            <div class="input-wrap-select">
+                                                <select id="rmForm01">
+                                                    <option>14:00 ~ 다음날 11시</option>
+                                                    <option>14:00 ~ 다음날 11시</option>
+                                                    <option>14:00 ~ 다음날 11시</option>
+                                                    <option>14:00 ~ 다음날 11시</option>
+                                                </select>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rmForm02">잔여 객실수</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number counter fl-r">
+                                                <input id="rmForm02" type="number" value="0" data-minimum="0" data-maximum="30">
+                                                <button type="button" class="minus" data-amount="-1">-</button>
+                                                <button type="button" class="plus" data-amount="1">+</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rmForm03">정상 금액</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit">
+                                                <input id="rmForm03" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
+                                                <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rmForm04">판매 금액</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit">
+                                                <input id="rmForm04" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
+                                                <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl data-js="datepicker">
+                                        <dt><label for="rmForm05">적용 일자</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-datetime">
+                                                <input id="rmForm05" type="button" name="datefilter" value="당일 날짜" data-datepicker data-single-date data-container="#applyDate01" data-inline="true" data-toggle="off">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div id="applyDate01"></div><!-- datepicker inline -->
+                            </div>
+                        </div>
+                        <!-- 숙박 [e] -->
+
+                        <!-- 대실 [s] -->
+                        <div tabindex="0" role="tabpanel" id="tab_content03_2" aria-labelledby="tab03_2">
+                            <div class="form-wrap room-edit mt30">
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rtForm01">가능 시간</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit time">
+                                                <input id="rtForm01" type="text" placeholder="0"><span class="unitText">시간</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <div data-js="timepicker" data-timepicker-days="1">
+                                        <div class="timepicker--button">
+                                            <label for="inp_time01">오픈마감</label>
+                                            <div class="input-wrap">
+                                                <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="selectedTime" value="d1 09:00 ~ d1 18:00" data-timepicker-value>
+                                        <div class="timepicker--content">
+                                            <div class="text-box">
+                                                <p>오픈 ~ 마감 시간 설정</p>
+                                                <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
+                                            </div>
+                                            <div class="timepicker-wrapper">
+                                                <!-- sample
+                                                <ul class="item-wrapper" data-timepicker-day="d1">
+                                                    <li><button type="button">00시</button></li>
+                                                    <li><button type="button">01시</button></li>
+                                                    <li><button type="button">02시</button></li>
+                                                    <li><button type="button">03시</button></li>
+                                                </ul> -->
+                                            </div>
+                                            <div class="button-wrap full mt10">
+                                                <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rtForm03">잔여 객실수</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number counter fl-r">
+                                                <input id="rtForm03" type="number" value="0" data-minimum="0" data-maximum="30">
+                                                <button type="button" class="minus" data-amount="-1">-</button>
+                                                <button type="button" class="plus" data-amount="1">+</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rtForm04">정상 금액</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit">
+                                                <input id="rtForm04" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
+                                                <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rtForm05">판매 금액</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit">
+                                                <input id="rtForm05" type="text" placeholder="0"><span class="unitText">원</span>
+                                                <button class="sm-bk" type="button" data-amount="10000">+ 1만</button>
+                                                <button class="sm-bk" type="button" data-amount="1000">+ 1천</button>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="row">
+                                    <dl data-js="datepicker">
+                                        <dt><label for="rtForm06">적용 일자</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-datetime">
+                                                <input id="rtForm06" type="button" name="datefilter" value="당일 날짜" data-datepicker data-single-date data-container="#applyDate02" data-inline="true" data-toggle="off">
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div id="applyDate02"></div><!-- datepicker inline -->
+                            </div>
+                        </div>
+                        <!-- 대실 [e] -->
+                    </div>
+                </section>
+
+                <!-- bottom-floating-menu [s] -->
+                <div class="bottom-floating-menu-wrap">
+                    <!-- common button -->
+                    <div class="button-wrap full">
+                        <button class="lg-bl" type="button" data-open-layer="alert-with-graybox">객실 수정 하기</button>
+                    </div>
+                </div>
+                <!-- bottom-floating-menu [e] -->
+            </div>
+        </main>
+        <!-- app-content-wrap [e] -->
+    </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+    
+        <!-- layer-name="alert-with-graybox" -->
+        <div class="layer alert" data-layer-name="alert-with-graybox">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    객실이 수정 완료되었습니다.<br>객실 유형 화면으로 이동합니다.
+                    <p class="gray-box al-l mt20">
+                        객실 정보 수정 시, 원픽 사용자 앱에는<br>
+                        수정된 객실 정보로 적용 노출됩니다.<br>
+                        단, 해당 객실 정보 수정 전 예약한 고객이<br>
+                        있는 경우 변경 전 정보로 유지됩니다.
+                    </p>
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">확인</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- layer-wrap [e] -->
+    
+    <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/lib/current-device.min.js"></script>
+    <script src="../assets/js/lib/swiper.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/lib/moment.min.js"></script>
+    <script src="../assets/js/lib/jquery.daterangepicker.custom.js"></script>
+
+    <script src="../assets/js/ui.js"></script>
+</body>
+
+</html>
