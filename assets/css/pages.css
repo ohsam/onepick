@@ -389,8 +389,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .info-details .calc-tbl .em-bl {color:#037cff;}
 .info-details .calc-tbl .em-rd {color:#e53935;}
 .info-details .calc-tbl tr:nth-child(2) th, .info-details .calc-tbl tr:nth-child(2) td,
-.info-details .calc-tbl tr:nth-child(5) th, .info-details .calc-tbl tr:nth-child(5) td,
-.info-details .calc-tbl tr:nth-child(9) th, .info-details .calc-tbl tr:nth-child(9) td {padding-bottom:10px;}
+.info-details .calc-tbl tr:nth-child(6) th, .info-details .calc-tbl tr:nth-child(6) td {padding-bottom:10px;}
 .info-details .calc-tbl .div-top th, .info-details .calc-tbl .div-top td {padding-top:10px;border-top:1px solid #e0e0e0;}
 
 .calc-info--summary {padding:20px;background:#fff;}
