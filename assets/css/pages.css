@@ -179,6 +179,7 @@
 
 .room-name {position:relative;padding-top:10px;}
 .room-name .room-input input {padding-right:100px;}
+.room-name .room-input input[readonly] {padding-right:0;}
 .room-name .room-input button {position:absolute;bottom:13px;right:0;}
 .room-name .room-button {position:absolute;bottom:13px;right:0;}
 
@@ -229,6 +230,7 @@ input[type="text"] {-webkit-appearance:none;appearance:none;}
 textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;border-color:#eee;-webkit-outline:none;outline:none;}
 
 .room-settings + .bottom-floating-menu-wrap {z-index:2;} /* datepicker 위로 */
+.room-settings .tablist-ty03 [role="tab"] {padding:8px 25px 11px;}
 
 .grp-title {font-size:20px;font-weight:700;}
 .bg-gray-t1 {background-color:#f6f7f7;}
