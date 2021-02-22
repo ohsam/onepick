@@ -247,7 +247,8 @@ $(function(){
         var $selectedTime = $container.find('[data-timepicker-value]');
         var $content = $container.find('.timepicker--content');
         var $wrapper = $container.find('.timepicker-wrapper');
-        var $btnClose = $container.find('[data-timepicker-close]');
+        // 적용하기 버튼 삭제, 시간 선택시 바로 적용
+        // var $btnClose = $container.find('[data-timepicker-close]');
         var days = parseFloat($container.attr('data-timepicker-days')) || 1;
         var splitter = ' ~ ';
         var isComplete = {"start":false};
@@ -283,7 +284,8 @@ $(function(){
                 dataObj.start[0] = day;
                 dataObj.start[1] = time;
                 isComplete.start = true;
-                $btnClose.get(0).disabled = true;
+                // 적용하기 버튼 삭제, 시간 선택시 바로 적용
+                // $btnClose.get(0).disabled = true;
             }else{
                 dataObj.end[0] = day;
                 dataObj.end[1] = time;
@@ -297,7 +299,9 @@ $(function(){
                     "start": ['d'+(dataObj.start[0]+1), (dataObj.start[1] < 10 ? '0' : '') + dataObj.start[1] + ':00'],
                     "end": ['d'+(dataObj.end[0]+1), (dataObj.end[1] < 10 ? '0' : '') + dataObj.end[1] + ':00']
                 }
-                setTimeValue(saveData, true);
+                // 적용하기 버튼 삭제, 시간 선택시 바로 적용
+                //setTimeValue(saveData, true);
+                setTimeValue(saveData);
             }
         });
 
@@ -315,15 +319,12 @@ $(function(){
             $(this).hasClass('timepicker-opened') ? setTimeValue(getTimeValue()) : null;
         });
 
-        $btnClose.on('click', function(e){
-            // if(isComplete.start){
-            //     $wrapper.find('li').removeClass('start section end');
-            //     setTimeValue(getTimeValue());
-            // }
-            setTimeValue(saveData);
-            $btnTimepicker.removeClass('timepicker-opened').focus();
-            $content.slideUp();
-        });
+        // 적용하기 버튼 삭제, 2021-02-22 이후 쓰이지 않음
+        // $btnClose.on('click', function(e){
+        //     setTimeValue(saveData);
+        //     $btnTimepicker.removeClass('timepicker-opened').focus();
+        //     $content.slideUp();
+        // });
 
         // getter
         function getTimeValue(){
@@ -339,7 +340,8 @@ $(function(){
         function setTimeValue(dataObj, displayOnly){
             if(!dataObj){
                 isComplete.start = false;
-                $btnClose.get(0).disabled = true;
+                // 적용하기 버튼 삭제, 시간 선택시 바로 적용
+                // $btnClose.get(0).disabled = true;
                 $wrapper.find('li').removeClass('start section end');
                 return;
             }else{
@@ -374,7 +376,8 @@ $(function(){
 
             // flags
             isComplete.start = false;
-            $btnClose.get(0).disabled = false;
+            // 적용하기 버튼 삭제, 시간 선택시 바로 적용
+            // $btnClose.get(0).disabled = false;
             if(!displayOnly){
                 console.log('selectedTime.value::',$selectedTime.val());
             }
