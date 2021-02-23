@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>숙박 정보 설정 | 원픽 관리자</title>
+    <title>대실 정보 설정 | 원픽 관리자</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="" />
@@ -22,7 +22,7 @@
         <!-- app-header-wrap [s] -->
         <header class="app-header-wrap">
             <div class="app-header sub"><!-- class:: main/sub/popup -->
-                <h1>숙박 정보 설정</h1>
+                <h1>대실 정보 설정</h1>
                 <button class="btn-hd-notifications" type="button">알림</button>
                 <button class="btn-hd-menu" type="button">메뉴</button>
                 <button class="btn-hd-back" type="button" data-open-layer="confirm-cancel-saleset">뒤로가기</button>
@@ -51,7 +51,7 @@
                             <div class="condition-toggle">
                                 <div class="input-wrap">
                                     <label for="condition01">
-                                        <strong class="type">당일 숙박 만실</strong>
+                                        <strong class="type">당일 대실 만실</strong>
                                         <span class="case">방이 없을때</span>
                                     </label>
                                     <input id="condition01" class="chk_t03" type="checkbox" data-js="checkevent_01" data-checkevent-target="#room-edit_01">
@@ -62,7 +62,6 @@
                             <!-- 숙박 만실 checkbox on: <div class="form-wrap room-edit mt15 disabled"> -->
                             <div class="form-wrap room-edit mt15" id="room-edit_01">
                                 <div class="row">
-                                    <!-- [s]: 2021-02-22 수정 | 입/퇴실 timepicker -->
                                     <!-- 
                                         data-js="timepicker" 로 동작합니다
                                         data-timepicker-days= 당일/여러날 일 수
@@ -71,23 +70,45 @@
                                         data-timepicker-day 현재 쓰이지 않음 (여러날 시 Next Day, 다음날 로만 표시됨)
                                         현재 reset, cancel 기능 없음
                                     -->
-                                    <div data-js="timepicker" data-timepicker-days="2">
+                                    <div data-js="timepicker" data-timepicker-days="1">
                                         <div class="timepicker--button">
-                                            <label for="inp_time01">입/퇴실</label>
+                                            <label for="inp_time01">오픈마감</label>
                                             <div class="input-wrap">
                                                 <input id="inp_time01" type="button" class="btn-timepicker" data-timepicker-show value="시간선택">
                                             </div>
                                         </div>
-                                        <input type="hidden" name="selectedTime" value="d1 09:00 ~ d2 14:00" data-timepicker-value>
+                                        <input type="hidden" name="selectedTime" value="d1 09:00 ~ d1 18:00" data-timepicker-value>
                                         <div class="timepicker--content">
                                             <div class="text-box">
-                                                <p>입실 ~ 퇴실 시간 설정</p>
+                                                <p>오픈 ~ 마감 시간 설정</p>
                                                 <div class="desc">원하는 시간대를 터치하여 설정하세요.</div>
                                             </div>
-                                            <div class="timepicker-wrapper"></div>
+                                            <div class="timepicker-wrapper">
+                                                <!-- sample
+                                                <ul class="item-wrapper" data-timepicker-day="d1">
+                                                    <li><button type="button">00시</button></li>
+                                                    <li><button type="button">01시</button></li>
+                                                    <li><button type="button">02시</button></li>
+                                                    <li><button type="button">03시</button></li>
+                                                </ul> -->
+                                            </div>
+                                            <!-- 2021-02-22 수정 | 적용하기 버튼 삭제, 시간 선택시 바로 적용
+                                            <div class="button-wrap full mt10">
+                                                <button class="lg-bl" type="button" data-timepicker-close>적용하기</button>
+                                            </div> -->
                                         </div>
                                     </div>
-                                    <!-- [e]: 2021-02-22 수정 | 입/퇴실 timepicker -->
+                                </div>
+
+                                <div class="row">
+                                    <dl>
+                                        <dt><label for="rpForm01">가능 시간</label></dt>
+                                        <dd>
+                                            <div class="input-wrap-number unit time">
+                                                <input id="rpForm01" type="text" value="4" placeholder="0"><span class="unitText">시간</span>
+                                            </div>
+                                        </dd>
+                                    </dl>
                                 </div>
 
                             </div>
@@ -170,7 +191,7 @@
                 <div class="bottom-floating-menu-wrap">
                     <!-- common button -->
                     <div class="button-wrap full">
-                        <button class="lg-bl" type="button" data-open-layer="alert-save-chages">객실 수정하기</button>
+                        <button class="lg-bl" type="button" data-open-layer="confirm-save-settings">객실 수정하기</button>
                     </div>
                 </div>
                 <!-- bottom-floating-menu [e] -->
@@ -193,13 +214,13 @@
             </div>
         </div>
 
-        <!-- layer-name="confirm-save-noempty" // 숙박 만실 처리 -->
+        <!-- layer-name="confirm-save-noempty" // 대실 만실 처리 -->
         <div class="layer confirm" data-layer-name="confirm-save-noempty">
             <div class="layer-inner">
                 <div class="layer-cont">
-                    <p>당일 숙박 만실<br>처리하시겠습니까?</p>
+                    <p>당일 대실 만실<br>처리하시겠습니까?</p>
                     <div class="guide-box">
-                        당일 숙박 만실 처리 시<br/>
+                        당일 대실 만실 처리 시<br/>
                         해당 객실은 당일만 판매 중지됩니다.<br/>
                         익일 시 잔여 객실 잔고가 남아 있는 경우<br/>
                         다시 판매 상태로 전환됩니다.<br/>
@@ -214,16 +235,30 @@
             </div>
         </div>
         
-        <!-- layer-name="confirm-change-times" // 입퇴실 정보 변경 -->
+        <!-- layer-name="confirm-save-settings" -->
         <div class="layer confirm" data-layer-name="confirm-change-times">
             <div class="layer-inner">
                 <div class="layer-cont">
-                    <p>스탠다드A 입퇴실 정보를<br>변경 하시겠습니까?</p>
-                    <div class="guide-box">변경 시, 해당 객실의 입퇴실 시간 정보로 변경 적용됩니다.</div>
+                    <p>스탠다드A 오픈마감을<br>변경 하시겠습니까?</p>
+                    <div class="guide-box">변경 시, 해당 객실의 오픈마감 시간 정보로 변경 적용됩니다.</div>
                 </div>
-                <div class="button-wrap confirm">
+                <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer="">취소</button>
                     <button class="md-bl" type="button" data-close-layer="" data-open-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- layer-name="confirm-save-settings" -->
+        <div class="layer confirm" data-layer-name="confirm-save-settings">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    <p>숙박 판매 설정 정보를<br>변경 하시겠습니까?</p>
+                    <div class="guide-box">판매 정보 변경 시, 원픽 사용자 앱에는 변경된 판매 정보로 적용 노출됩니다. 단, 이전 예약한 고객이 있는 경우 변경 전 정보로 유지됩니다.</div>
+                </div>
+                <div class="button-wrap dialog">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">확인</button>
                 </div>
             </div>
         </div>
@@ -234,20 +269,8 @@
                 <div class="layer-cont">
                     설정하신 숙박 판매 설정을 <br/>취소하시겠습니까?
                 </div>
-                <div class="button-wrap confirm">
+                <div class="button-wrap dialog">
                     <button class="md-gr" type="button" data-close-layer>취소</button>
-                    <button class="md-bl" type="button" data-close-layer>확인</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- layer-name="alert-save-chages" -->
-        <div class="layer alert" data-layer-name="alert-save-chages">
-            <div class="layer-inner">
-                <div class="layer-cont">
-                    객실 수정이<br/>완료되었습니다.
-                </div>
-                <div class="button-wrap full alert">
                     <button class="md-bl" type="button" data-close-layer>확인</button>
                 </div>
             </div>
