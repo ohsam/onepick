@@ -358,6 +358,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .form-wrap.room-edit .row dt label {font-size:18px;}
 .form-wrap.room-edit .row dd {width:calc(100% - 100px);margin:0;}
 .form-wrap.room-edit .row dd::after {content:"";clear:both;display:table;}
+.form-wrap.room-edit .row dd .input-wrap-text input[readonly] {width:100%;height:48px;padding:0 30px 0 10px;border:1px solid #e5e5e5;border-radius:6px;}
 
 .form-wrap.room-edit {position:relative;}
 .form-wrap.room-edit.disabled:after,
