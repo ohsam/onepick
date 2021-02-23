@@ -309,10 +309,13 @@ a[class^="lg-"][disabled],button[class^="lg-"][disabled] {color:#bdbdbd;border-c
 a[class*="md-bk"][disabled],button[class*="md-bk"][disabled] {color:#fff;border-color:#bdbdbd;background:#bdbdbd;}
 a[class$="-wt"][disabled],button[class$="-wt"][disabled] {background:#fff;}
 .button-wrap.full a,.button-wrap.full button {width:100%;}
-.button-wrap.dialog {display:flex;}
-.button-wrap.dialog a:nth-child(1),.button-wrap.dialog button:nth-child(1) {width:33.3%;}
-.button-wrap.dialog a:nth-child(2),.button-wrap.dialog button:nth-child(2) {width:66.6%;}
-.button-wrap.dialog a + a,.button-wrap.dialog button + button {margin-left:12px;}
+.button-wrap.dialog, .button-wrap.confirm {display:flex;}
+.button-wrap.dialog a:nth-child(1),.button-wrap.dialog button:nth-child(1),
+.button-wrap.confirm a:nth-child(1),.button-wrap.confirm button:nth-child(1) {width:33.3%;}
+.button-wrap.dialog a:nth-child(2),.button-wrap.dialog button:nth-child(2),
+.button-wrap.confirm a:nth-child(2),.button-wrap.confirm button:nth-child(2)  {width:66.6%;}
+.button-wrap.dialog a + a,.button-wrap.dialog button + button,
+.button-wrap.confirm a + a,.button-wrap.confirm button + button {margin-left:12px;}
 .btn-more {font-size:16px;line-height:32px;color:#828282;border:none;background-color:transparent;}
 .btn-more:after {content:"";display:inline-block;width:32px;height:32px;vertical-align:top;background:url('../img/icon/ic_more.png') no-repeat center center;background-size:32px 32px;}
 .btn-cancel {font-size:16px;line-height:24px;color:#e53935;}
