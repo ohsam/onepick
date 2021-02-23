@@ -216,6 +216,8 @@ $(function(){
                 datepickerEl.find('.month-wrapper').append($('<div class="apply-box">').append($btnApply));
                 $btnApply.on('click', function(e){
                     if($datepicker.val()){
+                        // 페이지 함수호출
+                        fnSearchSelectedDate($datepicker);
                         console.log('btnApply click');
                         $datepicker.data('dateRangePicker').close();
                     }
