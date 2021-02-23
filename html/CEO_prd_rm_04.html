@@ -191,7 +191,7 @@
                 <div class="bottom-floating-menu-wrap">
                     <!-- common button -->
                     <div class="button-wrap full">
-                        <button class="lg-bl" type="button" data-open-layer="confirm-save-settings">객실 수정하기</button>
+                        <button class="lg-bl" type="button" data-open-layer="alert-save-chages">객실 수정하기</button>
                     </div>
                 </div>
                 <!-- bottom-floating-menu [e] -->
@@ -249,29 +249,14 @@
             </div>
         </div>
 
-        <!-- layer-name="confirm-save-settings" -->
-        <div class="layer confirm" data-layer-name="confirm-save-settings">
+        <!-- layer-name="alert-save-chages" -->
+        <div class="layer alert" data-layer-name="alert-save-chages">
             <div class="layer-inner">
                 <div class="layer-cont">
-                    <p>숙박 판매 설정 정보를<br>변경 하시겠습니까?</p>
-                    <div class="guide-box">판매 정보 변경 시, 원픽 사용자 앱에는 변경된 판매 정보로 적용 노출됩니다. 단, 이전 예약한 고객이 있는 경우 변경 전 정보로 유지됩니다.</div>
+                    객실 수정이<br/>완료되었습니다.
                 </div>
-                <div class="button-wrap dialog">
-                    <button class="md-gr" type="button" data-close-layer="">취소</button>
-                    <button class="md-bl" type="button" data-close-layer="" data-open-layer="dialog-cancel-yes">확인</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- layer-name="confirm-cancel-saleset" -->
-        <div class="layer confirm" data-layer-name="confirm-cancel-saleset">
-            <div class="layer-inner">
-                <div class="layer-cont">
-                    설정하신 숙박 판매 설정을 <br/>취소하시겠습니까?
-                </div>
-                <div class="button-wrap dialog">
-                    <button class="md-gr" type="button" data-close-layer>취소</button>
-                    <button class="md-bl" type="button" data-close-layer>확인</button>
+                <div class="button-wrap full alert">
+                    <button class="md-bl" type="button" data-close-layer  onclick="window.location.href='CEO_prd_rm_01.html'">확인</button>
                 </div>
             </div>
         </div>
