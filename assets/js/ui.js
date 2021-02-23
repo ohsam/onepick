@@ -164,8 +164,9 @@ $(function(){
         isApply = isApply == 'false' || isApply == undefined ? false : true;
         var maxDays = $datepicker.attr('data-max-days') || 0;
         var container = $datepicker.attr('data-container') || 'body';
+        var $textContainer = $($datepicker.attr('data-text-container'));
         var $btnApply = null;
-
+        
         $.dateRangePickerLanguages.ko = {...$.dateRangePickerLanguages.ko, 
             "month-name": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
             "week-1": "Mon",
@@ -194,6 +195,18 @@ $(function(){
             configObject.setValue = function(s){
                 $datepicker.val(s);
                 $btnApply.val(s+' 조회하기');
+                if($textContainer.length){
+                    $textContainer.each(function(){
+                        $(this).val(s);
+                    });
+                }
+	        }
+        }else if($textContainer.length){
+            configObject.setValue = function(s){
+                $datepicker.val(s);
+                $textContainer.each(function(){
+                    $(this).val(s);
+                });
 	        }
         }
         
@@ -217,8 +230,11 @@ $(function(){
                 $btnApply.on('click', function(e){
                     if($datepicker.val()){
                         // 페이지 함수호출
-                        fnSearchSelectedDate($datepicker);
-                        console.log('btnApply click');
+                        if(typeof fnSearchSelectedDate !== 'undefined'){
+                            fnSearchSelectedDate($datepicker);
+                        }else{
+                            console.log('fnSearchSelectedDate not defined');
+                        }
                         $datepicker.data('dateRangePicker').close();
                     }
                 });
