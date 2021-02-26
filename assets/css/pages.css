@@ -222,7 +222,6 @@ video {
 .card-box .sm-wt {position:absolute;top:11px;right:10px;}
 .card-box .card-head .title {font-size:20px;font-weight:700;line-height:27px;}
 .card-box .card-body .time, .card-box .card-body .price-item .tit {color:#828282;font-size:14px;font-weight:400;line-height:20px;} 
-.card-box .num {font-family:'Roboto', sans-serif;}
 
 .input-wrap-datetime input {width:100%;height:48px;padding:0 35px 0 10px;border:1px solid #e5e5e5;border-radius:6px;text-align:left;background:#fff url('../img/icon/icon_function_element_dropdown.png') no-repeat right 4px center;background-size:28px 28px;}
 
@@ -242,6 +241,7 @@ textarea {-webkit-appearance:none;appearance:none;width:100%;padding:8px 16px;bo
 .layer-wrap .layer:not(.full) .layer-head {padding-right:0;letter-spacing:-1.5px;}
 .layer-wrap .layer-title {padding-bottom:20px;border-bottom:1px solid #eee;font-size:20px;text-align:center;}
 .bg-white-rd10 {background-color:#fff;border-radius:10px;}
+.count, .num {font-family:'Roboto', sans-serif;}
 
 a.lg-bk,button.md-bk {border:1px solid #000;color:#fff;background:#000;}	
 a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
@@ -327,6 +327,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .main--room-types {background:#f7f7f7;}
 .main--room-types div[role="tabpanel"] {min-height:calc(100vh - 180px);}
 .no-data-info {display:flex;flex-direction:column;align-items:center;padding-top:120px;}
+.no-data-info .guide {display:block;margin-top:4px;margin-bottom:10px;font-size:12px;font-weight:400;color:#828282;}
 .main--room-types .box-cs-info {display:inline-block;padding:20px;margin-top:114px;}
 .no-data-info .box-cs-info .contact {color:#a1a1a1;font-weight:400;}
 @media all and (max-height: 740px) {
@@ -420,6 +421,9 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .summary-box.ty02 .calc-items .num {color:#037cff;}
 
 .calc-info--tab .no-data-info {height:calc(100vh - 511px);justify-content:center;padding-top:0;}
+@media all and (max-width: 359px) {
+    .calc-info--tab .no-data-info {height:auto;padding:20px 0;}
+}
 .calc-info--tab button[role="tab"] {padding:16px 4px;letter-spacing:-0.5px;}
 /* .ios.mobile .calc-info--tab .no-data-info {height:calc(100vh - 69px - 511px);} */
 .card--list {padding:20px;}
@@ -480,7 +484,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 .pictures-wrap .picture-item img {position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;}
 
 /* CEO_prd_rm 판매객실 관리(추가) */
-
+.date {color:#828282;font-size:14px;font-weight:400;line-height:1em;}
 
 /* modal layer - dialog | 공통 */
 .layer.alert .layer-cont {font-size:18px;}

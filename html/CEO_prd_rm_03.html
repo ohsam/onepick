@@ -36,6 +36,7 @@
             <!-- page class:: has-bottom-menu, has-bottom-button -->
             <div class="app-content has-bottom-button">
                 <section class="app-section full room-settings">
+                    <div class="date pt20">21.02.25(목)</div>
                     <div class="room-name">
                         <div class="room-input">
                             <input type="text" value="스텐다드 A" readonly>
@@ -170,7 +171,7 @@
                 <div class="bottom-floating-menu-wrap">
                     <!-- common button -->
                     <div class="button-wrap full">
-                        <button class="lg-bl" type="button" data-open-layer="alert-save-chages">객실 수정하기</button>
+                        <button class="lg-bl" type="button" data-open-layer="confirm-save-chages">객실 수정하기</button>
                     </div>
                 </div>
                 <!-- bottom-floating-menu [e] -->
@@ -229,13 +230,31 @@
         </div>
 
         <!-- layer-name="alert-save-chages" -->
-        <div class="layer alert" data-layer-name="alert-save-chages">
+        <!-- <div class="layer alert" data-layer-name="alert-save-chages">
             <div class="layer-inner">
                 <div class="layer-cont">
                     객실 수정이<br/>완료되었습니다.
                 </div>
                 <div class="button-wrap full alert">
                     <button class="md-bl" type="button" data-close-layer  onclick="window.location.href='CEO_prd_rm_01.html'">확인</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- layer-name="confirm-save-chages" // 개발 별도 처리 -->
+        <div class="layer confirm" data-layer-name="confirm-save-chages">
+            <div class="layer-inner">
+                <div class="layer-cont">
+                    <p>21년 2월 25일<br>숙박정보가 수정되었습니다.</p>
+                    <p class="pt20">
+                        계속 수정하기 원하실 경우<br>
+                        정보 변경 후 적용일자를 선택<br>
+                        적용하면 됩니다.
+                    </p>
+                </div>
+                <div class="button-wrap confirm">
+                    <button class="md-gr" type="button" data-close-layer="">취소</button>
+                    <button class="md-bl" type="button" data-close-layer="">계속 설정하기</button>
                 </div>
             </div>
         </div>
