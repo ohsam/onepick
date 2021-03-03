@@ -479,7 +479,8 @@ $(function(){
 
     $QItem.each( function() {
         $AItem.hide();
-        $('.accordion-list li').eq(0).find('.item-a').show();
+        /* 2021-03-03 */
+        // $('.accordion-list li').eq(0).find('.item-a').show();
 
         $(this).on('click', function(){
             if($(this).attr("aria-expanded") === 'true') {
