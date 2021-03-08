@@ -274,7 +274,7 @@ a.lg-wt,button.md-wt {border:1px solid #000;color:#000;background:#fff;}
 
 .qna-guide-list {padding-bottom:20px;}
 .qna-guide-list .accordion-list {padding:0 20px;}
-.qna-guide-list .item-q {position:relative;width:100%;height:56px;padding:12px 0 16px;border:none;border-bottom:1px solid #e0e0e0;background:#fff;font-size:18px;text-align:left;}
+.qna-guide-list .item-q {position:relative;width:100%;min-height:56px;padding:12px 36px 16px 0;border:none;border-bottom:1px solid #e0e0e0;background:#fff;font-size:18px;text-align:left;}
 .item-q::after {content:"";position:absolute;top:10px;right:-10px;display:block;width:40px;height:40px;}
 .item-q[aria-expanded="true"]::after {background:url(../img/icon/ic_acc_close.png) no-repeat 0 0;background-size:contain;}
 .item-q[aria-expanded="false"]::after {background:url(../img/icon/ic_acc_open.png) no-repeat 0 0;background-size:contain;}
