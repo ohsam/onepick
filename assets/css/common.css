@@ -223,10 +223,11 @@ body.lock .app-header-wrap:before {content:'';position:fixed;left:0;top:0;displa
 .onepick-info {margin-top:12px;}
 .onepick-info p {font-size:12px;line-height:18px;font-weight:400;color:#828282;}
 
-.onepick-link {margin-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;}
+.onepick-info + .onepick-link {margin-top:20px;}
+.onepick-link {display:flex;flex-wrap:wrap;justify-content:space-between;}
 .onepick-link a,
 .onepick-link span {font-size:12px;font-weight:400;color:#828282;}
-.onepick-link span {padding:0 5px;font-size:10px;}
+.onepick-link span {display:inline-block;padding:0 5px;font-size:10px;}
 
 /* input */
 ::placeholder {/* Chrome, Firefox, Opera, Safari 10.1+ */

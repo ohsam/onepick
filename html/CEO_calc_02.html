@@ -50,7 +50,10 @@
                     </div>
 
                     <ul class="calc-info--list ty01">
-                        <li><span class="dtitle">정산일</span><span class="dates">2020.12.1(화)</span></li>
+                        <li>
+                            <span class="dtitle">정산일</span><span class="dates">2020.12.1(화)</span>
+                            <button type="button" class="info_popup"  data-open-layer="tip-info"><span class="hidden">안내 팝업창</span></button>
+                        </li>
                         <li><span class="dtitle">퇴실일</span><span class="dates">2020.11.26(요일)</span></li>
                     </ul>
 
@@ -253,6 +256,47 @@
         </main>
         <!-- app-content-wrap [e] -->
     </div>
+
+    <!-- layer-wrap [s] -->
+    <div class="layer-wrap">
+    
+        <!-- layer-name="tip-info" --><!-- 2021-03-08 [s] -->
+        <div class="layer alert" data-layer-name="tip-info">
+            <div class="layer-inner">
+                <div class="layer-head"><strong></strong></div>
+                <div class="layer-cont full long-content">
+                    <p class="al-l">원픽 정산 기준은 퇴실일 + 3일입니다.</p>
+                    <p class="al-l">
+                        조회기간에 해당하는 예약 완료 금액을 안내합니다.
+                    </p>
+                    <dl class="details-info al-l mt20">
+                        <dt>예약완료</dt>
+                        <dd>환불 및 취소처리 완료를 제외한 금액입니다.</dd>
+                        <dt class="mt20">취소</dt>
+                        <dd>고객이 예약 건 1시간 이내 취소한 건의 금액입니다.</dd>
+                        <dt class="mt20">환불</dt>
+                        <dd>사정 상 사장님의 취소하여 환불된 건과 고객이 1시간 이후 요청에 의해 사장님이 취소한 금액입니다.</dd>
+                    </dl>
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- 2021-03-08 [e] -->
+        
+        <!-- layer-name="personal-information-policy" -->
+        <div class="layer" data-layer-name="personal-information-policy">
+            <div class="layer-inner">
+                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-cont full">
+                    layer-cont full
+                </div>
+                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- layer-wrap [e] -->
     
     <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/lib/current-device.min.js"></script>

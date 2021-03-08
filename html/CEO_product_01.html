@@ -67,6 +67,7 @@
                                     </div>
                                     <div class="reservation-item">
                                         <strong class="text">총 판매금액</strong>
+                                        <button type="button" class="info_popup"  data-open-layer="tip-info"><span class="hidden">안내 팝업창</span></button>
                                         <div class="amount">
                                             <span class="num">340,000</span><em class="currency">원</em>
                                         </div>
@@ -254,6 +255,7 @@
                                     </div>
                                     <div class="reservation-item empty">
                                         <strong class="text">총 판매금액</strong>
+                                        <button type="button" class="info_popup"  data-open-layer="tip-info"><span class="hidden">안내 팝업창</span></button>
                                         <div class="amount">
                                             <span class="num">0</span><em class="currency">원</em>
                                         </div>
@@ -293,16 +295,23 @@
     <!-- layer-wrap [s] -->
     <div class="layer-wrap">
         
-        <!-- layer-name="terms" -->
-        <div class="layer" data-layer-name="terms">
+        <!-- layer-name="tip-info" --><!-- 2021-03-08 [s] -->
+        <div class="layer alert" data-layer-name="tip-info">
             <div class="layer-inner">
-                <div class="layer-head"><strong>layer-head</strong></div>
+                <div class="layer-head"><strong></strong></div>
                 <div class="layer-cont full">
-                    layer-cont full
+                    조회 날짜는 체크인 날짜 기준<br>
+                    예약 정상 건 리스트를 제공하며<br>
+                    판매금액도 해당 건의 합산금앱입니다.<br>
+                    (환불 접수 후 처리 된 건은 미 포함)
+                    
                 </div>
-                <button class="btn-layer-close"><i class="icon-cancel-t02"></i></button>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
             </div>
         </div>
+        <!-- 2021-03-08 [e] -->
         
         <!-- layer-name="personal-information-policy" -->
         <div class="layer" data-layer-name="personal-information-policy">
