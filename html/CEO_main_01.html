@@ -84,6 +84,9 @@
                     <div class="status-summary">
                         <div class="status-item">
                             <strong class="status-title">숙박</strong>
+                            <!-- 2021-03-08 [s] -->
+                            <button type="button" class="info_popup"  data-open-layer="tip-info"><span class="hidden">안내 팝업창</span></button>
+                            <!-- 2021-03-08 [e] -->
                             <ul class="status-reservation">
                                 <li>
                                     <strong class="name">총 예약</strong>
@@ -106,6 +109,9 @@
                         </div>
                         <div class="status-item">
                             <strong class="status-title">대실</strong>
+                            <!-- 2021-03-08 [s] -->
+                            <button type="button" class="info_popup"  data-open-layer="tip-info"><span class="hidden">안내 팝업창</span></button>
+                            <!-- 2021-03-08 [e] -->
                             <ul class="status-reservation">
                                 <li>
                                     <strong class="name">총 예약</strong>
@@ -155,6 +161,28 @@
 
     <!-- layer-wrap [s] -->
     <div class="layer-wrap">
+
+        <!-- layer-name="tip-info2" --><!-- 2021-03-08 [s] -->
+        <div class="layer alert" data-layer-name="tip-info">
+            <div class="layer-inner">
+                <div class="layer-head"><strong></strong></div>
+                <div class="layer-cont full long-content">
+                    <p class="al-l">앱 접속 당일 기준 정보 제공</p>
+                    <dl class="details-info al-l mt20">
+                        <dt>총예약</dt>
+                        <dd>당일 체크인 예약건수.</dd>
+                        <dt class="mt20">총잔여</dt>
+                        <dd>남은 방수 안내</dd>
+                        <dt class="mt20">총 판매금액</dt>
+                        <dd>당일 체크인 예약 정상 합산금액</dd>
+                    </dl>
+                </div>
+                <div class="button-wrap full">
+                    <button class="md-bl" type="button" data-close-layer="">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- 2021-03-08 [e] -->
         
         <!-- layer-name="terms" -->
         <div class="layer" data-layer-name="terms">
