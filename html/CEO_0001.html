@@ -54,14 +54,18 @@
     <script src="../assets/js/lib/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/lib/current-device.min.js"></script>
     <script src="../assets/js/lib/swiper.min.js"></script>
-    <script src="../assets/js/ui.js"></script>
     <script>
         $(function(){
-            $.each('input', function(){
-                alert($('.app-content').innerHeight());
+            console.log($('.app-content').height());
+            $('input').on('click', function(){
+                if($('input').is(':focus')) {
+                    console.log('after clicking ' + $('.app-content').height());
+                }
             });
         });
     </script>
+    <script src="../assets/js/ui.js"></script>
+
 </body>
 
 </html>
