@@ -56,10 +56,10 @@
     <script src="../assets/js/lib/swiper.min.js"></script>
     <script>
         $(function(){
-            var before = $('.app-content').height();
+            var before = $('body').height();
             $('input').on('click', function(){
                 if($('input').is(':focus')) {
-                    alert('before clicking' + before + 'after clicking ' + $('.app-content').height());
+                    alert('before clicking' + before + 'after clicking ' + $('body').height());
                 }
             });
         });
